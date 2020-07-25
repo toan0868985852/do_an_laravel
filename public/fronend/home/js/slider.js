@@ -84,7 +84,7 @@ function autoplay() {
     updateCircleIndicator();
 }
 
-let timer = setInterval(autoplay, 20000);
+let timer = setInterval(autoplay, 10000);
 
 // menu active
 $(document).ready(function () {
@@ -124,3 +124,127 @@ jQuery(document).ready(function($) {
         time: 1000
     });
 });
+
+
+function session2box1() {
+    var introText = document.querySelector('.session2-box1');
+    var introPosition = introText.getBoundingClientRect().top;
+    var screenPosition = window.innerHeight / 1.8;
+
+    if (introPosition < screenPosition) {
+        introText.classList.add('session2-box1-show');
+    }
+}
+window.addEventListener('scroll', session2box1);
+
+function session2box2() {
+    var introText = document.querySelector('.session2-box2');
+    var introPosition = introText.getBoundingClientRect().top;
+    var screenPosition = window.innerHeight / 1.3;
+
+    if (introPosition < screenPosition) {
+        introText.classList.add('session2-box2-show');
+    }
+}
+window.addEventListener('scroll', session2box2);
+
+function session2box3() {
+    var introText = document.querySelector('.session2-box3');
+    var introPosition = introText.getBoundingClientRect().top;
+    var screenPosition = window.innerHeight / 1.8;
+
+    if (introPosition < screenPosition) {
+        introText.classList.add('session2-box3-show');
+    }
+}
+window.addEventListener('scroll', session2box3);
+
+function session251() {
+    var introText = document.querySelector('.section2-5-1-img');
+    var introPosition = introText.getBoundingClientRect().top;
+    var screenPosition = window.innerHeight / 2;
+
+    if (introPosition < screenPosition) {
+        introText.classList.add('section2-5-1-img-show');
+    }
+}
+
+window.addEventListener('scroll', session251);
+
+
+function section4img() {
+    var introText = document.querySelector('.section4-img');
+    var introPosition = introText.getBoundingClientRect().top;
+    var screenPosition = window.innerHeight / 2;
+
+    if (introPosition < screenPosition) {
+        introText.classList.add('section4-img-show');
+    }
+}
+window.addEventListener('scroll', section4img);
+
+function section6text() {
+    var introText = document.querySelector('.chodi');
+    var introPosition = introText.getBoundingClientRect().top;
+    var screenPosition = window.innerHeight / 1.5;
+
+    if (introPosition < screenPosition) {
+        introText.classList.add('chodi-text-show');
+    }
+}
+window.addEventListener('scroll', section6text);
+
+function section6img() {
+    var introText = document.querySelector('.section6-img');
+    var introPosition = introText.getBoundingClientRect().top;
+    var screenPosition = window.innerHeight / 1.5;
+
+    if (introPosition < screenPosition) {
+        introText.classList.add('section6-img-show');
+    }
+}
+window.addEventListener('scroll', section6img);
+
+function section7current1() {
+    var introText = document.querySelector('.section7-current__1');
+    var introPosition = introText.getBoundingClientRect().top;
+    var screenPosition = window.innerHeight / 1.5;
+
+    if (introPosition < screenPosition) {
+        introText.classList.add('section7-current__1-show');
+    }
+}
+window.addEventListener('scroll', section7current1);
+
+function section7current2() {
+    var introText = document.querySelector('.section7-current__2');
+    var introPosition = introText.getBoundingClientRect().top;
+    var screenPosition = window.innerHeight / 1.5;
+
+    if (introPosition < screenPosition) {
+        introText.classList.add('section7-current__2-show');
+    }
+}
+window.addEventListener('scroll', section7current2);
+
+function section7current3() {
+    var introText = document.querySelector('.section7-current__3');
+    var introPosition = introText.getBoundingClientRect().top;
+    var screenPosition = window.innerHeight / 1.1;
+
+    if (introPosition < screenPosition) {
+        introText.classList.add('section7-current__3-show');
+    }
+}
+window.addEventListener('scroll', section7current3);
+
+function section7current4() {
+    var introText = document.querySelector('.section7-current__4');
+    var introPosition = introText.getBoundingClientRect().top;
+    var screenPosition = window.innerHeight / 1.1;
+
+    if (introPosition < screenPosition) {
+        introText.classList.add('section7-current__4-show');
+    }
+}
+window.addEventListener('scroll', section7current4);

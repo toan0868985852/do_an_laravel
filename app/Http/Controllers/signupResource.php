@@ -11,7 +11,7 @@ class signupResource extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View
      */
     public function index()
     {
@@ -22,7 +22,7 @@ class signupResource extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Http\Response
      */
     public function store(Request $request)
     {
@@ -45,7 +45,7 @@ class signupResource extends Controller
         $user->remember_token = $request->_token;
         $user->name = $request->fullname;
         $user->email = $request->email;
-        $user->password = Hash::make($request->password);
+        $user->password = bcrypt($request->password);
         $user->save();
         return redirect()->route('login.index')->with('thanhcong','Tạo tài khoản thành công');
     }

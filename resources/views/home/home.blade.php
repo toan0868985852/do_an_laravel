@@ -64,21 +64,21 @@
                     đi để thấy rằng đời sống thật phong phú.</p>
             </div>
             <div class="section2-3 col-md-12 col-xs-12 col-lg-12 col-sm-12">
-                <div class="section2-3-1 col-md-3 col-xs-3 col-lg-3 col-sm-3">
+                <div class="section2-3-1 session2-box1 col-md-3 col-xs-3 col-lg-3 col-sm-3">
                     <font color="#1e90ff"><i class='fas fa-burn' style='font-size:36px'></i></font>
                     <h5>Tiết kiệm nước</h5>
                     <div ><font color="#1e90ff"><i class='fas fa-burn' ></i></font></div>
                     <p>Lorem ipsum dolor amet, consectetur amet adipiscing elit, sed do eiusmod incididunt labore dolore.</p>
                     <a href="#" class="read-more" >Đọc thêm</a>
                 </div>
-                <div class="section2-3-1 section2-3-11 col-md-3 col-xs-3 col-lg-3 col-sm-3">
+                <div class="section2-3-1 session2-box2 section2-3-11 col-md-3 col-xs-3 col-lg-3 col-sm-3">
                     <font color=" #cc7c39"><i class='far fa-hand-paper' style='font-size:36px'></i></font>
                     <h5>Trở thành tình nguyện viên</h5>
                     <div><font color=" #cc7c39"><i class='far fa-hand-paper' ></i></font></div>
                     <p>Lorem ipsum dolor amet, consectetur amet adipiscing elit, sed do eiusmod incididunt labore dolore.</p>
                     <a href="#"class="read-more" >Đọc thêm</a>
                 </div>
-                <div class="section2-3-1 section2-3-11 col-md-3 col-xs-3 col-lg-3 col-sm-3">
+                <div class="section2-3-1 session2-box3 section2-3-11 col-md-3 col-xs-3 col-lg-3 col-sm-3">
                     <font color="red"><i class='far fa-heart' style='font-size:36px'></i></font>
                     <h5>Trao đi yêu thương</h5>
                     <div><font color="red"><i class='far fa-heart' ></i></font></div>
@@ -106,7 +106,7 @@
             </div>
 
             <div class="section2-5 col-md-12 col-xs-12 col-lg-12 col-sm-12">
-                <div class="section2-5-1 col-md-6 col-xs-6 col-lg-6 col-sm-6">
+                <div class="section2-5-1 section2-5-1-img col-md-6 col-xs-6 col-lg-6 col-sm-6">
                     <img src="{{asset('fronend/home/img/get-started.png')}}">
                 </div>
                 <div class="section2-5-2 col-md-6 col-xs-6 col-lg-6 col-sm-6">
@@ -250,7 +250,7 @@
     <section class="section4">
         <div class="container">
             <div class="section4-1 col-md-12 col-xs-12 col-lg-12 col-sm-12">
-                <div class="section2-5-1 col-md-6 col-xs-6 col-lg-6 col-sm-6">
+                <div class="section2-5-1 section4-img col-md-6 col-xs-6 col-lg-6 col-sm-6">
                     <img src="{{asset('fronend/home/img/organaization.png')}}">
                 </div>
                 <div class="section4-box">
@@ -332,20 +332,25 @@
             <div class="section6-1 col-md-12 col-xs-12 col-lg-12 col-sm-12">
                 <div class="chodi col-md-6 col-xs-6 col-lg-7 col-sm-6">
                     <font color="black">
-                        <div class="session6-title"><h1>Cho đi sẽ nhận lại
-                                được nhiều hơn những gì bạn mất.</h1></div>
-                        <p class="session6-conten">Hãy cứ cho đi sẽ nhận lại
+                        <div class="session6-title">
+                            <h1>
+                                Cho đi sẽ nhận lại được nhiều hơn những gì bạn mất.
+                            </h1>
+                        </div>
+                        <p class="session6-conten">
+                            Hãy cứ cho đi sẽ nhận lại
                             gấp trăm ngàn lần yêu thương. Trao yêu thương sẽ
                             nhận lại yêu thương, cái được nhận lại còn lớn lao gấp bội lần.
                             <br>
-                        Đó chính là phước báo, là sự thanh thản trong tâm hồn.
+                            Đó chính là phước báo, là sự thanh thản trong tâm hồn.
                             Đây chính là những giá trị không thể đo đếm được. Sự
                             yêu thương giúp đỡ mà chúng ta nhận lại chính là quả
-                            ngọt của tình yêu thương mà chúng ta đã trao đi.</p>
+                            ngọt của tình yêu thương mà chúng ta đã trao đi.
+                        </p>
                     </font>
                     <a class="button" href="">Làm cách nào để ủng hộ</a>
                 </div>
-                <div class="col-md-5 col-xs-6 col-lg-5 col-sm-6">
+                <div class="section6-img col-md-5 col-xs-6 col-lg-5 col-sm-6">
                     <img src="{{asset('fronend/home/img/organaization-2.jpg')}}" alt="">
                 </div>
             </div>
@@ -365,13 +370,13 @@
             </div>
             <div class="container-list">
                 <div class="list">
-                    <div class="list-img-text">
+                    <div class="list-img-text section7-current__1">
                         <div class="background">
                             <img src="{{asset('fronend/home/img/backgrou.jpg')}}" alt="" width="270px" height="260px">
                         </div>
                         <div class="list-item">
                             <div class="list-item__img">
-                                <img src="{{asset('fronend/home/img/event1.jpg')}}" alt="" width="270px" height="260px">
+                                <img src="{{asset('fronend/home/img/even/1.jpg')}}" alt="" width="270px" height="260px">
                             </div>
                             <div class="list-item__text">
                                 <h4>Donation is hope</h4>
@@ -397,13 +402,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="list-img-text">
+                    <div class="list-img-text section7-current__2">
                         <div class="background">
                             <img src="{{asset('fronend/home/img/backgrou.jpg')}}" alt="" width="270px" height="260px">
                         </div>
                         <div class="list-item">
                             <div class="list-item__img">
-                                <img src="{{asset('fronend/home/img/event1.jpg')}}" alt="">
+                                <img src="{{asset('fronend/home/img/even/2.jpg')}}" alt="">
                             </div>
                             <div class="list-item__text">
                                 <h4>Donation is hope</h4>
@@ -429,13 +434,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="list-img-text">
+                    <div class="list-img-text section7-current__3">
                         <div class="background">
                             <img src="{{asset('fronend/home/img/backgrou.jpg')}}" alt="" width="270px" height="260px">
                         </div>
                         <div class="list-item">
                             <div class="list-item__img">
-                                <img src="{{asset('fronend/home/img/event1.jpg')}}" alt="" width="270px" height="260px">
+                                <img src="{{asset('fronend/home/img/even/3.jpg')}}" alt="" width="270px" height="260px">
                             </div>
                             <div class="list-item__text">
                                 <h4>Donation is hope</h4>
@@ -461,13 +466,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="list-img-text">
+                    <div class="list-img-text section7-current__4">
                         <div class="background">
                             <img src="{{asset('fronend/home/img/backgrou.jpg')}}" alt="" width="270px" height="260px">
                         </div>
                         <div class="list-item">
                             <div class="list-item__img">
-                                <img src="{{asset('fronend/home/img/event1.jpg')}}" alt="" width="270px" height="260px">
+                                <img src="{{asset('fronend/home/img/even/4.jpg')}}" alt="" width="270px" height="260px">
                             </div>
                             <div class="list-item__text">
                                 <h4>Donation is hope</h4>

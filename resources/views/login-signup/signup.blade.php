@@ -65,7 +65,7 @@
                 <input class="form__checkbox" type="checkbox">
                 <span>I agree to theterms of service</span>
                 <div class="button">
-                    <button type="submit">Login</button>
+                    <button type="submit">Sign up</button>
                 </div>
             </form>
         </div>

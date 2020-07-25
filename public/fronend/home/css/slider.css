@@ -483,10 +483,48 @@ img {
     padding-top: 20px;
     padding-bottom: 8px;
 }
+
+.section2{
+    overflow-x: hidden;
+}
+
 .section2-3-1{
     color: black;
-    transition: .3s;
 }
+/*animation section2-box */
+.session2-box1{
+    opacity: 0;
+    transform: translateX(-250px);
+    transition: 1.1s all ease-in-out;
+}
+
+.session2-box1-show{
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+.session2-box2{
+    opacity: 0;
+    transform: translateY(100px);
+    transition: 1.1s all ease-in-out;
+}
+
+.session2-box2-show{
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+.session2-box3{
+    opacity: 0;
+    transform: translateX(250px);
+    transition: 1.1s all ease-in-out;
+}
+
+.session2-box3-show{
+    opacity: 1;
+    transform: translateX(0px);
+}
+/*animation section2-box */
 
 .section2-3-1:hover{
     box-shadow: 0 0 22px -8px #848484;
@@ -595,6 +633,112 @@ img {
 .section2-5{
     margin-top: 70px;
 }
+
+/*animation img section2-5-1*/
+
+.section2-5-1-img{
+    position: relative;
+    left: -20px;
+    opacity: 0;
+    transform: translateX(-250px);
+    transition: 1.1s all ease-in-out;
+}
+
+.section2-5-1-img-show{
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+/*animation img section2-5-1*/
+/*animation img section4*/
+
+.section4-img{
+    opacity: 0;
+    transform: translateX(-250px);
+    transition: 1.1s all ease-in-out;
+}
+
+.section4-img-show{
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+/*animation img section4*/
+/*animation img section6*/
+
+.chodi{
+    opacity: 0;
+    transform: translateX(-200px);
+    transition: 1.1s all ease-in-out;
+}
+
+.chodi-text-show{
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+.section6-img{
+    opacity: 0;
+    transform: translateX(200px);
+    transition: 1.1s all ease-in-out;
+}
+
+.section6-img-show{
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+/*animation img section6*/
+/*animation current section7*/
+
+.section7-current__1{
+    opacity: 0;
+    transform: translateY(100px);
+    transition: 1.1s all ease-in-out;
+}
+
+.section7-current__1-show{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+
+.section7-current__2{
+    opacity: 0;
+    transform: translateY(100px);
+    transition: 1.1s all ease-in-out;
+}
+
+.section7-current__2-show{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.section7-current__3{
+    opacity: 0;
+    transform: translateY(100px);
+    transition: 1.1s all ease-in-out;
+}
+
+.section7-current__3-show{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.section7-current__4{
+    opacity: 0;
+    transform: translateY(100px);
+    transition: 1.1s all ease-in-out;
+}
+
+.section7-current__4-show{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+
+/*animation current section7*/
+
 .section2-5-2 div{
     font-size: 16px;
     color: #e22b64;
