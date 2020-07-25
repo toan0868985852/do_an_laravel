@@ -1,0 +1,193 @@
+
+.footer-footer-top-area {
+    padding-top: 100px;
+    padding-bottom: 70px;
+    position: relative;
+    z-index: 1;
+    background-color: #000c35;
+}
+.footer-footer-top-area::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url("../img/footer.png");
+    opacity: 0.1;
+    z-index: -1;
+}
+.footer-footer-top-area .footer-section-title {
+    margin-bottom: 100px;
+    position: relative;
+}
+.footer-section-title {
+    text-align: center;
+    max-width: 800px;
+    margin: -7px auto 60px;
+}
+.footer-section-title span {
+    color: #fd3c65;
+    font-size: 19px;
+    font-weight: 500;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+.footer-footer-top-area .footer-section-title h2 {
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+.footer-section-title h2 {
+    font-size: 35px;
+    margin-bottom: 18px;
+}
+
+.subscribe-field {
+    background-color: transparent;
+    height: 50px;
+    padding: 6px 18px;
+    border: 1px solid #E22B64;
+    width: 100%;
+    outline: 0;
+    transition: 0.5s;
+    color: #ffffff;
+}
+.subscribe-submit {
+    position: absolute;
+    cursor: pointer;
+    top: 0px;
+    right: 0;
+    outline: 0;
+    border: none;
+    color: #ffffff;
+    background-color: #e22b64;
+    height: 50px;
+    padding: 0 50px;
+    transition: 0.5s;
+    font-size: 15px;
+    text-transform: capitalize;
+}
+.widget-subcribe{
+    position: relative;
+}
+
+.subscribe-submit:hover {
+    background-color: #25283a;
+}
+.widget-subcribe label{
+    display: block;
+}
+.footer-footer-top-area .footer-section-title::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: -58px;
+    width: 200px;
+    height: 2px;
+    border-bottom: 2px dashed #e22b64;
+    margin: auto;
+    right: 0;
+}
+.footer-footer-top-area .single-widget p {
+    color: #d0cece;
+    margin-bottom: 29px;
+}
+.single-widget img {
+    margin-bottom: 20px;
+}
+.social-icon li a i {
+    font-size: 15px;
+    width: 30px;
+    height: 30px;
+    background-color: #e22b64;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+    color: #ffffff;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.social-icon li a i:hover {
+    color: #e22b64;
+    background-color: #ffffff;
+}
+.social-icon li {
+    color: #ffffff;
+    padding-left: 5px;
+    padding-right: 5px;
+    display: inline-block;
+}
+.single-widget ul li {
+    font-size: 15px;
+    color: #d0cece;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.single-widget h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    border-bottom: 1px solid #6f6a6a;
+    padding-bottom: 10px;
+}
+.footer-footer-top-area .single-widget ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.single-widget ul li a {
+    color: #d0cece;
+}
+.single-widget ul li a:hover {
+    color: #fd3c65;
+    transition: all 0.5s;
+    text-decoration: none;
+}
+.footer-footer-top-area .single-widget ul.address li i {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background-color: #e22b64;
+    border-radius: 50%;
+    color: #ffffff;
+}
+.footer-bottom-area {
+    background-color: #28376a;
+    padding: 15px 0 0 0;
+    overflow: hidden;
+}
+.footer-bottom-area p {
+    color: #fbfbfb;
+    margin: 0;
+    font-size: 14px;
+}
+.footer-bottom-area .terms-conditions {
+    text-align: right;
+}
+.footer-bottom-area .terms-conditions .footer-terms::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    right: -12px;
+    width: 1px;
+    height: 12px;
+    background-color: #fbfbfb;
+}
+.terms-conditions li a {
+    color: #fbfbfb;
+}
+.terms-conditions li a:hover {
+    color: #e22b64;
+    transition: all 0.5s;
+    text-decoration: none;
+}
+
+.footer-bottom-area .terms-conditions li {
+    display: inline-block;
+    margin-left: 20px;
+    position: relative;
+}

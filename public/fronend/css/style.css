@@ -1,0 +1,237 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+.img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.img .container {
+    background-image: url("../img/login.jpg");
+    background-size: cover;
+    max-width: 950px;
+    width: 950px;
+    height: 470px;
+    position:relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
+}
+
+.background__img{
+    display: inline-block;
+}
+
+.form__img{
+    background-color: white;
+    width: 555px;
+    height: 100%;
+    float: right;
+    position: relative;
+}
+
+.logo{
+    position: absolute;
+    color: white;
+    top:20px;
+    left: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+}
+.img__icon{
+    margin-top: 220px;
+}
+
+.img__icon ul li a{
+    width: 60px;
+    padding-right: 5px;
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 5px;
+    text-align: center;
+    display: inline-block;
+    font-size: 15px;
+    color: #fff;
+    border-radius: 0 50px 50px 0;
+    background: rgba(23, 23, 23, 0.298039);
+}
+
+.img__icon ul li .icon1:hover{
+    background-color: #0c5db5;
+}
+
+.img__icon ul li .icon2:hover{
+    background-color: #19e7ff;
+}
+
+.img__icon ul li .icon3:hover{
+    background-color: #ce4d4d;
+}
+
+.img__icon ul li .icon4:hover{
+    background-color: #2376d5;
+}
+
+.img__icon ul li .icon5:hover{
+    background-color:  brown;
+}
+
+.signup-login{
+    position: absolute;
+    top:41%;
+    left: 31%;
+}
+
+.signup-login a{
+    display: block;
+    padding: 14px 18px;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 50px 0 0 50px;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.signup-login .active{
+    background-color: white;
+    color: #505050;
+}
+
+.login {
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.error{
+    text-align: center;
+    position: relative;
+    top:90px;
+    color: #ffa303;
+}
+
+.error_login{
+    text-align: center;
+    position: relative;
+    top:125px;
+    color: #ffa303;
+}
+
+.thanhcong{
+    text-align: center;
+    position: relative;
+    top:90px;
+    color: #10d500;
+}
+
+.thongbao{
+    text-align: center;
+    position: relative;
+    top:125px;
+    color: #f32020;
+}
+
+.login .login__text{
+    color: #505050;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.textbox{
+    width: 400px;
+    height: 45px;
+    background-color: white;
+    border-radius: 25px;
+    margin-bottom: 25px;
+    position: relative;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.textbox input{
+    border:  none;
+    outline: none;
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    height: 28px;
+    color: #525252;
+}
+
+.textbox i{
+    float: right;
+    font-weight: 300;
+    font-size: 20px;
+    margin-top: 12px;
+    margin-right: 19px;
+}
+.form__checkbox{
+    padding-left: 25px;
+    margin-top: -4px;
+    margin-bottom: 22px;
+    font-size: 14px;
+    color: #616161;
+    width: 19px;
+    height: 19px;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.form__img span{
+    position: relative;
+    top: -5px;
+    color: #4c4c4c;
+    font-size: 15px;
+}
+
+.login a{
+    font-size: 14px;
+    color: #616161;
+    float: right;
+    margin-left: 3px;
+    margin-top: -3px;
+    text-decoration: none;
+}
+
+.login a:hover{
+    text-decoration: underline;
+    color: #ff214f;
+}
+
+.button button{
+    padding: 13px 179px 13px 179px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    font-size: 15px;
+    font-weight: 700;
+    background-color: #ff214f;
+    color: white;
+    transition: .3s;
+    letter-spacing: 1px;
+}
+.button button:hover{
+    background-color: #fd504f;
+}
+
+
+
+
+
+
