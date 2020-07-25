@@ -403,7 +403,7 @@
                         </div>
                         <div class="list-item">
                             <div class="list-item__img">
-                                <img src="{{asset('fronend/home/img/event1.jpg')}}" alt="">
+                                <img src="{{asset('fronend/home/img/even/2.jpg')}}" alt="">
                             </div>
                             <div class="list-item__text">
                                 <h4>Donation is hope</h4>
@@ -435,7 +435,7 @@
                         </div>
                         <div class="list-item">
                             <div class="list-item__img">
-                                <img src="{{asset('fronend/home/img/event1.jpg')}}" alt="" width="270px" height="260px">
+                                <img src="{{asset('fronend/home/img/even/3.jpg')}}" alt="" width="270px" height="260px">
                             </div>
                             <div class="list-item__text">
                                 <h4>Donation is hope</h4>
@@ -467,7 +467,7 @@
                         </div>
                         <div class="list-item">
                             <div class="list-item__img">
-                                <img src="{{asset('fronend/home/img/event1.jpg')}}" alt="" width="270px" height="260px">
+                                <img src="{{asset('fronend/home/img/even/4.jpg')}}" alt="" width="270px" height="260px">
                             </div>
                             <div class="list-item__text">
                                 <h4>Donation is hope</h4>
