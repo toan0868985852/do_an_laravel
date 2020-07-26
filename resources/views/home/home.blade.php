@@ -1,5 +1,5 @@
 
-@extends('header/header')
+@extends('header.header')
 @section('home')
 <section class="home">
     <div class="slider">

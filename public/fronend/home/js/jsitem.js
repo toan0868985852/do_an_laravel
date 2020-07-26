@@ -35,3 +35,6 @@ $(".skill-per").each(function () {
         },
     });
 });
+
+
+

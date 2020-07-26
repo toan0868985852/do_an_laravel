@@ -17,7 +17,7 @@
 <body>
 <header>
 
-    <a href="#" class="logo"><img src="{{asset('fronend/home/img/logo.png')}}" alt=""></a>
+    <a href="{{route('home')}}" class="logo"><img src="{{asset('fronend/home/img/logo.png')}}" alt=""></a>
     <button class="menu-toggler">
         <span></span>
         <span></span>
@@ -28,20 +28,48 @@
         <li><a class="" href="{{route('about')}}">About</a></li>
         <li><a class="" href="{{route('even')}}">Event</a></li>
         <li><a class="" href="{{route('project')}}">Project</a></li>
-        <li><a class="" href="{{route('causes_grid')}}">Causes</a></li>
-        <li><a class="" href="{{route('blog_grid')}}">Blog</a></li>
+        <li>
+            <div class="dropdown">
+                <button class="dropbtn js-item">Causes
+                    <i class="fa fa-chevron-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="{{route('causes_grid')}}">Causes Grid</a>
+                    <a href="{{route('causes_details')}}">Causes Details</a>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="dropdown">
+                <button class="dropbtn js-item">Blog
+                    <i class="fa fa-chevron-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="{{route('blog_grid')}}">Blog Grid</a>
+                    <a href="{{route('blog_details')}}">Blog Details</a>
+                </div>
+            </div>
+        </li>
         <li><a class="" href="#">Contact</a></li>
         @if(Auth::check())
-            <li><a class="donate__header" href="{{route('log_out')}}"><i class="fas fa-sign-out-alt"></i></a></li>
+            <li>
+                <div class="dropdown seting-color">
+                    <button class="dropbtn js-item setting-user">
+                        <i class="far fa-user-circle"></i>
+                        <i class="fa fa-chevron-down"></i>
+                    </button>
+                    <div class="dropdown-content conten-setting">
+                        <a href="{{route('log_out')}}">Đăng xuất</a>
+                    </div>
+                </div>
+            </li>
         @else
             <li><a class="donate__header2" href="{{route('login.index')}}"><i class="fas fa-sign-in-alt"></i></a></li>
         @endif
+
     </ul>
 </header>
     @yield('home')
-    @yield('content_session')
-    @yield('content_session')
-
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
