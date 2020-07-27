@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
 
-class adminResource extends Controller
+class DangkyController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,8 @@ class adminResource extends Controller
      */
     public function index()
     {
-        return view('dashboard.dashboard_admin');
+        $users = User::all();
+        return view('dashboard.all_register',compact('users'));
     }
 
 }

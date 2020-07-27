@@ -25,11 +25,18 @@ Route::resource('signup','signupResource')->only([
 
 Route::resource('user','UserResouce')->middleware('adminlogin');
 
-Route::resource('admin','adminResource')->middleware('adminlogin');
+Route::resource('admin','adminResource')->only([
+    'index'
+]);
 
 Route::get('log_out','logoutController@log_out')->name('log_out');
 
 Route::get('home','homeController@home')->name('home');
+
+Route::group(['prefix'=>'admin'],function(){
+    Route::resource('register','DangkyController')->only(['index']);
+    Route::resource('edit','EditUserController');
+});
 
 Route::group(['prefix'=>'home'],function(){
     Route::get('blog_details','homeController@blog_details')->name('blog_details');
