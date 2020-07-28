@@ -15,9 +15,13 @@ class CreateMassageAccountTable extends Migration
     {
         Schema::create('massage_account', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('massage_id');
-            $table->integer('acound_id');
+            $table->integer('massage_id')->unsigned();
+            $table->integer('account_id')->unsigned();
+
             $table->timestamps();
+            $table->foreign('massage_id')->references('id')->on('massage');
+            $table->foreign('account_id')->references('id')->on('account');
+
         });
     }
 

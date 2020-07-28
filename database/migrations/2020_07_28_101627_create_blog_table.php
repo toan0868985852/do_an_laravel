@@ -18,8 +18,9 @@ class CreateBlogTable extends Migration
             $table->string('tac_gia');
             $table->string('tieu_de');
             $table->longText('noi_dung');
-            $table->integer('chien_dich_id');
+            $table->integer('project_id')->unsigned();
             $table->timestamps();
+            $table->foreign('project_id')->references('id')->on('projects');
         });
     }
 

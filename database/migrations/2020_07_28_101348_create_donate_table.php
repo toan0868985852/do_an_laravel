@@ -17,9 +17,11 @@ class CreateDonateTable extends Migration
             $table->increments('id');
             $table->double('so_tien_donate');
             $table->string('hinh_thuc');
-            $table->integer('thong_tin_account_id');
-            $table->integer('projets_id');
+            $table->integer('account_id')->unsigned();
+            $table->integer('projects_id')->unsigned();
             $table->timestamps();
+            $table->foreign('account_id')->references('id')->on('account');
+            $table->foreign('projects_id')->references('id')->on('projects');
         });
     }
 
