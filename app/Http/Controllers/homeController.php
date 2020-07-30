@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\projects;
 use Illuminate\Http\Request;
 
 class homeController extends Controller
@@ -31,11 +31,12 @@ class homeController extends Controller
     }
 
     public function even(){
-        return view('home.Even_grid');
+       return view('home.even');
     }
 
     public function project(){
-        return view('home.project');
+        $projects = projects::all()->take(6);
+        return view('home.project', compact('projects'));
     }
 
 }
