@@ -59,7 +59,7 @@
                     </div>
                     <input class="form__checkbox" type="checkbox">
                     <span>Remember</span>
-                    <a href="">Forgot Password</a>
+                    <a href="{{route('forgotPassword')}}">Forgot Password</a>
                     <div class="button">
                         <button type="submit">Login</button>
                     </div>

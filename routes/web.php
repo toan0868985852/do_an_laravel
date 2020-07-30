@@ -13,30 +13,47 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/','homeController@home')->name('home');
 
-Route::resource('login','loginResouce')->only([
-    'index', 'store'
-]);
 
-Route::resource('signup','signupResource')->only([
-    'index', 'store'
-]);
+//----------------login-signup-forgotPassword------------------------------------
+Route::resource('login','loginResouce')->only(['index', 'store']);
+Route::resource('signup','signupResource')->only(['index', 'store']);
+
+//----------------login-signup-forgotPassword------------------------------------
+
+
+//-----------------------------reset password--------------------------------------
+Route::get('forgotPassword','forgotPasswordControllers@forgotPassword')->name('forgotPassword');
+Route::post('forgotPassword','forgotPasswordControllers@Password')->name('forgotPassword');
+Route::get('/reset_password/{email}/{code}','forgotPasswordControllers@reset')->name('resetPassword');
+Route::post('/reset_password/{email}/{code}','forgotPasswordControllers@resetPassword')->name('resetPassword');
+//-----------------------------reset password--------------------------------------
+
 
 Route::resource('user','UserResouce')->middleware('adminlogin');
 
-Route::resource('admin','adminResource')->only([
-    'index'
-]);
 
-Route::get('log_out','logoutController@log_out')->name('log_out');
-
-Route::get('home','homeController@home')->name('home');
+//-------------------------quan ly--------------------------
+Route::resource('admin','adminResource')->only(['index']);
 
 Route::group(['prefix'=>'admin'],function(){
     Route::resource('register','DangkyController')->only(['index']);
     Route::resource('edit','EditUserController');
 });
+//-------------------------quan ly--------------------------
+
+
+
+//-----------------------dang xuat-------------------------------
+Route::get('log_out','logoutController@log_out')->name('log_out');
+//-----------------------dang xuat-------------------------------
+
+
+
+//----------------------trang chu----------------------------
+Route::get('/','homeController@home')->name('home');
+Route::get('home','homeController@home')->name('home');
+
 
 Route::group(['prefix'=>'home'],function(){
     Route::get('blog_details','homeController@blog_details')->name('blog_details');
@@ -47,6 +64,9 @@ Route::group(['prefix'=>'home'],function(){
     Route::get('even','homeController@even')->name('even');
     Route::get('project','homeController@project')->name('project');
 });
+//----------------------trang chu----------------------------
+
+
 
 
 
