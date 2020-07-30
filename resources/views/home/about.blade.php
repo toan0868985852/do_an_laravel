@@ -15,13 +15,13 @@
     <section class="page-title-area">
         <div class="container">
             <div class="page-title-content">
-                <h2>Causes Grid</h2>
+                <h2>About</h2>
                 <ul>
                     <li>
                         <a href="#">Home</a>
                     </li>
                     <i class="fa fa-chevron-right" style="color:#bab0b0"></i>
-                    <li>Causes Grid</li>
+                    <li>About</li>
                 </ul>
             </div>
         </div>
