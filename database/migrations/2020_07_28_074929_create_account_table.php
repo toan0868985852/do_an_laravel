@@ -18,10 +18,10 @@ class CreateAccountTable extends Migration
             $table->longText('thong_tin_ca_nhan');
             $table->string('phone');
             $table->double('so_tien');
-
-//            $table->integer('user_id')->unsigned();
-//            $table->foreign('user_id')->references('id')->on('user');
+            $table->integer('users_id')->unsigned();
             $table->timestamps();
+            $table->foreign('users_id')->references('id')->on('users');
+
         });
     }
 
