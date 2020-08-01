@@ -29,9 +29,9 @@
         </div>
         <div class="top-nav clearfix">
             <ul class="nav pull-right top-menu">
-                <li>
-                    <input type="text" class="form-control search" placeholder=" Search">
-                </li>
+{{--                <li>--}}
+{{--                    <input type="text" class="form-control search" placeholder=" Search">--}}
+{{--                </li>--}}
                 <!-- user login dropdown start-->
                 <li class="dropdown">
                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">

@@ -39,6 +39,7 @@ Route::resource('admin','adminResource')->only(['index']);
 Route::group(['prefix'=>'admin'],function(){
     Route::resource('register','DangkyController')->only(['index']);
     Route::resource('edit','EditUserController');
+    Route::get('register/serch','serchController@getserch')->name('serch');
 });
 //-------------------------quan ly--------------------------
 

@@ -11,10 +11,10 @@
                 <div class="col-sm-3">
                     <p style="position: relative; left: 497px">Tìm kiếm theo tên</p>
                     <div class="input-group">
-                        <input type="text" class="input-sm form-control" placeholder="Search">
-                        <span class="input-group-btn">
-            <button class="btn btn-sm btn-default" type="button"><i class="fa fa-search"></i></button>
-          </span>
+                        <form action="{{route('serch')}}" method="get">
+                            <input style="outline: none; width: 200px" type="text" name="key" class="input-sm form-control" placeholder="Search">
+                            <button style="float: right; position: absolute" class="btn btn-sm btn-default" ><i class="fa fa-search"></i></button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -43,11 +43,29 @@
                         <td>
                             <a href="/do_an_laravel/public/admin/edit/{{$user->id}}" class="active">
                                 <i class="fa fa-pencil-square-o text-success text-active"></i></a>
-                            <a href="">
+                            <a href="#myModal-2" data-toggle="modal">
                                 <i class="fa fa-times text-danger text"></i>
                             </a>
-                        </td>
-                    </tr>
+                                <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal-2" class="modal fade">
+                                     <div class="modal-dialog">
+                                         <div class="modal-content col-lg-6" style="margin-left: 28%">
+                                             <div class="modal-header">
+                                                 <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                                                 <h4 class="modal-title">ADMIN</h4>
+                                             </div>
+                                                <div class="modal-body">
+                                                    <p style="line-height: 57px; text-align: center">Bạn có muốn xóa người dùng này</p>
+                                                        <form style="margin-left: 67%" action="{{route('edit.destroy',$user->id)}}" method="post">
+                                                            {{csrf_field()}}
+                                                            {{method_field('delete')}}
+                                                            <button class="btn btn-default">Delete</button>
+                                                        </form>
+                                                </div>
+                                         </div>
+                                      </div>
+                                 </div>
+                            </td>
+                        </tr>
                     @endforeach
                     </tbody>
                 </table>

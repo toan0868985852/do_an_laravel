@@ -24,7 +24,7 @@ class EditUserController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -93,6 +93,7 @@ class EditUserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        User::findOrFail($id)->delete();
+        return redirect()->route('register.index');
     }
 }
