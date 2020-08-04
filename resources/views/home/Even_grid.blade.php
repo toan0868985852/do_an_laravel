@@ -78,7 +78,7 @@
                                 </li>
                                 <li>
                                     <i class='fas fa-calendar-alt'></i>
-                                    <span>5 Jun 2019</span>
+                                    <span>{{date("D-M-Y", strtotime("2011-01-07"))}}</span>
                                 </li>
                             </ul>
                             <a class="read-more" href="#">

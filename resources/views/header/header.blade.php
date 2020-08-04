@@ -26,11 +26,11 @@
 <section class="main">
 <header>
     <a href="{{route('home')}}" class="logo"><img src="{{asset('fronend/home/img/logo.png')}}" alt=""></a>
-    <button class="menu-toggler">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
+{{--    <button class="menu-toggler">--}}
+{{--        <span></span>--}}
+{{--        <span></span>--}}
+{{--        <span></span>--}}
+{{--    </button>--}}
     <ul class="navbar-menu">
         <li><a class="active" href="{{route('home')}}">Home</a></li>
         <li><a class="" href="{{route('about')}}">About</a></li>

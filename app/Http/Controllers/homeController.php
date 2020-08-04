@@ -33,7 +33,7 @@ class homeController extends Controller
     }
 
     public function even(){
-       return view('home.even');
+       return view('home.Even_grid');
     }
 
     public function project(){
