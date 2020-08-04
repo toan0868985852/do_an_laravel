@@ -11,13 +11,8 @@ class homeController extends Controller
         return view('home.home');
     }
 
-<<<<<<< HEAD
-    public function blog_content(){
-        return view('home.Blog_Details');
-=======
     public function blog_details($id){
         return view('home.blog_details.blog_details_1');
->>>>>>> update
     }
 
     public function blog($id){
@@ -26,14 +21,8 @@ class homeController extends Controller
     }
 
     public function blog_grid(){
-<<<<<<< HEAD
-        $bloggrid = projects::all()->where('trang_thai',1);
-        return view('home.Blog_Grid', compact('bloggrid'));
-
-=======
         $blogGrid = blog::all();
         return view('home.Blog_Grid',compact('blogGrid'));
->>>>>>> update
     }
 
     public function causes_details(){
@@ -49,7 +38,7 @@ class homeController extends Controller
     }
 
     public function even(){
-       return view('home.Even_grid');
+        return view('home.Even_grid');
     }
 
     public function project(){

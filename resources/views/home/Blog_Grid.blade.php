@@ -39,210 +39,68 @@
 <section class="blog-area" style="padding-top: 100px">
     <div class="container">
         <div class="row">
-<<<<<<< HEAD
-            @foreach($bloggrid as $blog)
-            <div class="col-lg-4 col-md-6">
-                <div class="single-news">
-                    <div class="news-img">
-                        <a href="#">
-                            <img style="width: 100%;" src="{{asset("fronend/home/img/projects/" . "$blog->img" . "")}}" alt="News">
-                        </a>
-                        <div class="date">
-                            <span>{{$blog->created_at}}</span>
-=======
             @foreach($blogGrid as $BlogGrids)
-            <div class="col-lg-4 col-md-6">
-                <div class="single-news">
-                    <div class="news-img">
-                        <a href="{{url("home/blog_details_1/" . "$BlogGrids->id" . "")}}">
-                            <img style="width: 100%;" src="{{asset("fronend/img_blog/blog/" . "$BlogGrids->img" . "")}}" alt="News">
-                        </a>
-                        <div class="date">
-                            <span>{{$BlogGrids->date}}</span>
->>>>>>> update
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-news">
+                        <div class="news-img">
+                            <a href="{{url("home/blog_details_1/" . "$BlogGrids->id" . "")}}">
+                                <img style="width: 100%;" src="{{asset("fronend/img_blog/blog/" . "$BlogGrids->img" . "")}}" alt="News">
+                            </a>
+                            <div class="date">
+                                <span>{{$BlogGrids->date}}</span>
+                            </div>
+                        </div>
+                        <div class="news-text" style="color:#747677">
+                            <ul>
+                                <li>
+                                    <i class='fas fa-user' style="color:#e22b64"></i>
+                                    By
+                                    <a class="name-user" href="{{url("home/blog_details_1/" . "$BlogGrids->id" . "")}}">
+                                        {{$BlogGrids->tac_gia}}
+                                    </a>
+                                </li>
+
+                            </ul>
+                            <h3>
+                                <a href="{{url("home/blog_details_1/" . "$BlogGrids->id" . "")}}">{{$BlogGrids->tieu_de}}</a>
+                            </h3>
+                            <p style="line-height: 23px">{{$BlogGrids->noi_dung}}</p>
+                            <a class="read-more" href="{{url("home/blog_details_1/" . "$BlogGrids->id" . "")}}">
+                                Read More
+                            </a>
                         </div>
                     </div>
-                    <div class="news-text" style="color:#747677">
-                        <ul>
-                            <li>
-                                <i class='fas fa-user' style="color:#e22b64"></i>
-                                By
-                                <a class="name-user" href="{{url("home/blog_details_1/" . "$BlogGrids->id" . "")}}">
-                                    {{$BlogGrids->tac_gia}}
-                                </a>
-                            </li>
-
-                        </ul>
-                        <h3>
-<<<<<<< HEAD
-                            <a href="{{route('blog_details_1')}}">{{$blog->ten_chien_dich}}</a>
-                        </h3>
-                        <p>{{$blog->content}}</p>
-                        <a class="read-more" href="{{route('blog_details_1')}}">
-=======
-                            <a href="{{url("home/blog_details_1/" . "$BlogGrids->id" . "")}}">{{$BlogGrids->tieu_de}}</a>
-                        </h3>
-                        <p style="line-height: 23px">{{$BlogGrids->noi_dung}}</p>
-                        <a class="read-more" href="{{url("home/blog_details_1/" . "$BlogGrids->id" . "")}}">
->>>>>>> update
-                            Read More
-                        </a>
-                    </div>
                 </div>
-            </div>
             @endforeach
-{{--            <div class="col-lg-4 col-md-6">--}}
-{{--                <div class="single-news">--}}
-{{--                    <div class="news-img">--}}
-{{--                        <a href="#">--}}
-{{--                            <img style="width: 100%;" src="{{asset('fronend/img_blog/blog/2.jpg')}}" alt="News">--}}
-{{--                        </a>--}}
-{{--                        <div class="date">--}}
-{{--                            <span>2 November</span>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                    <div class="news-text" style="color:#747677">--}}
-{{--                        <ul>--}}
-{{--                            <li>--}}
-{{--                                <i class='fas fa-user' style="color:#e22b64"></i>--}}
-{{--                                By--}}
-{{--                                <a class="name-user" href="#">Admin</a>--}}
-{{--                            </li>--}}
+            {{--            <div class="col-lg-4 col-md-6">--}}
+            {{--                <div class="single-news">--}}
+            {{--                    <div class="news-img">--}}
+            {{--                        <a href="#">--}}
+            {{--                            <img style="width: 100%;" src="{{asset('fronend/img_blog/blog/2.jpg')}}" alt="News">--}}
+            {{--                        </a>--}}
+            {{--                        <div class="date">--}}
+            {{--                            <span>2 November</span>--}}
+            {{--                        </div>--}}
+            {{--                    </div>--}}
+            {{--                    <div class="news-text" style="color:#747677">--}}
+            {{--                        <ul>--}}
+            {{--                            <li>--}}
+            {{--                                <i class='fas fa-user' style="color:#e22b64"></i>--}}
+            {{--                                By--}}
+            {{--                                <a class="name-user" href="#">Admin</a>--}}
+            {{--                            </li>--}}
 
-{{--                        </ul>--}}
-{{--                        <h3>--}}
-<<<<<<< HEAD
-{{--                            <a href="{{route('blog_details')}}">A place start a new life with peace</a>--}}
-{{--                        </h3>--}}
-{{--                        <p>Lorem ipsum dolor sit amet, consectetur eiussi adipiscing elit, sed do eiusmod tempor incididunt ut</p>--}}
-{{--                        <a class="read-more" href="{{route('blog_details')}}">--}}
-{{--                            Read More--}}
-{{--                        </a>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--            <div class="col-lg-4 col-md-6">--}}
-{{--                <div class="single-news">--}}
-{{--                    <div class="news-img">--}}
-{{--                        <a href="#">--}}
-{{--                            <img style="width: 100%;" src="{{asset('fronend/img_blog/blog/3.jpg')}}" alt="News">--}}
-{{--                        </a>--}}
-{{--                        <div class="date">--}}
-{{--                            <span>3 November</span>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                    <div class="news-text" style="color:#747677">--}}
-{{--                        <ul>--}}
-{{--                            <li>--}}
-{{--                                <i class='fas fa-user' style="color:#e22b64"></i>--}}
-{{--                                By--}}
-{{--                                <a class="name-user" href="#">Admin</a>--}}
-{{--                            </li>--}}
-
-{{--                        </ul>--}}
-{{--                        <h3>--}}
-{{--                            <a href="{{route('blog_details')}}">Build school for poor children</a>--}}
-{{--                        </h3>--}}
-{{--                        <p>Lorem ipsum dolor sit amet, consectetur eiussi adipiscing elit, sed do eiusmod tempor incididunt ut</p>--}}
-{{--                        <a class="read-more" href="{{route('blog_details')}}">--}}
-{{--                            Read More--}}
-{{--                        </a>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--            <div class="col-lg-4 col-md-6">--}}
-{{--                <div class="single-news">--}}
-{{--                    <div class="news-img">--}}
-{{--                        <a href="#">--}}
-{{--                            <img style="width: 100%;" src="{{asset('fronend/img_blog/blog/4.jpg')}}" alt="News">--}}
-{{--                        </a>--}}
-{{--                        <div class="date">--}}
-{{--                            <span>1 Jun</span>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                    <div class="news-text" style="color:#747677">--}}
-{{--                        <ul>--}}
-{{--                            <li>--}}
-{{--                                <i class='fas fa-user' style="color:#e22b64"></i>--}}
-{{--                                By--}}
-{{--                                <a class="name-user" href="#">Admin</a>--}}
-{{--                            </li>--}}
-
-{{--                        </ul>--}}
-{{--                        <h3>--}}
-{{--                            <a href="{{route('blog_details')}}">Support for Children</a>--}}
-{{--                        </h3>--}}
-{{--                        <p>Lorem ipsum dolor sit amet, consectetur eiussi adipiscing elit, sed do eiusmod tempor incididunt ut</p>--}}
-{{--                        <a class="read-more" href="{{route('blog_details')}}">--}}
-{{--                            Read More--}}
-{{--                        </a>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--            <div class="col-lg-4 col-md-6">--}}
-{{--                <div class="single-news">--}}
-{{--                    <div class="news-img">--}}
-{{--                        <a href="#">--}}
-{{--                            <img style="width: 100%;" src="{{asset('fronend/img_blog/blog/5.jpg')}}" alt="News">--}}
-{{--                        </a>--}}
-{{--                        <div class="date">--}}
-{{--                            <span>2 July</span>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                    <div class="news-text" style="color:#747677">--}}
-{{--                        <ul>--}}
-{{--                            <li>--}}
-{{--                                <i class='fas fa-user' style="color:#e22b64"></i>--}}
-{{--                                By--}}
-{{--                                <a class="name-user" href="#">Admin</a>--}}
-{{--                            </li>--}}
-
-{{--                        </ul>--}}
-{{--                        <h3>--}}
-{{--                            <a href="{{route('blog_details')}}">Capetown orphanage</a>--}}
-{{--                        </h3>--}}
-{{--                        <p>Lorem ipsum dolor sit amet, consectetur eiussi adipiscing elit, sed do eiusmod tempor incididunt ut</p>--}}
-{{--                        <a class="read-more" href="{{route('blog_details')}}">--}}
-{{--                            Read More--}}
-{{--                        </a>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--            <div class="col-lg-4 col-md-6">--}}
-{{--                <div class="single-news">--}}
-{{--                    <div class="news-img">--}}
-{{--                        <a href="#">--}}
-{{--                            <img style="width: 100%;" src="{{asset('fronend/img_blog/blog/6.jpg')}}" alt="News">--}}
-{{--                        </a>--}}
-{{--                        <div class="date">--}}
-{{--                            <span>3 Appril</span>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                    <div class="news-text" style="color:#747677">--}}
-{{--                        <ul>--}}
-{{--                            <li>--}}
-{{--                                <i class='fas fa-user' style="color:#e22b64"></i>--}}
-{{--                                By--}}
-{{--                                <a class="name-user" href="#">Admin</a>--}}
-{{--                            </li>--}}
-
-{{--                        </ul>--}}
-{{--                        <h3>--}}
-{{--                            <a href="{{route('blog_details')}}">Home For Homeless</a>--}}
-{{--                        </h3>--}}
-{{--                        <p>Lorem ipsum dolor sit amet, consectetur eiussi adipiscing elit, sed do eiusmod tempor incididunt ut</p>--}}
-{{--                        <a class="read-more" href="{{route('blog_details')}}">--}}
-=======
-{{--                            <a href="{{route('blog_details_1')}}">A place start a new life with peace</a>--}}
-{{--                        </h3>--}}
-{{--                        <p>Lorem ipsum dolor sit amet, consectetur eiussi adipiscing elit, sed do eiusmod tempor incididunt ut</p>--}}
-{{--                        <a class="read-more" href="{{route('blog_details_1')}}">--}}
->>>>>>> update
-{{--                            Read More--}}
-{{--                        </a>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
+            {{--                        </ul>--}}
+            {{--                        <h3>--}}
+            {{--                            <a href="{{route('blog_details_1')}}">A place start a new life with peace</a>--}}
+            {{--                        </h3>--}}
+            {{--                        <p>Lorem ipsum dolor sit amet, consectetur eiussi adipiscing elit, sed do eiusmod tempor incididunt ut</p>--}}
+            {{--                        <a class="read-more" href="{{route('blog_details_1')}}">--}}
+            {{--                            Read More--}}
+            {{--                        </a>--}}
+            {{--                    </div>--}}
+            {{--                </div>--}}
+            {{--            </div>--}}
         </div>
     </div>
 </section>
