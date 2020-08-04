@@ -45,10 +45,10 @@
     }
 }
 
-::-webkit-scrollbar{
+.loader::-webkit-scrollbar{
     width: 0;
 }
 
-::-webkit-scrollbar-thumb{
+.loader::-webkit-scrollbar-thumb{
     background: none;
 }
