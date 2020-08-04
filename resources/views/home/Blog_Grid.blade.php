@@ -60,10 +60,10 @@
 
                         </ul>
                         <h3>
-                            <a href="{{route('blog_details')}}">{{$blog->ten_chien_dich}}</a>
+                            <a href="{{route('blog_details_1')}}">{{$blog->ten_chien_dich}}</a>
                         </h3>
                         <p>{{$blog->content}}</p>
-                        <a class="read-more" href="{{route('blog_details')}}">
+                        <a class="read-more" href="{{route('blog_details_1')}}">
                             Read More
                         </a>
                     </div>
