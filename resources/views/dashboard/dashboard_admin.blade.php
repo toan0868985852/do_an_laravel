@@ -1,7 +1,5 @@
 @extends('admin')
 @section('content_admin')
-
-<!-- //market-->
             <div class="market-updates">
                 <div class="col-md-3 market-update-gd">
                     <div class="market-update-block clr-block-2">
@@ -57,5 +55,4 @@
                 </div>
                 <div class="clearfix"> </div>
             </div>
-<!-- //market-->
 @endsection

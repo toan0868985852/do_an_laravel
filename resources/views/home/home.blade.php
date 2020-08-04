@@ -536,10 +536,10 @@
 
                             </ul>
                             <h3>
-                                <a href="{{route('blog_details')}}">Highlight some of the fundraising</a>
+                                <a href="{{route('blog_details_1')}}">Highlight some of the fundraising</a>
                             </h3>
                             <p>Lorem ipsum dolor sit amet, consectetur eiussi adipiscing elit, sed do eiusmod tempor incididunt ut</p>
-                            <a class="read-more2" href="{{route('blog_details')}}">
+                            <a class="read-more2" href="{{route('blog_details_1')}}">
                                 Read More
                             </a>
                         </div>
@@ -565,10 +565,10 @@
 
                             </ul>
                             <h3>
-                                <a href="{{route('blog_details')}}">A place start a new life with peace</a>
+                                <a href="{{route('blog_details_1')}}">A place start a new life with peace</a>
                             </h3>
                             <p>Lorem ipsum dolor sit amet, consectetur eiussi adipiscing elit, sed do eiusmod tempor incididunt ut</p>
-                            <a class="read-more2" href="{{route('blog_details')}}">
+                            <a class="read-more2" href="{{route('blog_details_1')}}">
                                 Read More
                             </a>
                         </div>
@@ -594,10 +594,10 @@
 
                             </ul>
                             <h3>
-                                <a href="{{route('blog_details')}}">Build school for poor children</a>
+                                <a href="{{route('blog_details_1')}}">Build school for poor children</a>
                             </h3>
                             <p>Lorem ipsum dolor sit amet, consectetur eiussi adipiscing elit, sed do eiusmod tempor incididunt ut</p>
-                            <a class="read-more2" href="{{route('blog_details')}}">
+                            <a class="read-more2" href="{{route('blog_details_1')}}">
                                 Read More
                             </a>
                         </div>

@@ -14,6 +14,12 @@ body{
     overflow-x: hidden;
 }
 
+.main{
+    opacity: 0;
+    display: none;
+    transition: opacity 1s ease-in;
+}
+
 header{
     position: fixed;
     top: 0;
@@ -94,7 +100,8 @@ header ul li a{
     font-size: 15px;
     font-weight: 600;
     color: white;
-    margin: 0px 12px 0 12px ;
+    margin: 0px 12px 0 12px;
+
 }
 
 .sticky .dropdown .dropbtn{
@@ -1757,6 +1764,7 @@ img {
 
     header ul.active-menu{
         right: 0;
+        overflow-y: scroll;
     }
 
     .menu-toggler.active-menu span:nth-child(1){
@@ -1779,6 +1787,16 @@ img {
     .home {
         height: 70vh;
     }
+
+    .dropdown .dropbtn {
+        font-size: 32px;
+        line-height: 57px;
+        margin-left: 0px;
+    }
+
+    .dropdown-content {
+        z-index: 1000;
+    }
 }
 
 ::-webkit-scrollbar{
@@ -1789,4 +1807,5 @@ img {
     background: linear-gradient(transparent, #ff3073);
     border-radius: 50px;
 }
+
 

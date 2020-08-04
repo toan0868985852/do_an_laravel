@@ -248,3 +248,4 @@ function section7current4() {
     }
 }
 window.addEventListener('scroll', section7current4);
+

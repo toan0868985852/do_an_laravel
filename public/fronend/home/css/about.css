@@ -105,7 +105,7 @@ nav *{
     border: none;
     outline: none;
     background-color: inherit;
-    padding: 0 0 20px 0;
+    padding: 21px 0 20px 0;
 }
 
 .dropdown .dropbtn:hover {
@@ -891,6 +891,8 @@ header{
 .section2 .section2-4 div{
     margin-top: 35px;
 }
+
+
 
 
 

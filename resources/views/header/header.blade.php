@@ -10,13 +10,21 @@
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-
-
     <link rel="stylesheet" href="{{asset('fronend/home/css/slider.css')}}">
+    <link rel="stylesheet" href="{{asset('fronend/css/loader.css')}}">
+
 </head>
 <body>
+<div class="loader-img">
+<img src="{{asset('fronend/img/lago2.png')}}" alt="">
+<div class="loader">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+</div>
+<section class="main">
 <header>
-
     <a href="{{route('home')}}" class="logo"><img src="{{asset('fronend/home/img/logo.png')}}" alt=""></a>
     <button class="menu-toggler">
         <span></span>
@@ -46,7 +54,7 @@
                 </button>
                 <div class="dropdown-content">
                     <a href="{{route('blog_grid')}}">Blog Grid</a>
-                    <a href="{{route('blog_details')}}">Blog Details</a>
+                    <a href="{{route('blog_details_1')}}">Blog Details</a>
                 </div>
             </div>
         </li>
@@ -77,7 +85,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="{{asset('fronend/home/js/jsitem.js')}}"></script>
 <script src="{{asset('fronend/home/js/slider.js')}}"></script>
-
+<script src="{{asset('fronend/home/js/loader.js')}}"></script>
+</section>
 </body>
 </html>
 
