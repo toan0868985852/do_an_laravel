@@ -15,14 +15,14 @@
 
 </head>
 <body>
-<div class="loader-img">
-<img src="{{asset('fronend/img/lago2.png')}}" alt="">
-<div class="loader">
-    <span></span>
-    <span></span>
-    <span></span>
-</div>
-</div>
+{{--<div class="loader-img">--}}
+{{--<img src="{{asset('fronend/img/lago2.png')}}" alt="">--}}
+{{--<div class="loader">--}}
+{{--    <span></span>--}}
+{{--    <span></span>--}}
+{{--    <span></span>--}}
+{{--</div>--}}
+{{--</div>--}}
 <section class="main">
 <header>
     <a href="{{route('home')}}" class="logo"><img src="{{asset('fronend/home/img/logo.png')}}" alt=""></a>
@@ -54,7 +54,7 @@
                 </button>
                 <div class="dropdown-content">
                     <a href="{{route('blog_grid')}}">Blog Grid</a>
-                    <a href="{{route('blog_details_1')}}">Blog Details</a>
+                    <a href="{{url('home/blog_details_1/1')}}">Blog Details</a>
                 </div>
             </div>
         </li>

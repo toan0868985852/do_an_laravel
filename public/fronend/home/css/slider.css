@@ -14,11 +14,11 @@ body{
     overflow-x: hidden;
 }
 
-.main{
-    opacity: 0;
-    display: none;
-    transition: opacity 1s ease-in;
-}
+/*.main{*/
+/*    opacity: 0;*/
+/*    display: none;*/
+/*    transition: opacity 1s ease-in;*/
+/*}*/
 
 header{
     position: fixed;

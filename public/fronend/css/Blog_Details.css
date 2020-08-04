@@ -291,7 +291,7 @@ body {
     background-color: #ffffff;
 }
 .comments-meta{
-    padding-left: 55px;
+    padding-left: 23px;
 }
 .comments-area .comment-body {
     border-bottom: 1px solid #eeeeee;
@@ -345,7 +345,7 @@ body {
 .comments-area .comment-metadata a {
     color: #666666;
 }
-.comments-area .comment-body .reply .comment-reply-link a{
+.comment-reply-link {
     border: 1px solid #ded9d9;
     color: #151d41;
     display: inline-block;
@@ -356,4 +356,109 @@ body {
     z-index: 1;
     font-size: 13px;
     font-weight: 600;
+}
+.comment-reply-link:hover{
+    color: #ffffff;
+    background-color: #fd3c65;
+    border-color: #fd3c65;
+    transition: all 0.5s;
+    text-decoration: none;
+}
+.comment-reply-title {
+    margin-bottom: 15px;
+    position: relative;
+    font-size: 22px;
+    font-weight: 600;
+}
+.comment-reply-title::before {
+    content: '';
+    height: 25px;
+    width: 3px;
+    left: -25px;
+    position: absolute;
+    background: #fd3c65;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.comment-form-comment label {
+    display: block;
+    font-weight: 500;
+    color: #151d41;
+    margin-bottom: 5px;
+}
+.comment-form-comment textarea {
+    display: block;
+    width: 100%;
+    background-color: #ffffff;
+    border: 1px solid #eeeeee;
+    padding: 0.625em 0.7375em;
+    outline: 0;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+}
+.comment-form-comment{
+    margin-top: 15px;
+    float: left;
+    width: 100%;
+}
+.comment-form-author {
+    float: left;
+    width: 50%;
+    padding-right: 10px;
+    margin-bottom: 20px;
+}
+.comment-form-author input[type="text"] {
+    display: block;
+    width: 100%;
+    background-color: #ffffff;
+    border: 1px solid #eeeeee;
+    padding: 0.625em 0.7375em;
+    outline: 0;
+
+    transition: 0.5s;
+}
+.comment-form-email {
+    float: left;
+    width: 50%;
+    padding-left: 12px;
+    margin-bottom: 20px;
+}
+.comment-form-email input[type="email"] {
+    display: block;
+    width: 100%;
+    background-color: #ffffff;
+    border: 1px solid #eeeeee;
+    padding: 0.625em 0.7375em;
+    outline: 0;
+
+    transition: 0.5s;
+}
+.comment-form-url {
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.comment-form-url input[type="url"] {
+    display: block;
+    width: 100%;
+    background-color: #ffffff;
+    border: 1px solid #eeeeee;
+    padding: 0.625em 0.7375em;
+    outline: 0;
+
+    transition: 0.5s;
+}
+.form-submit input {
+    background: #fd3c65;
+    border: none;
+    color: #ffffff;
+    padding: 14px 30px 12px;
+    display: inline-block;
+    cursor: pointer;
+    outline: 0;
+    border-radius: 0;
+    text-transform: uppercase;
+    transition: 0.5s;
+    font-size: 14px;
 }
