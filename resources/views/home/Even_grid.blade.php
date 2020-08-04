@@ -122,7 +122,7 @@
                 </div>
                 <div class="list-img-text">
                     <div class="background">
-                        <img src=".{{asset('fronend/homeimg/even/backgrou.jpg')}}" alt="" width="270px" height="260px">
+                        <img src="{{asset('fronend/home/img/even/backgrou.jpg')}}" alt="" width="270px" height="260px">
                     </div>
                     <div class="list-item">
                         <div class="list-item__img">

@@ -19,6 +19,8 @@ body{
     padding-top: 6%;
     padding-bottom: 5%;
     height: 380px;
+    background-color: black;
+    opacity: 0.9;
 }
 .setting-background{
     background:linear-gradient(black,black);

@@ -59,6 +59,7 @@ Route::get('home','homeController@home')->name('home');
 
 Route::group(['prefix'=>'home'],function(){
     Route::get('blog_details','homeController@blog_details_1')->name('blog_details_1');
+    Route::get('blog_details_1/{id}','homeController@blog');
     Route::get('blog_grid','homeController@blog_grid')->name('blog_grid');
     Route::get('causes_details','homeController@causes_details')->name('causes_details');
     Route::get('causes_grid','homeController@causes_grid')->name('causes_grid');
