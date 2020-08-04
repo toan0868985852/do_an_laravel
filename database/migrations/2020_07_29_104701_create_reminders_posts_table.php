@@ -14,9 +14,12 @@ class CreateRemindersPostsTable extends Migration
     public function up()
     {
         Schema::create('reminders', function (Blueprint $table) {
+            $table->increments('id');
             $table->integer('user_id');
             $table->string('code');
+            $table->string('code');
             $table->integer('completed');
+            $table->date('completed_at');
             $table->timestamps();
         });
     }

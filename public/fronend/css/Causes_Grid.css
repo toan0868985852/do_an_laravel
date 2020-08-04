@@ -98,8 +98,8 @@ body {
     font-size: 35px;
     text-align: center;
     color: #e22b64;
-    margin-bottom: 18px;
-    margin-top: 25px;
+    margin-bottom: 13px;
+    margin-top: 17px;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
 }
@@ -184,18 +184,18 @@ body {
     transition: all 0.5s;
     text-decoration: none;
 }
-/*.read-more::before{*/
-/*    content: "";*/
-/*    position: absolute;*/
-/*    bottom: -5px;*/
-/*    left: 50%;*/
-/*    width: 100%;*/
-/*    height: 1px;*/
-/*    transform: translateX(-50%) scaleX(1);*/
-/*    transform-origin: 50%;*/
-/*    background-color: #e22b64;*/
-/*    transition: transform 250ms;*/
-/*}*/
+.single-good-causes .read-more::before{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 100%;
+    height: 1px;
+    transform: translateX(-50%) scaleX(1);
+    transform-origin: 50%;
+    background-color: #e22b64;
+    transition: transform 250ms;
+}
 
 .single-good-causes:hover .read-more{
     color: #E22B64;

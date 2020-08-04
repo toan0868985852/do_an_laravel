@@ -10,8 +10,8 @@ class homeController extends Controller
         return view('home.home');
     }
 
-    public function blog_details(){
-        return view('home.Blog_Details');
+    public function blog_details_1(){
+        return view('home.blog_details.blog_details_1');
     }
 
     public function blog_grid(){
@@ -31,7 +31,7 @@ class homeController extends Controller
     }
 
     public function even(){
-       return view('home.even');
+       return view('home.Even_grid');
     }
 
     public function project(){

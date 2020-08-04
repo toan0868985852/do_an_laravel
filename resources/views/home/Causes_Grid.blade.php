@@ -50,8 +50,10 @@
             <div class="col-lg-4 col-md-6">
                 <div class="single-good-causes">
                     <i class='fas fa-gift'></i>
-                    <h3>Surprised Box</h3>
-                    <p>Lorem ipsum dolor amet, consectetur amet adipiscing elit, sed do eiusmod  incididunt labore  dolore.</p>
+                    <h3 style="font-weight: 700; font-size: 20px">Surprised Box</h3>
+                    <p style="color: gray;font-size: 15px;line-height: 25px;">
+                        Lorem ipsum dolor amet, consectetur amet adipiscing elit, sed do eiusmod  incididunt labore  dolore.
+                    </p>
                     <a class="read-more" href="#">
                         Read More
                     </a>
@@ -60,8 +62,10 @@
             <div class="col-lg-4 col-md-6">
                 <div class="single-good-causes">
                     <i class='fas fa-hand-holding-usd hand1' style="color: #eca66b"></i>
-                    <h3>Helping Hand</h3>
-                    <p>Lorem ipsum dolor amet, consectetur amet adipiscing elit, sed do eiusmod  incididunt labore  dolore.</p>
+                    <h3 style="font-weight: 700; font-size: 20px">Helping Hand</h3>
+                    <p style="color: gray;font-size: 15px;line-height: 25px;">
+                        Lorem ipsum dolor amet, consectetur amet adipiscing elit, sed do eiusmod  incididunt labore  dolore.
+                    </p>
                     <a class="read-more" href="#">
                         Read More
                     </a>
@@ -70,8 +74,10 @@
             <div class="col-lg-4 col-md-6">
                 <div class="single-good-causes">
                     <i class='fas fa-hand-holding-usd hand2'  style="color: #54c983"></i>
-                    <h3>Aid For Children</h3>
-                    <p>Lorem ipsum dolor amet, consectetur amet adipiscing elit, sed do eiusmod  incididunt labore  dolore.</p>
+                    <h3 style="font-weight: 700; font-size: 20px">Aid For Children</h3>
+                    <p style="color: gray;font-size: 15px;line-height: 25px;">
+                        Lorem ipsum dolor amet, consectetur amet adipiscing elit, sed do eiusmod  incididunt labore  dolore.
+                    </p>
                     <a class="read-more" href="#">
                         Read More
                     </a>
@@ -80,8 +86,10 @@
             <div class="col-lg-4 col-md-6">
                 <div class="single-good-causes">
                     <i class='fas fa-users' style="color: #62d1d3"></i>
-                    <h3>Helping Hand</h3>
-                    <p>Lorem ipsum dolor amet, consectetur amet adipiscing elit, sed do eiusmod  incididunt labore  dolore.</p>
+                    <h3 style="font-weight: 700; font-size: 20px">Helping Hand</h3>
+                    <p style="color: gray;font-size: 15px;line-height: 25px;">
+                        Lorem ipsum dolor amet, consectetur amet adipiscing elit, sed do eiusmod  incididunt labore  dolore.
+                    </p>
                     <a class="read-more" href="#">
                         Read More
                     </a>
@@ -90,8 +98,10 @@
             <div class="col-lg-4 col-md-6">
                 <div class="single-good-causes">
                     <i class='fas fa-apple-alt' style="color: #eb6840"></i>
-                    <h3>Food Camp</h3>
-                    <p>Lorem ipsum dolor amet, consectetur amet adipiscing elit, sed do eiusmod  incididunt labore  dolore.</p>
+                    <h3 style="font-weight: 700; font-size: 20px">Food Camp</h3>
+                    <p style="color: gray;font-size: 15px;line-height: 25px;">
+                        Lorem ipsum dolor amet, consectetur amet adipiscing elit, sed do eiusmod  incididunt labore  dolore.
+                    </p>
                     <a class="read-more" href="#">
                         Read More
                     </a>
@@ -100,8 +110,10 @@
             <div class="col-lg-4 col-md-6">
                 <div class="single-good-causes">
                     <i class='far fa-smile-beam' style="color: #7c3c83"></i>
-                    <h3>Smile Session</h3>
-                    <p>Lorem ipsum dolor amet, consectetur amet adipiscing elit, sed do eiusmod  incididunt labore  dolore.</p>
+                    <h3 style="font-weight: 700; font-size: 20px">Smile Session</h3>
+                    <p style="color: gray;font-size: 15px;line-height: 25px;">
+                        Lorem ipsum dolor amet, consectetur amet adipiscing elit, sed do eiusmod  incididunt labore  dolore.
+                    </p>
                     <a class="read-more" href="#">
                         Read More
                     </a>

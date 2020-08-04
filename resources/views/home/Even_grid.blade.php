@@ -17,7 +17,7 @@
     <span class="setting-background"></span>
         <div class="container">
             <h1>Event Grid</h1>
-            <p class="link-title"><a href="#">Home</a> <i class="fa fa-angle-right"></i> <b>Projects</b></p>
+            <p class="link-title"><a href="#">Home</a> <i class="fa fa-angle-right"></i> <b>Event</b></p>
         </div>
 </section>
 <section class="section-item">

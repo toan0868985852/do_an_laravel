@@ -21,6 +21,7 @@
     <header class="header fixed-top clearfix">
         <div class="brand">
             <a href="index.html" class="logo">
+                <img src="{{asset('fronend/img/lago2.png')}}" alt="">
                 ADMIN
             </a>
             <div class="sidebar-toggle-box">
@@ -105,7 +106,7 @@
                         </a>
                         <ul class="sub">
                             <li><a href="mail.html">Inbox</a></li>
-                            <li><a href="mail_compose.html">Compose Mail</a></li>
+                            <li><a href="{{route('mail')}}">Compose Mail</a></li>
                         </ul>
                     </li>
                     <li class="sub-menu">
