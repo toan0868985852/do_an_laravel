@@ -30,15 +30,15 @@ Route::post('/reset_password/{email}/{code}','forgotPasswordControllers@resetPas
 //-----------------------------reset password--------------------------------------
 
 
-Route::resource('user','UserResouce')->middleware('adminlogin');
+Route::resource('user','userResouce')->middleware('adminlogin');
 
 
 //-------------------------quan ly--------------------------
 Route::resource('admin','adminResource')->only(['index']);
 
 Route::group(['prefix'=>'admin'],function(){
-    Route::resource('register','DangkyController')->only(['index']);
-    Route::resource('edit','EditUserController');
+    Route::resource('register','registerController')->only(['index']);
+    Route::resource('edit','editUserController');
     Route::get('register/serch','serchController@getserch')->name('serch');
 });
 //-------------------------quan ly--------------------------

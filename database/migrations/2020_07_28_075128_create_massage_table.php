@@ -15,7 +15,7 @@ class CreateMassageTable extends Migration
     {
         Schema::create('massage', function (Blueprint $table) {
             $table->increments('id');
-            $table->longText('noi_dung');
+            $table->longText('comment');
             $table->timestamps();
         });
     }

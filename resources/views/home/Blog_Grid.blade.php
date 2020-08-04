@@ -39,14 +39,15 @@
 <section class="blog-area" style="padding-top: 100px">
     <div class="container">
         <div class="row">
+            @foreach($bloggrid as $blog)
             <div class="col-lg-4 col-md-6">
                 <div class="single-news">
                     <div class="news-img">
                         <a href="#">
-                            <img style="width: 100%;" src="{{asset('fronend/img_blog/blog/1.jpg')}}" alt="News">
+                            <img style="width: 100%;" src="{{asset("fronend/home/img/projects/" . "$blog->img" . "")}}" alt="News">
                         </a>
                         <div class="date">
-                            <span>1 November</span>
+                            <span>{{$blog->created_at}}</span>
                         </div>
                     </div>
                     <div class="news-text" style="color:#747677">
@@ -59,160 +60,161 @@
 
                         </ul>
                         <h3>
-                            <a href="{{route('blog_details')}}">Highlight some of the fundraising</a>
+                            <a href="{{route('blog_details')}}">{{$blog->ten_chien_dich}}</a>
                         </h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur eiussi adipiscing elit, sed do eiusmod tempor incididunt ut</p>
+                        <p>{{$blog->content}}</p>
                         <a class="read-more" href="{{route('blog_details')}}">
                             Read More
                         </a>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single-news">
-                    <div class="news-img">
-                        <a href="#">
-                            <img style="width: 100%;" src="{{asset('fronend/img_blog/blog/2.jpg')}}" alt="News">
-                        </a>
-                        <div class="date">
-                            <span>2 November</span>
-                        </div>
-                    </div>
-                    <div class="news-text" style="color:#747677">
-                        <ul>
-                            <li>
-                                <i class='fas fa-user' style="color:#e22b64"></i>
-                                By
-                                <a class="name-user" href="#">Admin</a>
-                            </li>
+            @endforeach
+{{--            <div class="col-lg-4 col-md-6">--}}
+{{--                <div class="single-news">--}}
+{{--                    <div class="news-img">--}}
+{{--                        <a href="#">--}}
+{{--                            <img style="width: 100%;" src="{{asset('fronend/img_blog/blog/2.jpg')}}" alt="News">--}}
+{{--                        </a>--}}
+{{--                        <div class="date">--}}
+{{--                            <span>2 November</span>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <div class="news-text" style="color:#747677">--}}
+{{--                        <ul>--}}
+{{--                            <li>--}}
+{{--                                <i class='fas fa-user' style="color:#e22b64"></i>--}}
+{{--                                By--}}
+{{--                                <a class="name-user" href="#">Admin</a>--}}
+{{--                            </li>--}}
 
-                        </ul>
-                        <h3>
-                            <a href="{{route('blog_details')}}">A place start a new life with peace</a>
-                        </h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur eiussi adipiscing elit, sed do eiusmod tempor incididunt ut</p>
-                        <a class="read-more" href="{{route('blog_details')}}">
-                            Read More
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single-news">
-                    <div class="news-img">
-                        <a href="#">
-                            <img style="width: 100%;" src="{{asset('fronend/img_blog/blog/3.jpg')}}" alt="News">
-                        </a>
-                        <div class="date">
-                            <span>3 November</span>
-                        </div>
-                    </div>
-                    <div class="news-text" style="color:#747677">
-                        <ul>
-                            <li>
-                                <i class='fas fa-user' style="color:#e22b64"></i>
-                                By
-                                <a class="name-user" href="#">Admin</a>
-                            </li>
+{{--                        </ul>--}}
+{{--                        <h3>--}}
+{{--                            <a href="{{route('blog_details')}}">A place start a new life with peace</a>--}}
+{{--                        </h3>--}}
+{{--                        <p>Lorem ipsum dolor sit amet, consectetur eiussi adipiscing elit, sed do eiusmod tempor incididunt ut</p>--}}
+{{--                        <a class="read-more" href="{{route('blog_details')}}">--}}
+{{--                            Read More--}}
+{{--                        </a>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--            <div class="col-lg-4 col-md-6">--}}
+{{--                <div class="single-news">--}}
+{{--                    <div class="news-img">--}}
+{{--                        <a href="#">--}}
+{{--                            <img style="width: 100%;" src="{{asset('fronend/img_blog/blog/3.jpg')}}" alt="News">--}}
+{{--                        </a>--}}
+{{--                        <div class="date">--}}
+{{--                            <span>3 November</span>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <div class="news-text" style="color:#747677">--}}
+{{--                        <ul>--}}
+{{--                            <li>--}}
+{{--                                <i class='fas fa-user' style="color:#e22b64"></i>--}}
+{{--                                By--}}
+{{--                                <a class="name-user" href="#">Admin</a>--}}
+{{--                            </li>--}}
 
-                        </ul>
-                        <h3>
-                            <a href="{{route('blog_details')}}">Build school for poor children</a>
-                        </h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur eiussi adipiscing elit, sed do eiusmod tempor incididunt ut</p>
-                        <a class="read-more" href="{{route('blog_details')}}">
-                            Read More
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single-news">
-                    <div class="news-img">
-                        <a href="#">
-                            <img style="width: 100%;" src="{{asset('fronend/img_blog/blog/4.jpg')}}" alt="News">
-                        </a>
-                        <div class="date">
-                            <span>1 Jun</span>
-                        </div>
-                    </div>
-                    <div class="news-text" style="color:#747677">
-                        <ul>
-                            <li>
-                                <i class='fas fa-user' style="color:#e22b64"></i>
-                                By
-                                <a class="name-user" href="#">Admin</a>
-                            </li>
+{{--                        </ul>--}}
+{{--                        <h3>--}}
+{{--                            <a href="{{route('blog_details')}}">Build school for poor children</a>--}}
+{{--                        </h3>--}}
+{{--                        <p>Lorem ipsum dolor sit amet, consectetur eiussi adipiscing elit, sed do eiusmod tempor incididunt ut</p>--}}
+{{--                        <a class="read-more" href="{{route('blog_details')}}">--}}
+{{--                            Read More--}}
+{{--                        </a>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--            <div class="col-lg-4 col-md-6">--}}
+{{--                <div class="single-news">--}}
+{{--                    <div class="news-img">--}}
+{{--                        <a href="#">--}}
+{{--                            <img style="width: 100%;" src="{{asset('fronend/img_blog/blog/4.jpg')}}" alt="News">--}}
+{{--                        </a>--}}
+{{--                        <div class="date">--}}
+{{--                            <span>1 Jun</span>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <div class="news-text" style="color:#747677">--}}
+{{--                        <ul>--}}
+{{--                            <li>--}}
+{{--                                <i class='fas fa-user' style="color:#e22b64"></i>--}}
+{{--                                By--}}
+{{--                                <a class="name-user" href="#">Admin</a>--}}
+{{--                            </li>--}}
 
-                        </ul>
-                        <h3>
-                            <a href="{{route('blog_details')}}">Support for Children</a>
-                        </h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur eiussi adipiscing elit, sed do eiusmod tempor incididunt ut</p>
-                        <a class="read-more" href="{{route('blog_details')}}">
-                            Read More
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single-news">
-                    <div class="news-img">
-                        <a href="#">
-                            <img style="width: 100%;" src="{{asset('fronend/img_blog/blog/5.jpg')}}" alt="News">
-                        </a>
-                        <div class="date">
-                            <span>2 July</span>
-                        </div>
-                    </div>
-                    <div class="news-text" style="color:#747677">
-                        <ul>
-                            <li>
-                                <i class='fas fa-user' style="color:#e22b64"></i>
-                                By
-                                <a class="name-user" href="#">Admin</a>
-                            </li>
+{{--                        </ul>--}}
+{{--                        <h3>--}}
+{{--                            <a href="{{route('blog_details')}}">Support for Children</a>--}}
+{{--                        </h3>--}}
+{{--                        <p>Lorem ipsum dolor sit amet, consectetur eiussi adipiscing elit, sed do eiusmod tempor incididunt ut</p>--}}
+{{--                        <a class="read-more" href="{{route('blog_details')}}">--}}
+{{--                            Read More--}}
+{{--                        </a>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--            <div class="col-lg-4 col-md-6">--}}
+{{--                <div class="single-news">--}}
+{{--                    <div class="news-img">--}}
+{{--                        <a href="#">--}}
+{{--                            <img style="width: 100%;" src="{{asset('fronend/img_blog/blog/5.jpg')}}" alt="News">--}}
+{{--                        </a>--}}
+{{--                        <div class="date">--}}
+{{--                            <span>2 July</span>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <div class="news-text" style="color:#747677">--}}
+{{--                        <ul>--}}
+{{--                            <li>--}}
+{{--                                <i class='fas fa-user' style="color:#e22b64"></i>--}}
+{{--                                By--}}
+{{--                                <a class="name-user" href="#">Admin</a>--}}
+{{--                            </li>--}}
 
-                        </ul>
-                        <h3>
-                            <a href="{{route('blog_details')}}">Capetown orphanage</a>
-                        </h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur eiussi adipiscing elit, sed do eiusmod tempor incididunt ut</p>
-                        <a class="read-more" href="{{route('blog_details')}}">
-                            Read More
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single-news">
-                    <div class="news-img">
-                        <a href="#">
-                            <img style="width: 100%;" src="{{asset('fronend/img_blog/blog/6.jpg')}}" alt="News">
-                        </a>
-                        <div class="date">
-                            <span>3 Appril</span>
-                        </div>
-                    </div>
-                    <div class="news-text" style="color:#747677">
-                        <ul>
-                            <li>
-                                <i class='fas fa-user' style="color:#e22b64"></i>
-                                By
-                                <a class="name-user" href="#">Admin</a>
-                            </li>
+{{--                        </ul>--}}
+{{--                        <h3>--}}
+{{--                            <a href="{{route('blog_details')}}">Capetown orphanage</a>--}}
+{{--                        </h3>--}}
+{{--                        <p>Lorem ipsum dolor sit amet, consectetur eiussi adipiscing elit, sed do eiusmod tempor incididunt ut</p>--}}
+{{--                        <a class="read-more" href="{{route('blog_details')}}">--}}
+{{--                            Read More--}}
+{{--                        </a>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--            <div class="col-lg-4 col-md-6">--}}
+{{--                <div class="single-news">--}}
+{{--                    <div class="news-img">--}}
+{{--                        <a href="#">--}}
+{{--                            <img style="width: 100%;" src="{{asset('fronend/img_blog/blog/6.jpg')}}" alt="News">--}}
+{{--                        </a>--}}
+{{--                        <div class="date">--}}
+{{--                            <span>3 Appril</span>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <div class="news-text" style="color:#747677">--}}
+{{--                        <ul>--}}
+{{--                            <li>--}}
+{{--                                <i class='fas fa-user' style="color:#e22b64"></i>--}}
+{{--                                By--}}
+{{--                                <a class="name-user" href="#">Admin</a>--}}
+{{--                            </li>--}}
 
-                        </ul>
-                        <h3>
-                            <a href="{{route('blog_details')}}">Home For Homeless</a>
-                        </h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur eiussi adipiscing elit, sed do eiusmod tempor incididunt ut</p>
-                        <a class="read-more" href="{{route('blog_details')}}">
-                            Read More
-                        </a>
-                    </div>
-                </div>
-            </div>
+{{--                        </ul>--}}
+{{--                        <h3>--}}
+{{--                            <a href="{{route('blog_details')}}">Home For Homeless</a>--}}
+{{--                        </h3>--}}
+{{--                        <p>Lorem ipsum dolor sit amet, consectetur eiussi adipiscing elit, sed do eiusmod tempor incididunt ut</p>--}}
+{{--                        <a class="read-more" href="{{route('blog_details')}}">--}}
+{{--                            Read More--}}
+{{--                        </a>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
         </div>
     </div>
 </section>

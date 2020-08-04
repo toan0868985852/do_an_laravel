@@ -10,12 +10,14 @@ class homeController extends Controller
         return view('home.home');
     }
 
-    public function blog_details(){
+    public function blog_content(){
         return view('home.Blog_Details');
     }
 
     public function blog_grid(){
-        return view('home.Blog_Grid');
+        $bloggrid = projects::all()->where('trang_thai',1);
+        return view('home.Blog_Grid', compact('bloggrid'));
+
     }
 
     public function causes_details(){

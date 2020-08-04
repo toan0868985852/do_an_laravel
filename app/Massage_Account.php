@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class massage_account extends Model
+class Massage_Account extends Model
 {
     protected $table = "massage_account" ;
 
-   
+
 }

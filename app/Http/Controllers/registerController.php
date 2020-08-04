@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\User;
 use Illuminate\Http\Request;
 
-class DangkyController extends Controller
+class registerController extends Controller
 {
     /**
      * Display a listing of the resource.

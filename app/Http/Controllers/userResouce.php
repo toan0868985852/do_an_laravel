@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use  App\User;
 
-class EditUserController extends Controller
+class userResouce extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +13,7 @@ class EditUserController extends Controller
      */
     public function index()
     {
-
+        //
     }
 
     /**
@@ -24,7 +23,7 @@ class EditUserController extends Controller
      */
     public function create()
     {
-
+        //
     }
 
     /**
@@ -46,8 +45,7 @@ class EditUserController extends Controller
      */
     public function show($id)
     {
-        $editUser = User::findOrFail($id);
-        return view('dashboard.edit.edit_user', compact('editUser'));
+        //
     }
 
     /**
@@ -70,19 +68,7 @@ class EditUserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $this->validate($request,
-            [
-                'name'=>'required|unique:users,name',
-            ],
-            [
-                'name.unique'=>'Tên đã có người sử dụng',
-            ]);
-        $news = User::find($id);
-        $news->name = $request->name;
-        $news->email = $request->email;
-        $news->created_at = $request->time;
-        $news->save();
-        return redirect()->route('register.index');
+        //
     }
 
     /**
@@ -93,7 +79,6 @@ class EditUserController extends Controller
      */
     public function destroy($id)
     {
-        User::findOrFail($id)->delete();
-        return redirect()->route('register.index');
+        //
     }
 }

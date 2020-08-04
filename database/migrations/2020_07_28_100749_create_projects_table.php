@@ -16,10 +16,10 @@ class CreateProjectsTable extends Migration
         Schema::create('projects', function (Blueprint $table) {
             $table->increments('id');
             $table->string('img');
-            $table->string('ten_chien_dich');
-            $table->string('trang_thai');
-            $table->double('muc_tieu');
-            $table->double('so_tien_quyen_gop_duoc');
+            $table->string('campaign_name');
+            $table->string('status');
+            $table->double('target');
+            $table->double('balance_donate');
             $table->timestamps();
         });
     }

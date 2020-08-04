@@ -15,9 +15,9 @@ class CreateBlogTable extends Migration
     {
         Schema::create('blog', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('tac_gia');
-            $table->string('tieu_de');
-            $table->longText('noi_dung');
+            $table->string('author');
+            $table->string('title');
+            $table->longText('content');
             $table->integer('project_id')->unsigned();
             $table->timestamps();
             $table->foreign('project_id')->references('id')->on('projects');
