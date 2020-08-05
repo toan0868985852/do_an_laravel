@@ -1533,10 +1533,11 @@ img {
 }
 
 .list-item__text h4{
-    margin-top: 15px;
+    text-align: left;
+    margin-top: 21px;
     font-size: 18px;
     font-weight: 600;
-    line-height: 40px;
+    line-height: 25px;
 }
 
 .list-item__text p {

@@ -26,7 +26,7 @@
             <h2>Blog Default</h2>
             <ul>
                 <li>
-                    <a href="#">Home</a>
+                    <a href="{{route('home')}}">Home</a>
                 </li>
                 <i class="fa fa-chevron-right" style="color:#bab0b0"></i>
                 <li>Blog Default</li>
@@ -40,20 +40,13 @@
         <div class="row">
             <div class="col-lg-8 col-md-12">
                 <div class="blog-details-desc">
-                    <img src="{{asset('fronend/img_blog/blogdefault1.jpg')}}" style="width: 100%;">
-                    <div class="article-content">
-                        <div class="entry-meta">
-                            <ul>
-                                <li style="width: 50%;"><span style="color: #fd3c65">Posted On:</span> <a href="#">September 31, 2020</a></li>
-                                <li style="width: 50%;"><span style="color: #fd3c65">Posted By:</span> <a href="#">John Anderson</a></li>
-                            </ul>
-{{--                            <h3>Weather Evident Smiling Bed Against</h3>--}}
-{{--                            <p>Quuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quia non numquam eius modi tempora incidunt ut labore et dolore magnam dolor sit amet, consectetur adipisicing.</p>--}}
-{{--                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in  sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>--}}
-{{--                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in  sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>--}}
-                                @yield('blog_details_1')
-                        </div>
-                    </div>
+
+
+                    {{--Blog_Details--}}
+                    @yield('blog_details_1')
+                    {{--Blog_Details--}}
+
+
                     <div class="article-footer">
                         <div class="article-tags">
                             <span><i class="fa fa-share" style="color: #e22b64"></i></span>
@@ -79,87 +72,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="comments-area">
-                        <h3 class="comments-title">
-                            2 Comments:
-                        </h3>
-                        <ul class="comments-list">
-                            <li class="comment">
-                                <div class="comment-body">
-                                    <footer class="comments-meta">
-                                        <div class="comment-author vcard">
-                                            <img src="{{asset('fronend/img_blog/Blog-Details/11.jpg')}}" class="avatar" alt="image">
-                                            <b class="fn">John Jones</b>
-                                        </div>
-                                        <div class="comment-metadata">
-                                            <a href="#">
-                                                <span>April 24, 2019 at 10:59 am</span>
-                                            </a>
-                                        </div>
-                                        <div class="comment-content">
-                                            <p>Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                        </div>
-                                        <div class="reply">
-                                            <a href="#" class="comment-reply-link">Reply</a>
-                                        </div>
-                                    </footer>
-                                </div>
-                            </li>
-{{--                            <li class="comment" style="padding-left: 10px;">--}}
-{{--                                <div class="comment-body">--}}
-{{--                                    <footer class="comment-meta">--}}
-{{--                                        <div class="comment-author vcard">--}}
-{{--                                            <img src="{{asset('fronend/img_blog/Blog-Details/12.jpg')}}" class="avatar" alt="image">--}}
-{{--                                            <b class="fn">John Doe</b>--}}
-{{--                                        </div>--}}
 
-{{--                                        <div class="comment-metadata">--}}
-{{--                                            <a href="#">--}}
-{{--                                                <span>April 24, 2019 at 10:59 am</span>--}}
-{{--                                            </a>--}}
-{{--                                        </div>--}}
-{{--                                    </footer>--}}
+                    {{--massage--}}
+                    @yield('message')
+                    {{--massage--}}
 
-{{--                                    <div class="comment-content">--}}
-{{--                                        <p>Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>--}}
-{{--                                    </div>--}}
-
-{{--                                    <div class="reply">--}}
-{{--                                        <a href="#" class="comment-reply-link">Reply</a>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </li>--}}
-                        </ul>
-                        <div class="comments-respond">
-                            <h3 class="comment-reply-title">Leave a Reply</h3>
-                            <form class="comment-form">
-                                <p class="comment-notes">
-                                    <span id="email-notes">Your email address will not be published.</span>
-                                    Required fields are marked
-                                    <span class="required">*</span>
-                                </p>
-                                <p class="comment-form-comment">
-                                    <label>Comment</label>
-                                    <textarea name="comment" id="comment" cols="45" rows="5" maxlength="65525" required="required"></textarea>
-                                </p>
-                                <p class="comment-form-author">
-                                    <label>Name <span class="required">*</span></label>
-                                    <input type="text" id="author" name="author" required="required">
-                                </p>
-                                <p class="comment-form-email">
-                                    <label>Email <span class="required">*</span></label>
-                                    <input type="email" id="email" name="email" required="required">
-                                </p>
-                                <p class="comment-form-url">
-                                    <label>Website</label>
-                                    <input type="url" id="url" name="url">
-                                </p>
-                                <p class="form-submit">
-                                    <input type="submit" name="submit" id="submit" class="submit" value="Post A Comment">
-                                </p>
-                            </form>
-                        </div>
-                    </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-12">

@@ -24,198 +24,203 @@
     <div class="container">
         <div class="container-list">
             <div class="list">
+                @foreach($event as $even)
                 <div class="list-img-text">
                     <div class="background">
-                        <img src="{{asset('fronend/home/img/even/backgrou.jpg')}}" alt="" width="270px" height="260px">
+                        <img src="{{asset("fronend/home/img/even/" . "$even->backgroud" . "")}}" alt="" width="270px" height="260px">
                     </div>
                 <div class="list-item">
                         <div class="list-item__img">
-                            <img src="{{asset('fronend/home/img/even/1.jpg')}}" alt="" width="270px" height="260px">
+                            <img src="{{asset("fronend/home/img/even/" . "$even->img" . "")}}" alt="" width="270px" height="260px">
                         </div>
                         <div class="list-item__text">
-                            <h4>Donation is hope</h4>
-                            <p>Lorem ipsum dolor sit amet, elip consectetur adipiscing sed.</p>
+                            <h4>{{$even->title}}</h4>
+                            <p>{{ $even->note }}</p>
                             <ul>
                                 <li>
                                      <i class="fas fa-map-marker-alt"></i>
-                                    <span>Newyork city</span>
+                                    <span>{{ $even->address }}</span>
                                 </li>
                                 <li>
                                     <i class='far fa-clock'></i>
-                                    <span>8.00 am-5.00 pm</span>
+                                    <span>{{ $even->time }}</span>
                                 </li>
                                 <li>
                                      <i class='fas fa-calendar-alt'></i>
-                                    <span>5 Jun 2019</span>
+                                    <span>{{ $even->date }}</span>
                                 </li>
                             </ul>
                             <a class="read-more" href="#">
                                 Read More
                             </a>
-                            <span>01</span>
+                            <span>0{{ $even->id }}</span>
                         </div>
                     </div>
                 </div>
-                <div class="list-img-text">
-                    <div class="background">
-                        <img src="{{asset('fronend/home/img/even/backgrou.jpg')}}" alt="" width="270px" height="260px">
-                    </div>
-                    <div class="list-item">
-                        <div class="list-item__img">
-                            <img src="{{asset('fronend/home/img/even/2.jpg')}}" alt="">
-                        </div>
-                        <div class="list-item__text">
-                            <h4>Donation is hope</h4>
-                            <p>Lorem ipsum dolor sit amet, elip consectetur adipiscing sed.</p>
-                            <ul>
-                                <li>
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    <span>Newyork city</span>
-                                </li>
-                                <li>
-                                    <i class='far fa-clock'></i>
-                                    <span>8.00 am-5.00 pm</span>
-                                </li>
-                                <li>
-                                    <i class='fas fa-calendar-alt'></i>
-                                    <span>5 Jun 2019</span>
-                                </li>
-                            </ul>
-                            <a class="read-more" href="#">
-                                Read More
-                            </a>
-                            <span>02</span>
-                        </div>
-                    </div>
+                @endforeach
+                <div class="link pagination">
+                    {!! $event->links() !!}
                 </div>
-                <div class="list-img-text">
-                    <div class="background">
-                        <img src="{{asset('fronend/home/img/even/backgrou.jpg')}}" alt="" width="270px" height="260px">
-                    </div>
-                    <div class="list-item">
-                        <div class="list-item__img">
-                            <img src="{{asset('fronend/home/img/even/3.jpg')}}" alt="" width="270px" height="260px">
-                        </div>
-                        <div class="list-item__text">
-                            <h4>Donation is hope</h4>
-                            <p>Lorem ipsum dolor sit amet, elip consectetur adipiscing sed.</p>
-                            <ul>
-                                <li>
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    <span>Newyork city</span>
-                                </li>
-                                <li>
-                                    <i class='far fa-clock'></i>
-                                    <span>8.00 am-5.00 pm</span>
-                                </li>
-                                <li>
-                                    <i class='fas fa-calendar-alt'></i>
-                                    <span>5 Jun 2019</span>
-                                </li>
-                            </ul>
-                            <a class="read-more" href="#">
-                                Read More
-                            </a>
-                            <span>03</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="list-img-text">
-                    <div class="background">
-                        <img src="{{asset('fronend/home/img/even/backgrou.jpg')}}" alt="" width="270px" height="260px">
-                    </div>
-                    <div class="list-item">
-                        <div class="list-item__img">
-                            <img src="{{asset('fronend/home/img/even/4.jpg')}}" alt="" width="270px" height="260px">
-                        </div>
-                        <div class="list-item__text">
-                            <h4>Donation is hope</h4>
-                            <p>Lorem ipsum dolor sit amet, elip consectetur adipiscing sed.</p>
-                            <ul>
-                                <li>
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    <span>Newyork city</span>
-                                </li>
-                                <li>
-                                    <i class='far fa-clock'></i>
-                                    <span>8.00 am-5.00 pm</span>
-                                </li>
-                                <li>
-                                    <i class='fas fa-calendar-alt'></i>
-                                    <span>5 Jun 2019</span>
-                                </li>
-                            </ul>
-                            <a class="read-more" href="#">
-                                Read More
-                            </a>
-                            <span>04</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="list-img-text">
-                    <div class="background">
-                        <img src="{{asset('fronend/home/img/even/backgrou.jpg')}}" alt="" width="270px" height="260px">
-                    </div>
-                    <div class="list-item">
-                        <div class="list-item__img">
-                            <img src="{{asset('fronend/home/img/even/5.jpg')}}" alt="" width="270px" height="260px">
-                        </div>
-                        <div class="list-item__text">
-                            <h4>Donation is hope</h4>
-                            <p>Lorem ipsum dolor sit amet, elip consectetur adipiscing sed.</p>
-                            <ul>
-                                <li>
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    <span>Newyork city</span>
-                                </li>
-                                <li>
-                                    <i class='far fa-clock'></i>
-                                    <span>8.00 am-5.00 pm</span>
-                                </li>
-                                <li>
-                                    <i class='fas fa-calendar-alt'></i>
-                                    <span>5 Jun 2019</span>
-                                </li>
-                            </ul>
-                            <a class="read-more" href="#">
-                                Read More
-                            </a>
-                            <span>05</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="list-img-text">
-                    <div class="background">
-                        <img src="{{asset('fronend/home/img/even/backgrou.jpg')}}" alt="" width="270px" height="260px">
-                    </div>
-                    <div class="list-item">
-                        <div class="list-item__img">
-                            <img src="{{asset('fronend/home/img/even/6.jpg')}}" alt="" width="270px" height="260px">
-                        </div>
-                        <div class="list-item__text">
-                            <h4>Donation is hope</h4>
-                            <p>Lorem ipsum dolor sit amet, elip consectetur adipiscing sed.</p>
-                            <ul>
-                                <li>
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    <span>Newyork city</span>
-                                </li>
-                                <li>
-                                    <i class='far fa-clock'></i>
-                                    <span>8.00 am-5.00 pm</span>
-                                </li>
-                                <li>
-                                    <i class='fas fa-calendar-alt'></i>
-                                    <span>5 Jun 2019</span>
-                                </li>
-                            </ul>
-                            <a class="read-more" href="#">
-                                Read More
-                            </a>
-                            <span>06</span>
-                        </div>
-                    </div>
-                </div>
+{{--                <div class="list-img-text">--}}
+{{--                    <div class="background">--}}
+{{--                        <img src="{{asset('fronend/home/img/even/backgrou.jpg')}}" alt="" width="270px" height="260px">--}}
+{{--                    </div>--}}
+{{--                    <div class="list-item">--}}
+{{--                        <div class="list-item__img">--}}
+{{--                            <img src="{{asset('fronend/home/img/even/2.jpg')}}" alt="">--}}
+{{--                        </div>--}}
+{{--                        <div class="list-item__text">--}}
+{{--                            <h4>Donation is hope</h4>--}}
+{{--                            <p>Lorem ipsum dolor sit amet, elip consectetur adipiscing sed.</p>--}}
+{{--                            <ul>--}}
+{{--                                <li>--}}
+{{--                                    <i class="fas fa-map-marker-alt"></i>--}}
+{{--                                    <span>Newyork city</span>--}}
+{{--                                </li>--}}
+{{--                                <li>--}}
+{{--                                    <i class='far fa-clock'></i>--}}
+{{--                                    <span>8.00 am-5.00 pm</span>--}}
+{{--                                </li>--}}
+{{--                                <li>--}}
+{{--                                    <i class='fas fa-calendar-alt'></i>--}}
+{{--                                    <span>5 Jun 2019</span>--}}
+{{--                                </li>--}}
+{{--                            </ul>--}}
+{{--                            <a class="read-more" href="#">--}}
+{{--                                Read More--}}
+{{--                            </a>--}}
+{{--                            <span>02</span>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="list-img-text">--}}
+{{--                    <div class="background">--}}
+{{--                        <img src="{{asset('fronend/home/img/even/backgrou.jpg')}}" alt="" width="270px" height="260px">--}}
+{{--                    </div>--}}
+{{--                    <div class="list-item">--}}
+{{--                        <div class="list-item__img">--}}
+{{--                            <img src="{{asset('fronend/home/img/even/3.jpg')}}" alt="" width="270px" height="260px">--}}
+{{--                        </div>--}}
+{{--                        <div class="list-item__text">--}}
+{{--                            <h4>Donation is hope</h4>--}}
+{{--                            <p>Lorem ipsum dolor sit amet, elip consectetur adipiscing sed.</p>--}}
+{{--                            <ul>--}}
+{{--                                <li>--}}
+{{--                                    <i class="fas fa-map-marker-alt"></i>--}}
+{{--                                    <span>Newyork city</span>--}}
+{{--                                </li>--}}
+{{--                                <li>--}}
+{{--                                    <i class='far fa-clock'></i>--}}
+{{--                                    <span>8.00 am-5.00 pm</span>--}}
+{{--                                </li>--}}
+{{--                                <li>--}}
+{{--                                    <i class='fas fa-calendar-alt'></i>--}}
+{{--                                    <span>5 Jun 2019</span>--}}
+{{--                                </li>--}}
+{{--                            </ul>--}}
+{{--                            <a class="read-more" href="#">--}}
+{{--                                Read More--}}
+{{--                            </a>--}}
+{{--                            <span>03</span>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="list-img-text">--}}
+{{--                    <div class="background">--}}
+{{--                        <img src="{{asset('fronend/home/img/even/backgrou.jpg')}}" alt="" width="270px" height="260px">--}}
+{{--                    </div>--}}
+{{--                    <div class="list-item">--}}
+{{--                        <div class="list-item__img">--}}
+{{--                            <img src="{{asset('fronend/home/img/even/4.jpg')}}" alt="" width="270px" height="260px">--}}
+{{--                        </div>--}}
+{{--                        <div class="list-item__text">--}}
+{{--                            <h4>Donation is hope</h4>--}}
+{{--                            <p>Lorem ipsum dolor sit amet, elip consectetur adipiscing sed.</p>--}}
+{{--                            <ul>--}}
+{{--                                <li>--}}
+{{--                                    <i class="fas fa-map-marker-alt"></i>--}}
+{{--                                    <span>Newyork city</span>--}}
+{{--                                </li>--}}
+{{--                                <li>--}}
+{{--                                    <i class='far fa-clock'></i>--}}
+{{--                                    <span>8.00 am-5.00 pm</span>--}}
+{{--                                </li>--}}
+{{--                                <li>--}}
+{{--                                    <i class='fas fa-calendar-alt'></i>--}}
+{{--                                    <span>5 Jun 2019</span>--}}
+{{--                                </li>--}}
+{{--                            </ul>--}}
+{{--                            <a class="read-more" href="#">--}}
+{{--                                Read More--}}
+{{--                            </a>--}}
+{{--                            <span>04</span>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="list-img-text">--}}
+{{--                    <div class="background">--}}
+{{--                        <img src="{{asset('fronend/home/img/even/backgrou.jpg')}}" alt="" width="270px" height="260px">--}}
+{{--                    </div>--}}
+{{--                    <div class="list-item">--}}
+{{--                        <div class="list-item__img">--}}
+{{--                            <img src="{{asset('fronend/home/img/even/5.jpg')}}" alt="" width="270px" height="260px">--}}
+{{--                        </div>--}}
+{{--                        <div class="list-item__text">--}}
+{{--                            <h4>Donation is hope</h4>--}}
+{{--                            <p>Lorem ipsum dolor sit amet, elip consectetur adipiscing sed.</p>--}}
+{{--                            <ul>--}}
+{{--                                <li>--}}
+{{--                                    <i class="fas fa-map-marker-alt"></i>--}}
+{{--                                    <span>Newyork city</span>--}}
+{{--                                </li>--}}
+{{--                                <li>--}}
+{{--                                    <i class='far fa-clock'></i>--}}
+{{--                                    <span>8.00 am-5.00 pm</span>--}}
+{{--                                </li>--}}
+{{--                                <li>--}}
+{{--                                    <i class='fas fa-calendar-alt'></i>--}}
+{{--                                    <span>5 Jun 2019</span>--}}
+{{--                                </li>--}}
+{{--                            </ul>--}}
+{{--                            <a class="read-more" href="#">--}}
+{{--                                Read More--}}
+{{--                            </a>--}}
+{{--                            <span>05</span>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="list-img-text">--}}
+{{--                    <div class="background">--}}
+{{--                        <img src="{{asset('fronend/home/img/even/backgrou.jpg')}}" alt="" width="270px" height="260px">--}}
+{{--                    </div>--}}
+{{--                    <div class="list-item">--}}
+{{--                        <div class="list-item__img">--}}
+{{--                            <img src="{{asset('fronend/home/img/even/6.jpg')}}" alt="" width="270px" height="260px">--}}
+{{--                        </div>--}}
+{{--                        <div class="list-item__text">--}}
+{{--                            <h4>Donation is hope</h4>--}}
+{{--                            <p>Lorem ipsum dolor sit amet, elip consectetur adipiscing sed.</p>--}}
+{{--                            <ul>--}}
+{{--                                <li>--}}
+{{--                                    <i class="fas fa-map-marker-alt"></i>--}}
+{{--                                    <span>Newyork city</span>--}}
+{{--                                </li>--}}
+{{--                                <li>--}}
+{{--                                    <i class='far fa-clock'></i>--}}
+{{--                                    <span>8.00 am-5.00 pm</span>--}}
+{{--                                </li>--}}
+{{--                                <li>--}}
+{{--                                    <i class='fas fa-calendar-alt'></i>--}}
+{{--                                    <span>5 Jun 2019</span>--}}
+{{--                                </li>--}}
+{{--                            </ul>--}}
+{{--                            <a class="read-more" href="#">--}}
+{{--                                Read More--}}
+{{--                            </a>--}}
+{{--                            <span>06</span>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
             </div>
         </div>
     </div>

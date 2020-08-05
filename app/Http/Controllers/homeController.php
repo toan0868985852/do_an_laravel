@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 use App\projects;
 use App\blog;
+use App\Event;
+use App\massage;
 use Illuminate\Http\Request;
+use Illuminate\Pagination\Paginator;
 
 class homeController extends Controller
 {
@@ -17,7 +20,8 @@ class homeController extends Controller
 
     public function blog($id){
         $blog = blog::all()->where('id',$id);
-        return view('home.blog_details.blog_details_1',compact('blog'));
+        $massages = massage::all();
+        return view('home.blog_details.blog_details_1',compact('blog','massages'));
     }
 
     public function blog_grid(){
@@ -38,7 +42,8 @@ class homeController extends Controller
     }
 
     public function even(){
-       return view('home.Even_grid');
+        $event = Event::paginate(6);
+       return view('home.Even_grid',compact('event'));
     }
 
     public function project(){
