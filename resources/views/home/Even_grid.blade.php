@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+
 @include('header.header')
 <section class="section">
     <span class="setting-background"></span>
@@ -225,6 +226,7 @@
         </div>
     </div>
 </section>
+<style></style>
 @include('footer.footer')
 </body>
 </html>

@@ -6,6 +6,10 @@ body {
     font-family: "Open Sans", sans-serif;
     color: #747171;
 }
+.header__menu .active{
+    color: #E22B64;
+}
+
 .container{
 
     margin: 0 auto;
