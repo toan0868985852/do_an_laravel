@@ -1,4 +1,4 @@
-@extends('admin')
+@extends('admin.layout.layout')
 @section('content_admin')
     <div class="col-lg-12">
         <section class="panel">

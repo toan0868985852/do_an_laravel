@@ -1,5 +1,5 @@
-@extends('admin')
-@section('content_admin')
+@extends('admin.layout.layout')
+@section('content_dashbroad')
 
 <!-- //market-->
             <div class="market-updates">

@@ -15,7 +15,7 @@ class DangkyController extends Controller
     public function index()
     {
         $users = User::all();
-        return view('dashboard.all_register',compact('users'));
+        return view('admin.all_register',compact('users'));
     }
 
 }

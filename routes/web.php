@@ -66,6 +66,11 @@ Route::group(['prefix'=>'home'],function(){
 });
 //----------------------trang chu----------------------------
 
+//---------------------Dasdboard---------------------------
+Route::get('dashboard', function (){
+    return view('dashboard.dashboard');
+});
+//---------------------Dasdboard---------------------------
 
 
 
