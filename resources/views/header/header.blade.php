@@ -86,6 +86,7 @@
 <script src="{{asset('fronend/home/js/jsitem.js')}}"></script>
 <script src="{{asset('fronend/home/js/slider.js')}}"></script>
 <script src="{{asset('fronend/home/js/loader.js')}}"></script>
+
 </section>
 </body>
 </html>
