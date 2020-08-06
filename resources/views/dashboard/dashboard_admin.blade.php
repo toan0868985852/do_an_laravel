@@ -2,53 +2,57 @@
 @section('content_admin')
             <div class="market-updates">
                 <div class="col-md-3 market-update-gd">
-                    <div class="market-update-block clr-block-2">
-                        <div class="col-md-4 market-update-right">
-                            <i class="fa fa-eye"> </i>
+                    <div class="market-update-block clr-block-1">
+                        <div class="col-md-12 market-update-left">
+                            <h4>Users</h4>
+                            <h3>1,250</h3>
+                            <span class="badge badge-success mr-1">+11%</span>
+                            <span style="font-size: 13px;position: relative; top: 10px;color: #fff">From previous period</span>
                         </div>
-                        <div class="col-md-8 market-update-left">
-                            <h4>Visitors</h4>
-                            <h3>13,500</h3>
-                            <p>Other hand, we denounce</p>
+                        <div class="col-md-4 market-update-right">
+                            <i class="fa fa-users"></i>
                         </div>
                         <div class="clearfix"> </div>
                     </div>
                 </div>
                 <div class="col-md-3 market-update-gd">
-                    <div class="market-update-block clr-block-1">
-                        <div class="col-md-4 market-update-right">
-                            <i class="fa fa-users" ></i>
+                    <div class="market-update-block clr-block-2">
+                        <div class="col-md-12 market-update-left">
+                            <h4>Visitors</h4>
+                            <h3>13,500</h3>
+                            <span style="background: #fd5d90" class="badge badge-pink mr-1">+5%</span>
+                            <span style="font-size: 13px;position: relative; top: 10px;color: #fff">From previous period</span>
                         </div>
-                        <div class="col-md-8 market-update-left">
-                            <h4>Users</h4>
-                            <h3>1,250</h3>
-                            <p>Other hand, we denounce</p>
+                        <div class="col-md-4 market-update-right">
+                            <i style="font-size: 45px;margin-top: -7px;" class="fa fa-eye"></i>
                         </div>
                         <div class="clearfix"> </div>
                     </div>
                 </div>
                 <div class="col-md-3 market-update-gd">
                     <div class="market-update-block clr-block-3">
-                        <div class="col-md-4 market-update-right">
-                            <i class="fa fa-usd"></i>
+                        <div class="col-md-12 market-update-left">
+                            <h4>Donate</h4>
+                            <h3>$ 1,500</h3>
+                            <span style="background: #53d769;" class="badge badge-success mr-1">+15%</span>
+                            <span style="font-size: 13px;position: relative; top: 10px;color: #fff">From previous period</span>
                         </div>
-                        <div class="col-md-8 market-update-left">
-                            <h4>Sales</h4>
-                            <h3>1,500</h3>
-                            <p>Other hand, we denounce</p>
+                        <div class="col-md-4 market-update-right">
+                            <i style="font-size: 45px; color: #fff" class="fa fa-money"></i>
                         </div>
                         <div class="clearfix"> </div>
                     </div>
                 </div>
                 <div class="col-md-3 market-update-gd">
                     <div class="market-update-block clr-block-4">
-                        <div class="col-md-4 market-update-right">
-                            <i style="font-size: 55px" class="fa fa-share-alt-square"></i>
-                        </div>
-                        <div class="col-md-8 market-update-left">
+                        <div class="col-md-12 market-update-left">
                             <h4>Share</h4>
                             <h3>1,500</h3>
-                            <p>Other hand, we denounce</p>
+                            <span class="badge badge-success mr-1">0%</span>
+                            <span style="font-size: 13px;position: relative; top: 10px;color: #fff">From previous period</span>
+                        </div>
+                        <div class="col-md-4 market-update-right">
+                            <i style="font-size: 45px;color: #fff" class="fa fa-share-alt-square"></i>
                         </div>
                         <div class="clearfix"> </div>
                     </div>
