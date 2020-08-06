@@ -15,6 +15,8 @@ class CreateTableEventTable extends Migration
     {
         Schema::create('event', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('img');
+            $table->string('background');
             $table->string('title');
             $table->string('note');
             $table->string('address');
