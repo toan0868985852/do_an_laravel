@@ -303,19 +303,19 @@
                 <div class="section5-2 col-md-12 col-xs-12 col-lg-12 col-sm-12">
                     <div class="tt col-md-2 col-xs-2 col-lg-2 col-sm-2">
                         <span class="counter">2,500</span>
-                        <p class="number"><font color="white"> Since</font></p>
+                        <p class="number"><font color="white" style="line-height: 47px"> Since</font></p>
                     </div>
                     <div class="tt tt1 col-md-2 col-xs-2 col-lg-2 col-sm-2">
                         <span class="counter">2,005</span>
-                        <p class="number"><font color="white"> Project</font></p>
+                        <p class="number"><font color="white" style="line-height: 47px"> Project</font></p>
                     </div>
                     <div class="tt tt1 col-md-2 col-xs-2 col-lg-2 col-sm-2">
                         <span class="counter">999</span>
-                        <p class="number"><font color="white"> Volunteers</font></p>
+                        <p class="number"><font color="white" style="line-height: 47px"> Volunteers</font></p>
                     </div>
                     <div class="tt tt1 col-md-2 col-xs-2 col-lg-2 col-sm-2">
                         <span class="counter">10000<span>+</span></span>
-                        <p class="number"><font color="white"> Thành viên</font></p>
+                        <p class="number"><font color="white" style="line-height: 47px"> Thành viên</font></p>
                     </div>
                 </div>
             </div>

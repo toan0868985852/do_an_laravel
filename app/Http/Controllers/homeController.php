@@ -7,6 +7,7 @@ use App\Event;
 use App\massage;
 use App\causes;
 use App\eventDetails;
+use App\causeDetails;
 use Illuminate\Http\Request;
 use Illuminate\Pagination\Paginator;
 
@@ -31,8 +32,9 @@ class homeController extends Controller
         return view('home.Blog_Grid',compact('blogGrid'));
     }
 
-    public function causes_details(){
-        return view('home.Causes_Details');
+    public function causes_details($id){
+        $causeDetails = causeDetails::all()->where('id',$id);
+        return view('home.cause_details.cause_details',compact('causeDetails'));
     }
 
     public function event_details($id){

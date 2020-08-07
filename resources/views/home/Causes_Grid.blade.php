@@ -110,51 +110,11 @@
                                     <hr>
                                     <h3>{{$project->ten_chien_dich}}</h3>
                                     <p>{{$project->content}}</p>
-                                    <a class="read-more" href="#">Read More</a>
+                                    <a class="read-more" href="{{url("home/cause_details/" . "$project->trang" . "")}}">Read More</a>
                                 </div>
                             </div>
                         </div>
                     @endforeach
-{{--                    <div class="swiper-slide">--}}
-{{--                        <div class="slide__img">--}}
-{{--                            <img src="{{asset('fronend/home/img/projects/27.jpg')}}" alt="">--}}
-{{--                        </div>--}}
-{{--                        <div class="skill">--}}
-{{--                            <div class="skill-bar">--}}
-{{--                                <div class="skill-per" per="70"></div>--}}
-{{--                            </div>--}}
-{{--                            <div class="slill__text">--}}
-{{--                                <div class="price">--}}
-{{--                                    <span class="text__left">Raised: $5000.00</span>--}}
-{{--                                    <span class="text__right">Goal: $8000.00</span>--}}
-{{--                                </div>--}}
-{{--                                <hr>--}}
-{{--                                <h3>Help Us To Send Food</h3>--}}
-{{--                                <p>Lorem ipsum dolor sit amet, consectetur scinelit, sed do eiusmod tempor incididunt</p>--}}
-{{--                                <a class="read-more" href="#">Read More</a>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                    <div class="swiper-slide">--}}
-{{--                        <div class="slide__img">--}}
-{{--                            <img src="{{asset('fronend/home/img/projects/28.jpg')}}" alt="">--}}
-{{--                        </div>--}}
-{{--                        <div class="skill">--}}
-{{--                            <div class="skill-bar">--}}
-{{--                                <div class="skill-per" per="45"></div>--}}
-{{--                            </div>--}}
-{{--                            <div class="slill__text">--}}
-{{--                                <div class="price">--}}
-{{--                                    <span class="text__left">Raised: $5000.00</span>--}}
-{{--                                    <span class="text__right">Goal: $8000.00</span>--}}
-{{--                                </div>--}}
-{{--                                <hr>--}}
-{{--                                <h3>Clothes For Everyone</h3>--}}
-{{--                                <p>Lorem ipsum dolor sit amet, consectetur scinelit, sed do eiusmod tempor incididunt</p>--}}
-{{--                                <a class="read-more" href="#">Read More</a>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
 {{--                    <div class="swiper-slide">--}}
 {{--                        <div class="slide__img">--}}
 {{--                            <img src="{{asset('fronend/home/img/projects/29.jpg')}}" alt="">--}}

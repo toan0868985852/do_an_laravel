@@ -43,7 +43,7 @@
                 </button>
                 <div class="dropdown-content">
                     <a href="{{route('causes_grid')}}">Causes Grid</a>
-                    <a href="{{route('causes_details')}}">Causes Details</a>
+                    <a href="{{url('home/cause_details/1')}}">Causes Details</a>
                 </div>
             </div>
         </li>

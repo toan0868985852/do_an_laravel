@@ -7,14 +7,16 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
    <link rel="stylesheet" href="{{asset('backend/css/bootstrap.min.css')}}" >
     <link rel="icon" href="{{asset('fronend/img/lago2.png')}}">
+    <link href="{{asset('backend/css/image.css')}}" rel="stylesheet">
     <link href="{{asset('backend/css/style.css')}}" rel='stylesheet' type='text/css' />
     <link href="{{asset('backend/css/style-responsive.css')}}" rel="stylesheet"/>
     <link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
     <link rel="stylesheet" href="{{asset('backend/css/font.css')}}" type="text/css"/>
-    <link href="{{asset('backend/css/font-awesome.css')}}" rel="stylesheet">
     <script src="{{asset('backend/js/jquery2.0.3.min.js')}}"></script>
     <script src="{{asset('backend/js/raphael-min.js')}}"></script>
     <script src="{{asset('backend/js/morris.js')}}"></script>
+
 </head>
 <body>
 <section id="container">
@@ -32,7 +34,7 @@
             <ul class="nav pull-right top-menu">
                 <li class="dropdown">
                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                        <i class="fa fa-user"></i>
+                        <i class="fas fa-user-shield"></i>
                         <span class="username">
                     @if(Auth::check())
                         {{Auth::user()->name}}
@@ -54,7 +56,7 @@
                 <ul class="sidebar-menu" id="nav-accordion">
                     <li>
                         <a class="active" href="{{route('admin.index')}}">
-                            <i class="fa fa-dashboard"></i>
+                            <i class="fas fa-tachometer-alt"></i>
                             <span>Dashboard</span>
                         </a>
                     </li>
@@ -105,7 +107,7 @@
                     </li>
                     <li class="sub-menu">
                         <a href="#">
-                            <i class="fa fa-dollar"></i>
+                            <i class="fas fa-donate"></i>
                             <span>Donate</span>
                             <i id="icon-donate" class="fa fa-chevron-down"></i>
                         </a>
@@ -121,7 +123,7 @@
                             <i id="icon-img" class="fa fa-chevron-down"></i>
                         </a>
                         <ul class="sub">
-                            <li><a href="chartjs.html">Liệt kê danh mục ảnh</a></li>
+                            <li><a href="{{route('image')}}">Liệt kê danh mục ảnh</a></li>
                         </ul>
                     </li>
                 </ul>

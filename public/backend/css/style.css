@@ -231,7 +231,16 @@ ul.sidebar-menu li a.active i {
     left:0;
     right:0;
     z-index:1002;
-    background-image: linear-gradient(135deg, #34a5ea 0%, #ea3a9c 100%);
+    /*background-image: linear-gradient(135deg, #34a5ea 0%, #ea3a9c 100%);*/
+    background-image: linear-gradient(135deg,rgba(29,29,29,.05),
+    rgba(29,29,29,.05) 17%,rgba(27,27,27,.05) 0,rgba(27,27,27,.05) 34%,
+    rgba(31,31,31,.05) 0,rgba(31,31,31,.05) 93%,hsla(0,0%,94.9%,.05) 0,
+    hsla(0,0%,94.9%,.05)),linear-gradient(135deg,hsla(0,0%,50.6%,.05),
+    hsla(0,0%,50.6%,.05) 66%,hsla(0,0%,45.9%,.05) 0,hsla(0,0%,45.9%,.05) 91%,
+    hsla(0,0%,78%,.05) 0,hsla(0,0%,78%,.05)),linear-gradient(135deg,rgba(31,31,31,.07),
+    rgba(31,31,31,.07) 15%,hsla(0,0%,54.5%,.07) 0,hsla(0,0%,54.5%,.07) 23%,
+    hsla(0,0%,78.4%,.07) 0,hsla(0,0%,78.4%,.07) 29%,hsla(0,0%,40%,.07) 0,
+    hsla(0,0%,40%,.07)),linear-gradient(90deg,#13c4e4,#7e08de);
     -webkit-transition:all .3s ease-in-out;
     -moz-transition:all .3s ease-in-out;
     -o-transition:all .3s ease-in-out;
@@ -796,27 +805,27 @@ ul.top-menu>li>a:hover,ul.top-menu>li>a:focus {
 }
 
 #icon-2{
-    margin-left: 136px;
+    margin-left: 132px;
     font-size: 12px;
 }
 
 #icon-3{
-    margin-left: 122px;
+    margin-left: 120px;
     font-size: 12px;
 }
 
 #icon-donate{
-    margin-left: 131px;
+    margin-left: 122px;
     font-size: 12px;
 }
 
 #icon-mail{
-    margin-left: 140px;
+    margin-left: 137px;
     font-size: 12px;
 }
 
 #icon-img{
-    margin-left: 128px;
+    margin-left: 127px;
     font-size: 12px;
 }
 
@@ -994,10 +1003,10 @@ div#graph1,div#graph4,div#graph5,div#graph6,div#graph7,div#graph8,div#graph9 {
 /*--statistics--*/
 .stats-info ul li {
     margin-bottom: 1em;
-    border-bottom:1px solid #e1ab91;
+    border-bottom:1px solid #fff;
     padding-bottom: 18px;
     font-size: 0.9em;
-    color: #555;
+    color: #fff;
 }
 .table>thead>tr>th {
     border-bottom: 1px solid #e1ab91 ! important;
@@ -1162,28 +1171,28 @@ div#graph1,div#graph4,div#graph5,div#graph6,div#graph7,div#graph8,div#graph9 {
 }
 /*--Progress bars--*/
 .stats-info-agileits {
-    background: #fff;
+    background: #0000001f;
     padding: 2em;
     border-radius: 9px;
     -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    /*box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);*/
 }
 .agileits-w3layouts-stats {
     margin: 1.5em 0;
 }
 h4.title {
     font-size: 20px;
-    color: #000;
+    color: #fff;
     text-align: center;
     margin-bottom: 2em;
     text-transform: uppercase;
 }
 .stats-last-agile {
-    background: #fff;
+    background: #00000021;
     padding: 2em;
     border-radius: 9px;
     -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    /*box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);*/
 }
 .w3-agile-google_map{
     background: #eef9f0;
@@ -1508,7 +1517,7 @@ section#tables  p {
 }
 .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
 	font-size: 0.9em;
-	color: #999;
+	color: #fff;
 	border-top: none !important;
 }
 .tab-content > .active {
