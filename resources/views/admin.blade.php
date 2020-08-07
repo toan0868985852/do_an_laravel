@@ -30,10 +30,6 @@
         </div>
         <div class="top-nav clearfix">
             <ul class="nav pull-right top-menu">
-{{--                <li>--}}
-{{--                    <input type="text" class="form-control search" placeholder=" Search">--}}
-{{--                </li>--}}
-                <!-- user login dropdown start-->
                 <li class="dropdown">
                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                         <i class="fa fa-user"></i>
@@ -45,8 +41,6 @@
                         <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu extended logout">
-{{--                        <li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>--}}
-{{--                        <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>--}}
                         <li><a href="{{route('log_out')}}"><i class="fa fa-key"></i> Đăng xuất</a></li>
                     </ul>
                 </li>
@@ -61,14 +55,14 @@
                     <li>
                         <a class="active" href="{{route('admin.index')}}">
                             <i class="fa fa-dashboard"></i>
-                            <span>Tổng quan</span>
+                            <span>Dashboard</span>
                         </a>
                     </li>
 
                     <li class="sub-menu">
                         <a href="#">
                             <i class="fa fa-book"></i>
-                            <span>Thông tin về công ty</span>
+                            <span>Company information</span>
                             <i id="icon-1" class="fa fa-chevron-down"></i>
                         </a>
                         <ul class="sub">
@@ -80,7 +74,7 @@
                     <li class="sub-menu">
                         <a href="#">
                             <i class="fa fa-users"></i>
-                            <span>Những người đã đăng ký</span>
+                            <span>User</span>
                             <i id="icon-2" class="fa fa-chevron-down"></i>
                         </a>
                         <ul class="sub">
@@ -90,7 +84,7 @@
                     <li class="sub-menu">
                         <a href="#">
                             <i class="fa fa-tasks"></i>
-                            <span>Danh sách đối tác</span>
+                            <span>Partner</span>
                             <i id="icon-3" class="fa fa-chevron-down"></i>
                         </a>
                         <ul class="sub">
@@ -123,7 +117,7 @@
                     <li class="sub-menu">
                         <a href="#">
                             <i class="fa fa-image"></i>
-                            <span>Danh mục ảnh</span>
+                            <span>Image</span>
                             <i id="icon-img" class="fa fa-chevron-down"></i>
                         </a>
                         <ul class="sub">

@@ -9,6 +9,15 @@ html, body{
     font-size: 100%;
     overflow-x: hidden;
     background-color: #eeeeee;
+    background-image: linear-gradient(135deg,rgba(29,29,29,.05),
+    rgba(29,29,29,.05) 17%,rgba(27,27,27,.05) 0,rgba(27,27,27,.05) 34%,
+    rgba(31,31,31,.05) 0,rgba(31,31,31,.05) 93%,hsla(0,0%,94.9%,.05) 0,
+    hsla(0,0%,94.9%,.05)),linear-gradient(135deg,hsla(0,0%,50.6%,.05),
+    hsla(0,0%,50.6%,.05) 66%,hsla(0,0%,45.9%,.05) 0,hsla(0,0%,45.9%,.05) 91%,
+    hsla(0,0%,78%,.05) 0,hsla(0,0%,78%,.05)),linear-gradient(135deg,rgba(31,31,31,.07),
+    rgba(31,31,31,.07) 15%,hsla(0,0%,54.5%,.07) 0,hsla(0,0%,54.5%,.07) 23%,
+    hsla(0,0%,78.4%,.07) 0,hsla(0,0%,78.4%,.07) 29%,hsla(0,0%,40%,.07) 0,
+    hsla(0,0%,40%,.07)),linear-gradient(90deg,#13c4e4,#7e08de);
 }
 body a{
 	transition: 0.5s all ease;
@@ -35,7 +44,8 @@ body a:hover{
     width:240px;
     height:100%;
     position:fixed;
-    background: #fff;
+    /*background: #fff;*/
+    box-shadow: 6px 0 20px 0 rgba(25,42,70,.15);
     -webkit-transition:all .3s ease-in-out;
     -moz-transition:all .3s ease-in-out;
     -o-transition:all .3s ease-in-out;
@@ -93,7 +103,7 @@ ul.sidebar-menu,ul.sidebar-menu li ul.sub {
     padding:0;
 }
 ul.sidebar-menu {
-    padding-top:80px;
+    padding-top:85px;
 
 }
 #sidebar>ul>li>ul.sub {
@@ -101,7 +111,7 @@ ul.sidebar-menu {
 }
 #sidebar .sub-menu>.sub li a {
     padding-left:46px;
-    color: #282828;
+    color: #fff;
 }
 #sidebar>ul>li.active>ul.sub,#sidebar>ul>li>ul.sub>li>a {
     display:block;
@@ -133,32 +143,29 @@ ul.sidebar-menu li ul.sub li a:hover,ul.sidebar-menu li ul.sub li.active a {
     display:block;
     background:rgba(40, 40, 46, 0.28);
 }
-ul.sidebar-menu li {
-    border-bottom:1px solid rgba(152, 152, 152, 0.17);
-}
 ul.sidebar-menu li.sub-menu {
-    line-height:15px;
+    line-height:28px;
 }
 ul.sidebar-menu ul.sub li {
     border-bottom:none;
 }
 ul.sidebar-menu li a span {
     display:inline-block;
-    color: #535353;
+    color: #fff;
     font-weight: 700;
 }
 
 ul.sidebar-menu li:hover a span {
-    color: black;
+    color: #fff;
 }
 
 ul.sidebar-menu li a.active span {
-    color: #64b0f2;
+    color: #fff;
 }
 
 ul.sidebar-menu li.active a span {
     display:inline-block;
-    color: #64b0f2;
+    color: #fff;
 }
 ul.sidebar-menu li a {
     color:#fff;
@@ -174,8 +181,8 @@ ul.sidebar-menu li a {
     transition:all 0.3s ease;
 }
 ul.sidebar-menu li a.active, ul.sidebar-menu li a:hover, ul.sidebar-menu li a:focus {
-    background: #f5f8fb;
-    color: #64b0f2;
+    background: #f5f8fb54;
+    color: #fff;
     display: block;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
@@ -186,13 +193,13 @@ ul.sidebar-menu li a.active, ul.sidebar-menu li a:hover, ul.sidebar-menu li a:fo
 ul.sidebar-menu li a i {
     font-size:15px;
     padding-right:6px;
-    color: #6d6d6d;
+    color: #fff;
 }
 ul.sidebar-menu li a:hover i,ul.sidebar-menu li a:focus i {
-    color:black;
+    color:#fff;
 }
 ul.sidebar-menu li a.active i {
-    color:#64b0f2;
+    color:#fff;
 }
 .mail-info,.mail-info:hover {
     margin:-3px 6px 0 0;
@@ -224,7 +231,7 @@ ul.sidebar-menu li a.active i {
     left:0;
     right:0;
     z-index:1002;
-    background-image: linear-gradient(135deg, #a2c7fd 0%, #fd1984 100%);
+    background-image: linear-gradient(135deg, #34a5ea 0%, #ea3a9c 100%);
     -webkit-transition:all .3s ease-in-out;
     -moz-transition:all .3s ease-in-out;
     -o-transition:all .3s ease-in-out;
@@ -742,38 +749,7 @@ ul.top-menu>li>a:hover,ul.top-menu>li>a:focus {
   -moz-transition: 0.5s all;
   -o-transition: 0.5s all;
 }
-/*.market-update-block.clr-block-1:hover {*/
-/*    background: #b7ffc4;*/
-/*    color: white;*/
-/*   transition: 0.5s all;*/
-/*  -webkit-transition: 0.5s all;*/
-/*  -moz-transition: 0.5s all;*/
-/*  -o-transition: 0.5s all;*/
-/*}*/
-/*.market-update-block.clr-block-2:hover {*/
-/*    background: #ffb8ce;*/
-/*    color: white;*/
-/*   transition: 0.5s all;*/
-/*  -webkit-transition: 0.5s all;*/
-/*  -moz-transition: 0.5s all;*/
-/*  -o-transition: 0.5s all;*/
-/*}*/
-/*.market-update-block.clr-block-3:hover {*/
-/*    background: #a3cdff;*/
-/*    color: white;*/
-/*    transition: 0.5s all;*/
-/*  -webkit-transition: 0.5s all;*/
-/*  -moz-transition: 0.5s all;*/
-/*  -o-transition: 0.5s all;*/
-/*}*/
-/*.market-update-block.clr-block-4:hover {*/
-/*    background: #898989;*/
-/*    color: white;*/
-/*    transition: 0.5s all;*/
-/*  -webkit-transition: 0.5s all;*/
-/*  -moz-transition: 0.5s all;*/
-/*  -o-transition: 0.5s all;*/
-/*}*/
+
 .market-update-right i.fa.fa-users {
     font-size: 3em;
     color: #fff;
@@ -820,27 +796,27 @@ ul.top-menu>li>a:hover,ul.top-menu>li>a:focus {
 }
 
 #icon-2{
-    margin-left: 20px;
+    margin-left: 136px;
     font-size: 12px;
 }
 
 #icon-3{
-    margin-left: 59px;
+    margin-left: 122px;
     font-size: 12px;
 }
 
 #icon-donate{
-    margin-left: 124px;
+    margin-left: 131px;
     font-size: 12px;
 }
 
 #icon-mail{
-    margin-left: 132px;
+    margin-left: 140px;
     font-size: 12px;
 }
 
 #icon-img{
-    margin-left: 78px;
+    margin-left: 128px;
     font-size: 12px;
 }
 
@@ -3221,10 +3197,11 @@ div#graph1, div#graph4, div#graph5, div#graph6, div#graph7, div#graph8, div#grap
 }
 }
 ::-webkit-scrollbar{
-    width: 12px;
+    width: 7px;
 }
 
 ::-webkit-scrollbar-thumb{
-    background: #ff588b;
-    border-radius: 50px;
+    background:#e43d9e;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }

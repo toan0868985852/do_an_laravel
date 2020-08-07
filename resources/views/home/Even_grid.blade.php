@@ -51,7 +51,7 @@
                                     <span>{{ $even->date }}</span>
                                 </li>
                             </ul>
-                            <a class="read-more" href="#">
+                            <a class="read-more" href="{{url("home/event_details/" . "$even->id" . "")}}">
                                 Read More
                             </a>
                             <span>0{{ $even->id }}</span>

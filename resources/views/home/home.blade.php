@@ -58,10 +58,7 @@
                     ta là một mắc xích quan trọng trong vòng liên kết ấy. </p>
                 <p>Đừng do dự khi mở rộng lòng mình với mọi người. Rất nhiều
                     người, nhiều nơi trên thế giới đang chờ đợi ở bạn một sự
-                    hảo tâm, một vòng tay ấm áp</p>
-                <p>Đôi khi, chỉ một ánh mắt , một nụ cười thân thiện, hay một
-                    câu nói chân tình cũng đủ làm viên mãn một trái tim! Hãy cho
-                    đi để thấy rằng đời sống thật phong phú.</p>
+                    hảo tâm.</p>
             </div>
             <div class="section2-3 col-md-12 col-xs-12 col-lg-12 col-sm-12">
                 <div class="section2-3-1 session2-box1 col-md-3 col-xs-3 col-lg-3 col-sm-3">

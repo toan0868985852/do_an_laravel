@@ -119,24 +119,6 @@
             </div>
         </div>
     </section>
-    <section class="section6">
-        <div class="container">
-            <div class="section6-1 col-md-12 col-xs-12 col-lg-12 col-sm-12">
-                <div class="chodi col-md-6 col-xs-6 col-lg-7 col-sm-6">
-                    <font color="black">
-                        <div class="session6-title"><h1>Cho đi sẽ nhận lại được nhiều hơn những gì bạn mất.</h1></div>
-                        <p class="session6-conten">Hãy cứ cho đi sẽ nhận lại gấp trăm ngàn lần yêu thương. Trao yêu thương sẽ nhận lại yêu thương, cái được nhận lại còn lớn lao gấp bội lần.
-                            <br>
-                            Đó chính là phước báo, là sự thanh thản trong tâm hồn. Đây chính là những giá trị không thể đo đếm được. Sự yêu thương giúp đỡ mà chúng ta nhận lại chính là quả ngọt của tình yêu thương mà chúng ta đã trao đi.</p>
-                    </font>
-                    <a class="button" href="">Làm cách nào để ủng hộ</a>
-                </div>
-                <div class="col-md-5 col-xs-6 col-lg-5 col-sm-6">
-                    <img src="{{asset('fronend/home/img/organaization-2.jpg')}}" alt="">
-                </div>
-            </div>
-        </div>
-    </section>
 </main>
 @include('footer.footer')
 <script type="text/javascript" src="{{asset('fronend/home/js/jquery.js')}}"></script>

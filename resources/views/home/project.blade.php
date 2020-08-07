@@ -135,46 +135,7 @@
 {{--                            </div>--}}
 {{--                        </div>--}}
 {{--                    </div>--}}
-{{--                    <div class="swiper-slide">--}}
-{{--                        <div class="slide__img">--}}
-{{--                            <img src="{{asset('fronend/home/img/projects/28.jpg')}}" alt="">--}}
-{{--                        </div>--}}
-{{--                        <div class="skill">--}}
-{{--                            <div class="skill-bar">--}}
-{{--                                <div class="skill-per" per="45"></div>--}}
-{{--                            </div>--}}
-{{--                            <div class="slill__text">--}}
-{{--                                <div class="price">--}}
-{{--                                    <span class="text__left">Raised: $5000.00</span>--}}
-{{--                                    <span class="text__right">Goal: $8000.00</span>--}}
-{{--                                </div>--}}
-{{--                                <hr>--}}
-{{--                                <h3>Clothes For Everyone</h3>--}}
-{{--                                <p>Lorem ipsum dolor sit amet, consectetur scinelit, sed do eiusmod tempor incididunt</p>--}}
-{{--                                <a class="read-more" href="#">Read More</a>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                    <div class="swiper-slide">--}}
-{{--                        <div class="slide__img">--}}
-{{--                            <img src="{{asset('fronend/home/img/projects/29.jpg')}}" alt="">--}}
-{{--                        </div>--}}
-{{--                        <div class="skill">--}}
-{{--                            <div class="skill-bar">--}}
-{{--                                <div class="skill-per" per="50"></div>--}}
-{{--                            </div>--}}
-{{--                            <div class="slill__text">--}}
-{{--                                <div class="price">--}}
-{{--                                    <span class="text__left">Raised: $5000.00</span>--}}
-{{--                                    <span class="text__right">Goal: $8000.00</span>--}}
-{{--                                </div>--}}
-{{--                                <hr>--}}
-{{--                                <h3>School For Poor Children</h3>--}}
-{{--                                <p>Lorem ipsum dolor sit amet, consectetur scinelit, sed do eiusmod tempor incididunt</p>--}}
-{{--                                <a class="read-more" href="#">Read More</a>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
+
                 </div>
                 <div class="swiper-pagination"></div>
             </div>

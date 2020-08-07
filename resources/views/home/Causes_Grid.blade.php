@@ -41,84 +41,37 @@
         <div class="section-title">
             <span>Good Causes</span>
             <h2>Help the Poor Throught Us</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna
-                aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo
-                viverra maecenas.</p>
+            <p>The life around us is full of difficulties, helping people as well as
+                helping ourselves. So help them when these little
+                things can make us feel happier everyday.</p>
         </div>
         <div class="row">
+            @foreach($causes as $cause)
             <div class="col-lg-4 col-md-6">
                 <div class="single-good-causes">
-                    <i class='fas fa-gift'></i>
-                    <h3 style="font-weight: 700; font-size: 20px">Surprised Box</h3>
+                    <i class="{{ $cause->icon }}" style="color: {{$cause->style}}"></i>
+                    <h3 style="font-weight: 700; font-size: 20px">{{ $cause->title }}</h3>
                     <p style="color: gray;font-size: 15px;line-height: 25px;">
-                        Lorem ipsum dolor amet, consectetur amet adipiscing elit, sed do eiusmod  incididunt labore  dolore.
+                        {{ $cause->text }}
                     </p>
                     <a class="read-more" href="#">
                         Read More
                     </a>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single-good-causes">
-                    <i class='fas fa-hand-holding-usd hand1' style="color: #eca66b"></i>
-                    <h3 style="font-weight: 700; font-size: 20px">Helping Hand</h3>
-                    <p style="color: gray;font-size: 15px;line-height: 25px;">
-                        Lorem ipsum dolor amet, consectetur amet adipiscing elit, sed do eiusmod  incididunt labore  dolore.
-                    </p>
-                    <a class="read-more" href="#">
-                        Read More
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single-good-causes">
-                    <i class='fas fa-hand-holding-usd hand2'  style="color: #54c983"></i>
-                    <h3 style="font-weight: 700; font-size: 20px">Aid For Children</h3>
-                    <p style="color: gray;font-size: 15px;line-height: 25px;">
-                        Lorem ipsum dolor amet, consectetur amet adipiscing elit, sed do eiusmod  incididunt labore  dolore.
-                    </p>
-                    <a class="read-more" href="#">
-                        Read More
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single-good-causes">
-                    <i class='fas fa-users' style="color: #62d1d3"></i>
-                    <h3 style="font-weight: 700; font-size: 20px">Helping Hand</h3>
-                    <p style="color: gray;font-size: 15px;line-height: 25px;">
-                        Lorem ipsum dolor amet, consectetur amet adipiscing elit, sed do eiusmod  incididunt labore  dolore.
-                    </p>
-                    <a class="read-more" href="#">
-                        Read More
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single-good-causes">
-                    <i class='fas fa-apple-alt' style="color: #eb6840"></i>
-                    <h3 style="font-weight: 700; font-size: 20px">Food Camp</h3>
-                    <p style="color: gray;font-size: 15px;line-height: 25px;">
-                        Lorem ipsum dolor amet, consectetur amet adipiscing elit, sed do eiusmod  incididunt labore  dolore.
-                    </p>
-                    <a class="read-more" href="#">
-                        Read More
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="single-good-causes">
-                    <i class='far fa-smile-beam' style="color: #7c3c83"></i>
-                    <h3 style="font-weight: 700; font-size: 20px">Smile Session</h3>
-                    <p style="color: gray;font-size: 15px;line-height: 25px;">
-                        Lorem ipsum dolor amet, consectetur amet adipiscing elit, sed do eiusmod  incididunt labore  dolore.
-                    </p>
-                    <a class="read-more" href="#">
-                        Read More
-                    </a>
-                </div>
-            </div>
+            @endforeach
+{{--            <div class="col-lg-4 col-md-6">--}}
+{{--                <div class="single-good-causes">--}}
+{{--                    <i class='fas fa-hand-holding-usd hand1' style="color: #eca66b"></i>--}}
+{{--                    <h3 style="font-weight: 700; font-size: 20px">Helping Hand</h3>--}}
+{{--                    <p style="color: gray;font-size: 15px;line-height: 25px;">--}}
+{{--                        Lorem ipsum dolor amet, consectetur amet adipiscing elit, sed do eiusmod  incididunt labore  dolore.--}}
+{{--                    </p>--}}
+{{--                    <a class="read-more" href="#">--}}
+{{--                        Read More--}}
+{{--                    </a>--}}
+{{--                </div>--}}
+{{--            </div>--}}
         </div>
     </div>
 </section>
@@ -128,7 +81,9 @@
         <div class="section-title">
             <span>Active Campaing</span>
             <h2>Some Good Causes</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas.</p>
+            <p>Do you believe that every time you do a good job, not only will the happy people help
+                you but also the happy people will help you, and even the
+                people around you will be happy too.</p>
         </div>
         <div class="stage-outer"></div>
     </div>
@@ -138,86 +93,88 @@
         <div class="slide">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="slide__img">
-                            <img src="{{asset('fronend/home/img/projects/25.jpg')}}" alt="">
-                        </div>
-                        <div class="skill">
-                            <div class="skill-bar">
-                                <div class="skill-per" per="90"></div>
+                    @foreach($projects as $project)
+                        <div class="swiper-slide">
+                            <div class="slide__img">
+                                <img src="{{asset("fronend/home/img/projects/" . "$project->img" . "")}}" alt="">
                             </div>
-                            <div class="slill__text">
-                                <div class="price">
-                                    <span class="text__left">Raised: $5000.00</span>
-                                    <span class="text__right">Goal: $8000.00</span>
+                            <div class="skill">
+                                <div class="skill-bar">
+                                    <div class="skill-per" per="{{($project->so_tien_quyen_gop_duoc /$project->muc_tieu)* 100 }}"></div>
                                 </div>
-                                <hr>
-                                <h3>School For Poor Children</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur scinelit, sed do eiusmod tempor incididunt</p>
-                                <a class="read-more" href="#">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="slide__img">
-                            <img src="{{asset('fronend/home/img/projects/27.jpg')}}" alt="">
-                        </div>
-                        <div class="skill">
-                            <div class="skill-bar">
-                                <div class="skill-per" per="70"></div>
-                            </div>
-                            <div class="slill__text">
-                                <div class="price">
-                                    <span class="text__left">Raised: $5000.00</span>
-                                    <span class="text__right">Goal: $8000.00</span>
+                                <div class="slill__text">
+                                    <div class="price">
+                                        <span class="text__left">Raised: ${{$project->so_tien_quyen_gop_duoc}}</span>
+                                        <span class="text__right">Goal: ${{$project->muc_tieu}}</span>
+                                    </div>
+                                    <hr>
+                                    <h3>{{$project->ten_chien_dich}}</h3>
+                                    <p>{{$project->content}}</p>
+                                    <a class="read-more" href="#">Read More</a>
                                 </div>
-                                <hr>
-                                <h3>Help Us To Send Food</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur scinelit, sed do eiusmod tempor incididunt</p>
-                                <a class="read-more" href="#">Read More</a>
                             </div>
                         </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="slide__img">
-                            <img src="{{asset('fronend/home/img/projects/28.jpg')}}" alt="">
-                        </div>
-                        <div class="skill">
-                            <div class="skill-bar">
-                                <div class="skill-per" per="45"></div>
-                            </div>
-                            <div class="slill__text">
-                                <div class="price">
-                                    <span class="text__left">Raised: $5000.00</span>
-                                    <span class="text__right">Goal: $8000.00</span>
-                                </div>
-                                <hr>
-                                <h3>Clothes For Everyone</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur scinelit, sed do eiusmod tempor incididunt</p>
-                                <a class="read-more" href="#">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="slide__img">
-                            <img src="{{asset('fronend/home/img/projects/29.jpg')}}" alt="">
-                        </div>
-                        <div class="skill">
-                            <div class="skill-bar">
-                                <div class="skill-per" per="50"></div>
-                            </div>
-                            <div class="slill__text">
-                                <div class="price">
-                                    <span class="text__left">Raised: $5000.00</span>
-                                    <span class="text__right">Goal: $8000.00</span>
-                                </div>
-                                <hr>
-                                <h3>School For Poor Children</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur scinelit, sed do eiusmod tempor incididunt</p>
-                                <a class="read-more" href="#">Read More</a>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
+{{--                    <div class="swiper-slide">--}}
+{{--                        <div class="slide__img">--}}
+{{--                            <img src="{{asset('fronend/home/img/projects/27.jpg')}}" alt="">--}}
+{{--                        </div>--}}
+{{--                        <div class="skill">--}}
+{{--                            <div class="skill-bar">--}}
+{{--                                <div class="skill-per" per="70"></div>--}}
+{{--                            </div>--}}
+{{--                            <div class="slill__text">--}}
+{{--                                <div class="price">--}}
+{{--                                    <span class="text__left">Raised: $5000.00</span>--}}
+{{--                                    <span class="text__right">Goal: $8000.00</span>--}}
+{{--                                </div>--}}
+{{--                                <hr>--}}
+{{--                                <h3>Help Us To Send Food</h3>--}}
+{{--                                <p>Lorem ipsum dolor sit amet, consectetur scinelit, sed do eiusmod tempor incididunt</p>--}}
+{{--                                <a class="read-more" href="#">Read More</a>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <div class="swiper-slide">--}}
+{{--                        <div class="slide__img">--}}
+{{--                            <img src="{{asset('fronend/home/img/projects/28.jpg')}}" alt="">--}}
+{{--                        </div>--}}
+{{--                        <div class="skill">--}}
+{{--                            <div class="skill-bar">--}}
+{{--                                <div class="skill-per" per="45"></div>--}}
+{{--                            </div>--}}
+{{--                            <div class="slill__text">--}}
+{{--                                <div class="price">--}}
+{{--                                    <span class="text__left">Raised: $5000.00</span>--}}
+{{--                                    <span class="text__right">Goal: $8000.00</span>--}}
+{{--                                </div>--}}
+{{--                                <hr>--}}
+{{--                                <h3>Clothes For Everyone</h3>--}}
+{{--                                <p>Lorem ipsum dolor sit amet, consectetur scinelit, sed do eiusmod tempor incididunt</p>--}}
+{{--                                <a class="read-more" href="#">Read More</a>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <div class="swiper-slide">--}}
+{{--                        <div class="slide__img">--}}
+{{--                            <img src="{{asset('fronend/home/img/projects/29.jpg')}}" alt="">--}}
+{{--                        </div>--}}
+{{--                        <div class="skill">--}}
+{{--                            <div class="skill-bar">--}}
+{{--                                <div class="skill-per" per="50"></div>--}}
+{{--                            </div>--}}
+{{--                            <div class="slill__text">--}}
+{{--                                <div class="price">--}}
+{{--                                    <span class="text__left">Raised: $5000.00</span>--}}
+{{--                                    <span class="text__right">Goal: $8000.00</span>--}}
+{{--                                </div>--}}
+{{--                                <hr>--}}
+{{--                                <h3>School For Poor Children</h3>--}}
+{{--                                <p>Lorem ipsum dolor sit amet, consectetur scinelit, sed do eiusmod tempor incididunt</p>--}}
+{{--                                <a class="read-more" href="#">Read More</a>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
                 </div>
                 <div class="swiper-pagination"></div>
             </div>

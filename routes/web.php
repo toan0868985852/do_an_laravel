@@ -66,9 +66,10 @@ Route::group(['prefix'=>'home'],function(){
     Route::get('about','homeController@about')->name('about');
     Route::get('even','homeController@even')->name('even');
     Route::get('project','homeController@project')->name('project');
+    Route::get('event_details/{id}','homeController@event_details');
+
 });
 //----------------------trang chu----------------------------
-
 
 //-----------------------message----------------------------
 Route::resource('message','messageController');
