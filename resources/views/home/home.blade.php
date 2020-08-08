@@ -3,44 +3,19 @@
 @section('home')
 <section class="home">
     <div class="slider">
-        <div class="slide active-slide" style="background-image: url({{asset('fronend/home/img/silder1.jpg')}})">
+        @foreach($homeTitle as $hometitie)
+        <div class="slide active-slide" style="background-image: url({{asset("fronend/home/img/" . "$hometitie->img" . "")}})">
             <div class="container">
                 <div class="caption js-conten">
-                    <p>Bringing Completeness</p>
-                    <h1>Charity for a Better <br> Future, Charity Brings <br> Happiness!</h1>
-                    <p>Your small contribution can drive us to perform and achieve our
-                        mission. We are working for <br> millions of children
-                        who are striving for their basic needs.</p>
+                    <p>{{$hometitie->title}}</p>
+                    <h1>{{$hometitie->h1p1}} <br> {{$hometitie->h1p2}} <br> {{$hometitie->h1p3}}</h1>
+                    <p>{{$hometitie->p1}} <br> {{$hometitie->p2}}</p>
                     <a href="">Join us</a>
                 </div>
             </div>
         </div>
-        <div class="slide" style="background-image: url({{asset('fronend/home/img/silder2.jpg')}})">
-            <div class="container">
-                <div class="caption js-conten">
-                    <p>Bringing Smiles</p>
-                    <h1>Bringing Smiles to <br> Millions!</h1>
-                    <p>Our focus is to make the next generation needful child ready
-                        for giving back to the world! <br> Your support is the key
-                        to make us successful.</p>
-                    <a href="">Join us</a>
-                </div>
-            </div>
-        </div>
-        <div class="slide" style="background-image: url({{asset('fronend/home/img/silder3.jpg')}})">
-            <div class="container">
-                <div class="caption js-conten">
-                    <p>Bringing Completeness</p>
-                    <h1>We Encourage <br> Participating in <br> Charity!</h1>
-                    <p>Engaging in a charity can give you a good feeling! Your
-                        contribution can make you more <br> complete. Millions of
-                        children need your support.</p>
-                    <a href="">Join us</a>
-                </div>
-            </div>
-        </div>
+        @endforeach
     </div>
-    <!--    controls-->
     <div class="controls">
         <div class="prev"><i class='fas fa-angle-left' style='font-size:36px'></i></div>
         <div class="next"><i class='fas fa-angle-right' style='font-size:36px'></i></div>
@@ -51,8 +26,8 @@
     <section class="section2">
         <div class="container">
             <div class="section2-2 col-md-12 col-xs-12 col-lg-12 col-sm-12">
-                <h4> Những việc làm tốt</h4>
-                <h2>Hạnh phúc...là cho, và sống vì người khác.</h2>
+                <h4>Good Causes</h4>
+                <h2>Help the Poor Through Us</h2>
                 <p>Cuộc sống là quá trình trao tặng và đón nhận không
                     ngừng, mỗi người chúng
                     ta là một mắc xích quan trọng trong vòng liên kết ấy. </p>
@@ -61,27 +36,15 @@
                     hảo tâm.</p>
             </div>
             <div class="section2-3 col-md-12 col-xs-12 col-lg-12 col-sm-12">
-                <div class="section2-3-1 session2-box1 col-md-3 col-xs-3 col-lg-3 col-sm-3">
-                    <font color="#1e90ff"><i class='fas fa-burn' style='font-size:36px'></i></font>
-                    <h5>Tiết kiệm nước</h5>
-                    <div ><font color="#1e90ff"><i class='fas fa-burn' ></i></font></div>
-                    <p>Lorem ipsum dolor amet, consectetur amet adipiscing elit, sed do eiusmod incididunt labore dolore.</p>
-                    <a href="#" class="read-more" >Đọc thêm</a>
+                @foreach($homeBox as $HomeBox)
+                <div class="section2-3-1 {{$HomeBox->session}} {{$HomeBox->session2}} col-md-3 col-xs-3 col-lg-3 col-sm-3">
+                    <font color="{{$HomeBox->color}}"><i class='{{$HomeBox->icon}}' style='font-size:36px'></i></font>
+                    <h5>Save Water</h5>
+                    <div ><font color="{{$HomeBox->color}}"><i class='{{$HomeBox->icon}}' ></i></font></div>
+                    <p>{{$HomeBox->content}}</p>
+                    <a href="#" class="read-more" >Read More</a>
                 </div>
-                <div class="section2-3-1 session2-box2 section2-3-11 col-md-3 col-xs-3 col-lg-3 col-sm-3">
-                    <font color=" #cc7c39"><i class='far fa-hand-paper' style='font-size:36px'></i></font>
-                    <h5>Trở thành tình nguyện viên</h5>
-                    <div><font color=" #cc7c39"><i class='far fa-hand-paper' ></i></font></div>
-                    <p>Lorem ipsum dolor amet, consectetur amet adipiscing elit, sed do eiusmod incididunt labore dolore.</p>
-                    <a href="#"class="read-more" >Đọc thêm</a>
-                </div>
-                <div class="section2-3-1 session2-box3 section2-3-11 col-md-3 col-xs-3 col-lg-3 col-sm-3">
-                    <font color="red"><i class='far fa-heart' style='font-size:36px'></i></font>
-                    <h5>Trao đi yêu thương</h5>
-                    <div><font color="red"><i class='far fa-heart' ></i></font></div>
-                    <p>Lorem ipsum dolor amet, consectetur amet adipiscing elit, sed do eiusmod incididunt labore dolore.</p>
-                    <a href="#" class="read-more" >Đọc thêm</a>
-                </div>
+                @endforeach
             </div>
             <div class="section2-4 col-md-12 col-xs-12 col-lg-12 col-sm-12">
                 <div class="section2-4-1 col-md-6 col-xs-6 col-lg-6 col-sm-6">
@@ -111,33 +74,17 @@
                     <p class="about1">Kế hoạch gây quĩ của chúng tôi</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua.</p>
+                    @foreach($homePlan as $HomePlan)
                     <div>
                         <div class="col-md-2 col-xs-2 col-lg-2 col-sm-2">
-                            <img src="{{asset('fronend/home/img/getstarted1.png')}}" width="66%">
+                            <img src="{{asset("fronend/home/img/" . "$HomePlan->img" . "")}}" width="66%">
                         </div>
                         <div class="col-md-10 col-xs-10 col-lg-10 col-sm-10">
-                            <h3>Giáo dục cho trẻ em</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</p>
+                            <h3>{{ $HomePlan->title }}</h3>
+                            <p>{{ $HomePlan->content }}</p>
                         </div>
                     </div>
-                    <div>
-                        <div class="col-md-2 col-xs-2 col-lg-2 col-sm-2">
-                            <img src="{{asset('fronend/home/img/getstarted2.png')}}" width="66%">
-                        </div>
-                        <div class="col-md-10 col-xs-10 col-lg-10 col-sm-10">
-                            <h3>Nhà ở công cộng cho người vô gia cư</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</p>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="col-md-2 col-xs-2 col-lg-2 col-sm-2">
-                            <img src="{{asset('fronend/home/img/getstarted3.png')}}" width="66%">
-                        </div>
-                        <div class="col-md-10 col-xs-10 col-lg-10 col-sm-10">
-                            <h3>Dịch vụ y tế miễn phí</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</p>
-                        </div>
-                    </div>
+                    @endforeach
                     <button class="btn">Tìm hiểu thêm</button>
                 </div>
             </div>
@@ -156,87 +103,28 @@
         <div class="slide">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-
-                    <div class="swiper-slide">
-                        <div class="slide__img">
-                            <img src="{{asset('fronend/home/img/svtive1.jpg')}}" alt="">
-                        </div>
-                        <div class="skill">
-                            <div class="skill-bar">
-                                <div class="skill-per" per="90"></div>
+                    @foreach($homeSlide as $project)
+                        <div class="swiper-slide">
+                            <div class="slide__img">
+                                <img src="{{asset("fronend/home/img/projects/" . "$project->img" . "")}}" alt="">
                             </div>
-                            <div class="slill__text">
-                                <div class="price">
-                                    <span class="text__left">Raised: $1000.00</span>
-                                    <span class="text__right">Goal: $5000.00</span>
+                            <div class="skill">
+                                <div class="skill-bar">
+                                    <div class="skill-per" per="{{($project->so_tien_quyen_gop_duoc /$project->muc_tieu)* 100 }}"></div>
                                 </div>
-                                <hr>
-                                <h3>School For Poor Children</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur scinelit, sed do eiusmod tempor incididunt</p>
-                                <a class="read-more" href="#">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="slide__img">
-                            <img src="{{asset('fronend/home/img/svtive2.jpg')}}" alt="">
-                        </div>
-                        <div class="skill">
-                            <div class="skill-bar">
-                                <div class="skill-per" per="70"></div>
-                            </div>
-                            <div class="slill__text">
-                                <div class="price">
-                                    <span class="text__left">Raised: $1000.00</span>
-                                    <span class="text__right">Goal: $9000.00</span>
+                                <div class="slill__text">
+                                    <div class="price">
+                                        <span class="text__left">Raised: ${{$project->so_tien_quyen_gop_duoc}}</span>
+                                        <span class="text__right">Goal: ${{$project->muc_tieu}}</span>
+                                    </div>
+                                    <hr>
+                                    <h3>{{$project->ten_chien_dich}}</h3>
+                                    <p>{{$project->content}}</p>
+                                    <a class="read-more" href="#">Read More</a>
                                 </div>
-                                <hr>
-                                <h3>Help Us To Send Food</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur scinelit, sed do eiusmod tempor incididunt</p>
-                                <a class="read-more" href="#">Read More</a>
                             </div>
                         </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="slide__img">
-                            <img src="{{asset('fronend/home/img/svtive3.jpg')}}" alt="">
-                        </div>
-                        <div class="skill">
-                            <div class="skill-bar">
-                                <div class="skill-per" per="45"></div>
-                            </div>
-                            <div class="slill__text">
-                                <div class="price">
-                                    <span class="text__left">Raised: $1000.00</span>
-                                    <span class="text__right">Goal: $7689.00</span>
-                                </div>
-                                <hr>
-                                <h3>Clothes For Everyone</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur scinelit, sed do eiusmod tempor incididunt</p>
-                                <a class="read-more" href="#">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="slide__img">
-                            <img src="{{asset('fronend/home/img/svtive4.jpg')}}" alt="">
-                        </div>
-                        <div class="skill">
-                            <div class="skill-bar">
-                                <div class="skill-per" per="50"></div>
-                            </div>
-                            <div class="slill__text">
-                                <div class="price">
-                                    <span class="text__left">Raised: $5000.00</span>
-                                    <span class="text__right">Goal: $8000.00</span>
-                                </div>
-                                <hr>
-                                <h3>School For Poor Children</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur scinelit, sed do eiusmod tempor incididunt</p>
-                                <a class="read-more" href="#">Read More</a>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
@@ -367,135 +255,40 @@
             </div>
             <div class="container-list">
                 <div class="list">
-                    <div class="list-img-text section7-current__1">
-                        <div class="background">
-                            <img src="{{asset('fronend/home/img/backgrou.jpg')}}" alt="" width="270px" height="260px">
-                        </div>
-                        <div class="list-item">
-                            <div class="list-item__img">
-                                <img src="{{asset('fronend/home/img/even/1.jpg')}}" alt="" width="270px" height="260px">
+                    @foreach($homeEvent as $even)
+                        <div class="list-img-text {{$even->session}}">
+                            <div class="background">
+                                <img src="{{asset('fronend/home/img/backgrou.jpg')}}" alt="" width="270px" height="260px">
                             </div>
-                            <div class="list-item__text">
-                                <h4>Donation is hope</h4>
-                                <p>Lorem ipsum dolor sit amet, elip consectetur adipiscing sed.</p>
-                                <ul>
-                                    <li>
-                                        <i class="fas fa-map-marker-alt"></i>
-                                        <span>Newyork city</span>
-                                    </li>
-                                    <li>
-                                        <i class='far fa-clock'></i>
-                                        <span>8.00 am-5.00 pm</span>
-                                    </li>
-                                    <li>
-                                        <i class='fas fa-calendar-alt'></i>
-                                        <span>5 Jun 2019</span>
-                                    </li>
-                                </ul>
-                                <a class="read-more" href="#">
-                                    Read More
-                                </a>
-                                <span>01</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="list-img-text section7-current__2">
-                        <div class="background">
-                            <img src="{{asset('fronend/home/img/backgrou.jpg')}}" alt="" width="270px" height="260px">
-                        </div>
-                        <div class="list-item">
-                            <div class="list-item__img">
-                                <img src="{{asset('fronend/home/img/even/2.jpg')}}" alt="">
-                            </div>
-                            <div class="list-item__text">
-                                <h4>Donation is hope</h4>
-                                <p>Lorem ipsum dolor sit amet, elip consectetur adipiscing sed.</p>
-                                <ul>
-                                    <li>
-                                        <i class="fas fa-map-marker-alt"></i>
-                                        <span>Newyork city</span>
-                                    </li>
-                                    <li>
-                                        <i class='far fa-clock'></i>
-                                        <span>8.00 am-5.00 pm</span>
-                                    </li>
-                                    <li>
-                                        <i class='fas fa-calendar-alt'></i>
-                                        <span>5 Jun 2019</span>
-                                    </li>
-                                </ul>
-                                <a class="read-more" href="#">
-                                    Read More
-                                </a>
-                                <span>02</span>
+                            <div class="list-item">
+                                <div class="list-item__img">
+                                    <img src="{{asset("fronend/home/img/even/" . "$even->img" . "")}}" alt="" width="270px" height="260px">
+                                </div>
+                                <div class="list-item__text">
+                                    <h4>{{$even->title}}</h4>
+                                    <p>{{ $even->note }}</p>
+                                    <ul>
+                                        <li style="list-style: none">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            <span>{{ $even->address }}</span>
+                                        </li>
+                                        <li style="list-style: none">
+                                            <i class='far fa-clock'></i>
+                                            <span>{{ $even->time }}</span>
+                                        </li>
+                                        <li style="list-style: none">
+                                            <i class='fas fa-calendar-alt'></i>
+                                            <span>{{ $even->date }}</span>
+                                        </li>
+                                    </ul>
+                                    <a class="read-more" href="{{url("home/event_details/" . "$even->id" . "")}}">
+                                        Read More
+                                    </a>
+                                    <span>0{{ $even->id }}</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="list-img-text section7-current__3">
-                        <div class="background">
-                            <img src="{{asset('fronend/home/img/backgrou.jpg')}}" alt="" width="270px" height="260px">
-                        </div>
-                        <div class="list-item">
-                            <div class="list-item__img">
-                                <img src="{{asset('fronend/home/img/even/3.jpg')}}" alt="" width="270px" height="260px">
-                            </div>
-                            <div class="list-item__text">
-                                <h4>Donation is hope</h4>
-                                <p>Lorem ipsum dolor sit amet, elip consectetur adipiscing sed.</p>
-                                <ul>
-                                    <li>
-                                        <i class="fas fa-map-marker-alt"></i>
-                                        <span>Newyork city</span>
-                                    </li>
-                                    <li>
-                                        <i class='far fa-clock'></i>
-                                        <span>8.00 am-5.00 pm</span>
-                                    </li>
-                                    <li>
-                                        <i class='fas fa-calendar-alt'></i>
-                                        <span>5 Jun 2019</span>
-                                    </li>
-                                </ul>
-                                <a class="read-more" href="#">
-                                    Read More
-                                </a>
-                                <span>03</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="list-img-text section7-current__4">
-                        <div class="background">
-                            <img src="{{asset('fronend/home/img/backgrou.jpg')}}" alt="" width="270px" height="260px">
-                        </div>
-                        <div class="list-item">
-                            <div class="list-item__img">
-                                <img src="{{asset('fronend/home/img/even/4.jpg')}}" alt="" width="270px" height="260px">
-                            </div>
-                            <div class="list-item__text">
-                                <h4>Donation is hope</h4>
-                                <p>Lorem ipsum dolor sit amet, elip consectetur adipiscing sed.</p>
-                                <ul>
-                                    <li>
-                                        <i class="fas fa-map-marker-alt"></i>
-                                        <span>Newyork city</span>
-                                    </li>
-                                    <li>
-                                        <i class='far fa-clock'></i>
-                                        <span>8.00 am-5.00 pm</span>
-                                    </li>
-                                    <li>
-                                        <i class='fas fa-calendar-alt'></i>
-                                        <span>5 Jun 2019</span>
-                                    </li>
-                                </ul>
-                                <a class="read-more" href="#">
-                                    Read More
-                                </a>
-                                <span>04</span>
-                            </div>
-                        </div>
-                    </div>
-
+                    @endforeach
 
                 </div>
             </div>
@@ -513,93 +306,39 @@
                     gravida. Risus commodo viverra maecenas.</span>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-news">
-                        <div class="news-img">
-                            <a href="#">
-                                <img style="width: 100%;" src="{{asset('fronend/img_blog/blog/1.jpg')}}" alt="News">
-                            </a>
-                            <div class="date">
-                                <span>1 November</span>
+                @foreach($homeBlogGrid as $BlogGrids)
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-news">
+                            <div class="news-img">
+                                <a href="{{url("home/blog_details_1/" . "$BlogGrids->id" . "")}}">
+                                    <img style="width: 100%;" src="{{asset("fronend/img_blog/blog/" . "$BlogGrids->img" . "")}}" alt="News">
+                                </a>
+                                <div class="date">
+                                    <span>{{$BlogGrids->date}}</span>
+                                </div>
+                            </div>
+                            <div class="news-text" style="color:#747677">
+                                <ul>
+                                    <li>
+                                        <i class='fas fa-user' style="color:#e22b64"></i>
+                                        By
+                                        <a class="name-user" href="{{url("home/blog_details_1/" . "$BlogGrids->id" . "")}}">
+                                            {{$BlogGrids->tac_gia}}
+                                        </a>
+                                    </li>
+
+                                </ul>
+                                <h3>
+                                    <a href="{{url("home/blog_details_1/" . "$BlogGrids->id" . "")}}">{{$BlogGrids->tieu_de}}</a>
+                                </h3>
+                                <p style="line-height: 23px">{{$BlogGrids->noi_dung}}</p>
+                                <a class="read-more2" href="{{url("home/blog_details_1/" . "$BlogGrids->id" . "")}}">
+                                    Read More
+                                </a>
                             </div>
                         </div>
-                        <div class="news-text" style="color:#747677">
-                            <ul>
-                                <li>
-                                    <i class='fas fa-user' style="color:#e22b64"></i>
-                                    By
-                                    <a class="name-user" href="#">Admin</a>
-                                </li>
-
-                            </ul>
-                            <h3>
-                                <a href="{{route('blog_details_1')}}">Highlight some of the fundraising</a>
-                            </h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur eiussi adipiscing elit, sed do eiusmod tempor incididunt ut</p>
-                            <a class="read-more2" href="{{route('blog_details_1')}}">
-                                Read More
-                            </a>
-                        </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-news">
-                        <div class="news-img">
-                            <a href="#">
-                                <img style="width: 100%;" src="{{asset('fronend/img_blog/blog/2.jpg')}}" alt="News">
-                            </a>
-                            <div class="date">
-                                <span>2 November</span>
-                            </div>
-                        </div>
-                        <div class="news-text" style="color:#747677">
-                            <ul>
-                                <li>
-                                    <i class='fas fa-user' style="color:#e22b64"></i>
-                                    By
-                                    <a class="name-user" href="#">Admin</a>
-                                </li>
-
-                            </ul>
-                            <h3>
-                                <a href="{{route('blog_details_1')}}">A place start a new life with peace</a>
-                            </h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur eiussi adipiscing elit, sed do eiusmod tempor incididunt ut</p>
-                            <a class="read-more2" href="{{route('blog_details_1')}}">
-                                Read More
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-news">
-                        <div class="news-img">
-                            <a href="#">
-                                <img style="width: 100%;" src="{{asset('fronend/img_blog/blog/3.jpg')}}" alt="News">
-                            </a>
-                            <div class="date">
-                                <span>3 November</span>
-                            </div>
-                        </div>
-                        <div class="news-text" style="color:#747677">
-                            <ul>
-                                <li>
-                                    <i class='fas fa-user' style="color:#e22b64"></i>
-                                    By
-                                    <a class="name-user" href="#">Admin</a>
-                                </li>
-
-                            </ul>
-                            <h3>
-                                <a href="{{route('blog_details_1')}}">Build school for poor children</a>
-                            </h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur eiussi adipiscing elit, sed do eiusmod tempor incididunt ut</p>
-                            <a class="read-more2" href="{{route('blog_details_1')}}">
-                                Read More
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
@@ -616,21 +355,11 @@
             <div class="partner-img">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
+                        @foreach($partnerList as $parner)
                         <div class="swiper-slide" style="width: 200px; box-shadow: none; background: none; height: 90px">
-                            <img class="img-slide" src="{{asset('fronend/img-partner/1.png')}}" alt="">
+                            <img class="img-slide" src="{{asset("fronend/img-partner/" . "$parner->img" . "")}}" alt="">
                         </div>
-                        <div class="swiper-slide" style="width: 200px; box-shadow: none; background: none; height: 90px">
-                            <img class="img-slide" src="{{asset('fronend/img-partner/2.png')}}" alt="">
-                        </div>
-                        <div class="swiper-slide" style="width: 200px; box-shadow: none; background: none; height: 90px">
-                            <img class="img-slide" src="{{asset('fronend/img-partner/3.png')}}" alt="">
-                        </div>
-                        <div class="swiper-slide" style="width: 200px; box-shadow: none; background: none; height: 90px">
-                            <img class="img-slide" src="{{asset('fronend/img-partner/4.png')}}" alt="">
-                        </div>
-                        <div class="swiper-slide" style="width: 200px; box-shadow: none; background: none; height: 90px">
-                            <img class="img-slide" src="{{asset('fronend/img-partner/5.png')}}" alt="">
-                        </div>
+                        @endforeach
                      </div>
                 </div>
 

@@ -72,35 +72,6 @@
                     </div>
                 </div>
             @endforeach
-            {{--            <div class="col-lg-4 col-md-6">--}}
-            {{--                <div class="single-news">--}}
-            {{--                    <div class="news-img">--}}
-            {{--                        <a href="#">--}}
-            {{--                            <img style="width: 100%;" src="{{asset('fronend/img_blog/blog/2.jpg')}}" alt="News">--}}
-            {{--                        </a>--}}
-            {{--                        <div class="date">--}}
-            {{--                            <span>2 November</span>--}}
-            {{--                        </div>--}}
-            {{--                    </div>--}}
-            {{--                    <div class="news-text" style="color:#747677">--}}
-            {{--                        <ul>--}}
-            {{--                            <li>--}}
-            {{--                                <i class='fas fa-user' style="color:#e22b64"></i>--}}
-            {{--                                By--}}
-            {{--                                <a class="name-user" href="#">Admin</a>--}}
-            {{--                            </li>--}}
-
-            {{--                        </ul>--}}
-            {{--                        <h3>--}}
-            {{--                            <a href="{{route('blog_details_1')}}">A place start a new life with peace</a>--}}
-            {{--                        </h3>--}}
-            {{--                        <p>Lorem ipsum dolor sit amet, consectetur eiussi adipiscing elit, sed do eiusmod tempor incididunt ut</p>--}}
-            {{--                        <a class="read-more" href="{{route('blog_details_1')}}">--}}
-            {{--                            Read More--}}
-            {{--                        </a>--}}
-            {{--                    </div>--}}
-            {{--                </div>--}}
-            {{--            </div>--}}
         </div>
     </div>
 </section>

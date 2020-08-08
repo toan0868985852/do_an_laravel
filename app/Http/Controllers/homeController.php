@@ -8,13 +8,24 @@ use App\massage;
 use App\causes;
 use App\eventDetails;
 use App\causeDetails;
+use App\homeTitle;
+use App\homebox;
+use App\homeplan;
+use App\partherlist;
 use Illuminate\Http\Request;
 use Illuminate\Pagination\Paginator;
 
 class homeController extends Controller
 {
     public function home(){
-        return view('home.home');
+        $homeTitle = homeTitle::all();
+        $homeBox = homebox::all();
+        $homePlan = homeplan::all();
+        $homeSlide = projects::all()->take(6);
+        $homeEvent = Event::all()->take(4);
+        $homeBlogGrid = blog::all()->take('3');
+        $partnerList = partherlist::all();
+        return view('home.home',compact('homeTitle','homeBox','homePlan', 'homeSlide','homeEvent', 'homeBlogGrid', 'partnerList'));
     }
 
     public function blog_details($id){
