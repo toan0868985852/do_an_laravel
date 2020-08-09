@@ -46,7 +46,7 @@ class signupResource extends Controller
         $user->email = $request->email;
         $user->password = bcrypt($request->password);
         $user->save();
-        return redirect()->route('login.index')->with('thanhcong','Tạo tài khoản thành công');
+        return redirect()->route('mail')->with('thanhcong','Tạo tài khoản thành công');
     }
 
 }

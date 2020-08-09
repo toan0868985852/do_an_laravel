@@ -41,7 +41,9 @@ Route::group(['prefix'=>'admin'],function(){
     Route::resource('edit','editUserController');
     Route::get('register/serch','serchController@getserch')->name('serch');
     Route::get('email','mailController@getmail')->name('mail');
+    Route::get('sendemail','mailController@sendemail')->name('sendemail');
     Route::get('image','adminController@image')->name('image');
+    Route::get('image/listimg/{id}','adminController@imagelist')->name('imglist');
 });
 //-------------------------quan ly--------------------------
 
@@ -73,9 +75,16 @@ Route::group(['prefix'=>'home'],function(){
 //----------------------trang chu----------------------------
 
 //-----------------------message----------------------------
-Route::resource('message','messageController');
+Route::resource('message','messageController')->only(['store']);
 //-----------------------message----------------------------
 
+//-----------------------donate----------------------------
+Route::resource('donate','donateResource')->only(['store']);
+//-----------------------donate----------------------------
+
+//-------------------------send email-----------------------------------
+Route::post('admin/mail','sendmailController@sendmail')->name('sendmail');
+//-------------------------send email-----------------------------------
 
 
 

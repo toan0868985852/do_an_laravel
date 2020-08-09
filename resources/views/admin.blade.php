@@ -68,9 +68,9 @@
                             <i id="icon-1" class="fa fa-chevron-down"></i>
                         </a>
                         <ul class="sub">
-                            <li><a href="typography.html">Giới thiệu về công ty</a></li>
-                            <li><a href="glyphicon.html">Những dự án dã hoàn thành</a></li>
-                            <li><a href="grids.html">những dự án đang thực hiện</a></li>
+                            <li><a href="typography.html">Introduction</a></li>
+                            <li><a href="glyphicon.html">Completed projects</a></li>
+                            <li><a href="grids.html">Ongoing projects</a></li>
                         </ul>
                     </li>
                     <li class="sub-menu">
@@ -80,7 +80,7 @@
                             <i id="icon-2" class="fa fa-chevron-down"></i>
                         </a>
                         <ul class="sub">
-                            <li><a href="{{route('register.index')}}">Liệt kê những người đã đăng ký</a></li>
+                            <li><a href="{{route('register.index')}}">Subscribers</a></li>
                         </ul>
                     </li>
                     <li class="sub-menu">
@@ -90,8 +90,8 @@
                             <i id="icon-3" class="fa fa-chevron-down"></i>
                         </a>
                         <ul class="sub">
-                            <li><a href="form_component.html">Thêm đối tác</a></li>
-                            <li><a href="form_validation.html">Liệt kê các đối tác</a></li>
+                            <li><a href="form_component.html">Add object</a></li>
+                            <li><a href="form_validation.html">List of partners</a></li>
                         </ul>
                     </li>
                     <li class="sub-menu">
@@ -101,7 +101,7 @@
                             <i id="icon-mail" class="fa fa-chevron-down"></i>
                         </a>
                         <ul class="sub">
-                            <li><a href="mail.html">Inbox</a></li>
+                            <li><a href="{{route('sendemail')}}">Sent</a></li>
                             <li><a href="{{route('mail')}}">Compose Mail</a></li>
                         </ul>
                     </li>
@@ -112,8 +112,8 @@
                             <i id="icon-donate" class="fa fa-chevron-down"></i>
                         </a>
                         <ul class="sub">
-                            <li><a href="chartjs.html">Liệt kê người donate</a></li>
-                            <li><a href="chartjs.html">Những người donate nhiều nhất</a></li>
+                            <li><a href="chartjs.html">List of supporters</a></li>
+                            <li><a href="chartjs.html">The most supporters</a></li>
                         </ul>
                     </li>
                     <li class="sub-menu">
@@ -123,7 +123,7 @@
                             <i id="icon-img" class="fa fa-chevron-down"></i>
                         </a>
                         <ul class="sub">
-                            <li><a href="{{route('image')}}">Liệt kê danh mục ảnh</a></li>
+                            <li><a href="{{route('image')}}">List of photo categories</a></li>
                         </ul>
                     </li>
                 </ul>

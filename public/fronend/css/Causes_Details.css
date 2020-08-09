@@ -261,7 +261,8 @@ p{
 }
 .payment-method p{
     display: inline-block;
-    padding-right: 30px;
+    padding-right: 50px;
+    padding-left: 38px;
 }
 
 

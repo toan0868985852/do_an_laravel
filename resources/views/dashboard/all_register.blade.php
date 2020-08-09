@@ -3,7 +3,7 @@
     <div class="table-agile-info">
         <div class="panel panel-default">
             <div class="panel-heading">
-               Danh sách những người đã đăng ký
+                List of people who have subscribed
             </div>
             <div class="row w3-res-tb">
                 <div class="col-sm-4">
@@ -40,10 +40,10 @@
                         <td>{{ $user->name }}</td>
                         <td><span class="text-ellipsis">{{ $user->email }}</span></td>
                         <td><span class="text-ellipsis">{{ $user->created_at }}</span></td>
-                        <td>
+                        <td style="position: relative">
                             <a href="/do_an_laravel/public/admin/edit/{{$user->id}}" class="active">
-                                <i class="fa fa-pencil-square-o text-success text-active"></i></a>
-                            <a href="#myModal-2" data-toggle="modal">
+                                <i style="position: relative; top: -10px" class="far fa-edit text-success text-active"></i></a>
+                            <a style="position: absolute; top: 25px; right: 20px" href="#myModal-2" data-toggle="modal">
                                 <i class="fa fa-times text-danger text"></i>
                             </a>
                                 <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal-2" class="modal fade">
@@ -54,7 +54,7 @@
                                                  <h4 class="modal-title">ADMIN</h4>
                                              </div>
                                                 <div class="modal-body">
-                                                    <p style="line-height: 57px; text-align: center">Bạn có muốn xóa người dùng này</p>
+                                                    <p style="line-height: 57px; text-align: center">You want to delete this user</p>
                                                         <form style="margin-left: 67%" action="{{route('edit.destroy',$user->id)}}" method="post">
                                                             {{csrf_field()}}
                                                             {{method_field('delete')}}

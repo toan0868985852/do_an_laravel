@@ -4,16 +4,16 @@
         <div class="panel panel-default">
             <div class="panel-heading">
                 @if(count($serch) > 0)
-               Tìm thấy {{count($serch)}}  người dùng trong danh sách những người đã đăng ký
+                    {{count($serch)}} people found in the list registered
                     @else
-                    Tên người dùng không tồn tại
+                    Name does not exist
                 @endif
             </div>
             <div class="row w3-res-tb">
                 <div class="col-sm-4">
                 </div>
                 <div class="col-sm-3">
-                    <p style="position: relative; left: 497px">Tìm kiếm theo tên</p>
+                    <p style="position: relative; left: 497px">Search by name</p>
                     <div class="input-group">
                         <form action="{{route('serch')}}" method="get">
                             <input style="outline: none; width: 200px" type="text" name="key" class="input-sm form-control" placeholder="Search">
@@ -44,10 +44,10 @@
                             <td>{{ $user->name }}</td>
                             <td><span class="text-ellipsis">{{ $user->email }}</span></td>
                             <td><span class="text-ellipsis">{{ $user->created_at }}</span></td>
-                            <td>
+                            <td style="position: relative">
                                 <a href="/do_an_laravel/public/admin/edit/{{$user->id}}" class="active">
-                                    <i class="fa fa-pencil-square-o text-success text-active"></i></a>
-                                <a href="#myModal-2" data-toggle="modal">
+                                    <i style="position: relative; top: -10px" class="far fa-edit text-success text-active"></i></a>
+                                <a style="position: absolute; top: 25px; right: 20px" href="#myModal-2" data-toggle="modal">
                                     <i class="fa fa-times text-danger text"></i>
                                 </a>
                                 <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal-2" class="modal fade">

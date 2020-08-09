@@ -5,8 +5,12 @@
                     <div class="market-update-block clr-block-1">
                         <div class="col-md-12 market-update-left">
                             <h4>Users</h4>
-                            <h3>1,250</h3>
-                            <span class="badge badge-success mr-1">+11%</span>
+                            @if(count($user) > 0)
+                                <h3>{{count($user)}},000</h3>
+                            @else]
+                                <h3>0</h3>
+                            @endif
+                            <span class="badge badge-success mr-1">+100%</span>
                             <span style="font-size: 13px;position: relative; top: 10px;color: #fff">From previous period</span>
                         </div>
                         <div class="col-md-4 market-update-right">
@@ -38,7 +42,7 @@
                             <span style="font-size: 13px;position: relative; top: 10px;color: #fff">From previous period</span>
                         </div>
                         <div class="col-md-4 market-update-right">
-                            <i style="font-size: 45px; color: #fff" class="fa fa-money"></i>
+                            <i style="font-size: 45px; color: #fff; margin-left: -5px; margin-top: -5px" class="far fa-money-bill-alt"></i>
                         </div>
                         <div class="clearfix"> </div>
                     </div>
@@ -106,48 +110,48 @@
                         <table class="table stats-table ">
                             <thead>
                             <tr>
-                                <th>STT</th>
-                                <th>PROJECT</th>
-                                <th>STATUS</th>
-                                <th>PROGRESS</th>
+                                <th style="color: #fff">STT</th>
+                                <th style="color: #fff">PROJECT</th>
+                                <th style="color: #fff">STATUS</th>
+                                <th style="color: #fff">PROGRESS</th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr>
-                                <th scope="row">1</th>
-                                <td>Children</td>
-                                <td><span class="label label-success">finish</span></td>
-                                <td><h5 style="color: #4cc71b">100% <i class="fa fa-thumbs-up"></i></h5></td>
+                                <th style="color: #fff" scope="row">1</th>
+                                <td style="color: #fff">Children</td>
+                                <td style="color: #fff"><span class="label label-success">finish</span></td>
+                                <td style="color: #fff"><h5 style="color: #4cc71b">100% <i class="fa fa-thumbs-up"></i></h5></td>
                             </tr>
                             <tr>
-                                <th scope="row">2</th>
-                                <td>House</td>
-                                <td><span class="label label-warning">New</span></td>
-                                <td><h5 style="color: orange">0% <i class="fa fa-long-arrow-right"></i></h5></td>
+                                <th style="color: #fff" scope="row">2</th>
+                                <td style="color: #fff">House</td>
+                                <td style="color: #fff"><span class="label label-warning">New</span></td>
+                                <td style="color: #fff"><h5 style="color: orange">0% <i class="fa fa-long-arrow-right"></i></h5></td>
                             </tr>
                             <tr>
-                                <th scope="row">3</th>
-                                <td>Heart for you</td>
-                                <td><span class="label label-warning">New</span></td>
-                                <td><h5 style="color: orange">0% <i class="fa fa-long-arrow-right"></i></h5></td>
+                                <th style="color: #fff" scope="row">3</th>
+                                <td style="color: #fff">Heart for you</td>
+                                <td style="color: #fff"><span class="label label-warning">New</span></td>
+                                <td style="color: #fff"><h5 style="color: orange">0% <i class="fa fa-long-arrow-right"></i></h5></td>
                             </tr>
                             <tr>
-                                <th scope="row">4</th>
-                                <td>Construct a road</td>
-                                <td><span class="label label-info">In process</span></td>
-                                <td><h5>55% <i class="fa fa-level-up"></i></h5></td>
+                                <th style="color: #fff" scope="row">4</th>
+                                <td style="color: #fff">Construct a road</td>
+                                <td style="color: #fff"><span class="label label-info">In process</span></td>
+                                <td style="color: #fff"><h5>55% <i class="fa fa-level-up"></i></h5></td>
                             </tr>
                             <tr>
-                                <th scope="row">5</th>
-                                <td>The homeless</td>
-                                <td><span class="label label-success">finish</span></td>
-                                <td><h5 style="color: #4cc71b">100% <i class="fa fa-thumbs-up"></i></h5></td>
+                                <th style="color: #fff" scope="row">5</th>
+                                <td style="color: #fff">The homeless</td>
+                                <td style="color: #fff"><span class="label label-success">finish</span></td>
+                                <td style="color: #fff"><h5 style="color: #4cc71b">100% <i class="fa fa-thumbs-up"></i></h5></td>
                             </tr>
                             <tr>
-                                <th scope="row">6</th>
-                                <td>Mid-Autumn Festival for kids</td>
-                                <td><span class="label label-info">In process</span></td>
-                                <td><h5>38% <i class="fa fa-level-up"></i></h5></td>
+                                <th style="color: #fff" scope="row">6</th>
+                                <td style="color: #fff">Mid-Autumn Festival for kids</td>
+                                <td style="color: #fff"><span class="label label-info">In process</span></td>
+                                <td style="color: #fff"><h5>38% <i class="fa fa-level-up"></i></h5></td>
                             </tr>
                             </tbody>
                         </table>

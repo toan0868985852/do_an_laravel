@@ -853,7 +853,8 @@ ul.top-menu>li>a:hover,ul.top-menu>li>a:focus {
 }
 .panel {
     border: none ! important;
-    height: 525px;
+    min-height: 525px;
+    height: auto;
 }
 .agileinfo-grap {
     padding: 2em;
@@ -1517,7 +1518,7 @@ section#tables  p {
 }
 .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
 	font-size: 0.9em;
-	color: #fff;
+	color: #323232;
 	border-top: none !important;
 }
 .tab-content > .active {

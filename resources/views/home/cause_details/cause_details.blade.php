@@ -36,36 +36,57 @@
                         <p>{{$caudetails->p3}}</p>
                         <p>{{$caudetails->p4}}</p>
                     </div>
+                    @if(Auth::check())
                     <div class="article-content">
+                        <div class="error" style="color: red;text-align: center;">
+                            @if(count($errors)>0)
+                                @foreach($errors->all() as $err)
+                                    {{$err}}
+                                @endforeach
+                            @endif
+                        </div>
+                        <div class="thanhcong" style="text-align: center;font-size: 20px;color: #ff3187;font-weight: 600;">
+                            @if(Session::has('thanhcong'))
+                                <div class="success">
+                                    {{Session::get('thanhcong')}}
+                                </div>
+                            @endif
+                        </div>
+                        <form action="{{route('donate.store')}}" method="post">
+                            <input type="hidden" name="_token" value="{{csrf_token()}}">
                         <div class="payment-method">
+
                             <h3>Select Payment Method</h3>
                             <p>
-                                <input type="radio" id="paypal" name="radio-group">
+                                <input type="radio" id="paypal" name="radio" value="PayPal">
                                 <label for="paypal">PayPal</label>
                             </p>
                             <p>
-                                <input type="radio" id="credit" name="radio-group">
+                                <input type="radio" id="credit" name="radio" value="Credit Card">
                                 <label for="credit">Credit Card</label>
                             </p>
                             <p>
-                                <input type="radio" id="debit" name="radio-group">
+                                <input type="radio" id="debit" name="radio" value="Debit Card">
                                 <label for="debit">Debit Card</label>
                             </p>
                             <p>
-                                <input type="radio" id="others" name="radio-group">
+                                <input type="radio" id="others" name="radio" value="others">
                                 <label for="others">others</label>
                             </p>
+
                         </div>
                         <div class="contact-form">
-                            <input type="text" name="name"  placeholder="First Name">
-                            <input type="text" name="name"  placeholder="Last Name">
+                            <input type="hidden" name="name" value="{{Auth::user()->name}}">
                             <input type="text" name="email"  placeholder="Email">
-                            <input type="text" name="phone_number"  placeholder="Phone">
-                            <input type="text" name="message"  placeholder="$100.00">
+                            <input type="text" name="phone"  placeholder="Phone">
+                            <input type="text" name="money"  placeholder="$100.00">
                             <button type="submit" class="default-btn" >Donate Now</button>
-                        </div>
-                    </div>
 
+                        </div>
+                        </form>
+
+                    </div>
+                    @endif
                     <div class="article-footer">
                         <div class="article-tags">
                             <span><i class="fa fa-share"></i></span>

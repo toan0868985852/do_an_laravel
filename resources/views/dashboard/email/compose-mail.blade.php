@@ -30,29 +30,34 @@
                             <button class="btn btn-primary btn-sm"><i class="fa fa-check"></i> Send</button>
                         </div>
                         <div class="compose-mail">
-                            <form role="form-horizontal" method="post">
+                            <div class="error" style="text-align: center;margin-top: -22px;margin-bottom: 20px;font-size: 20px;color: red;">
+                                @if(count($errors)>0)
+                                    @foreach($errors->all() as $err)
+                                        <p>{{$err}}</p>
+                                    @endforeach
+                                @endif
+                            </div>
+                            <div class="thanhcong">
+                                @if(Session::has('thanhcong'))
+                                    <div class="success" style="text-align: center;margin-bottom: 20px;margin-top: -20px; font-size: 20px;font-weight: 600;">
+                                        {{Session::get('thanhcong')}}
+                                    </div>
+                                @endif
+                            </div>
+                            <form role="form-horizontal" action="{{route('sendmail')}}" method="post">
+                                <input type="hidden" name="_token" value="{{csrf_token()}}">
                                 <div class="form-group">
                                     <label for="to" class="">To:</label>
-                                    <input type="text" tabindex="1" id="to" class="form-control">
-                                </div>
-
-                                <div class="form-group hidden">
-                                    <label for="cc" class="">Cc:</label>
-                                    <input type="text" tabindex="2" id="cc" class="form-control">
-                                </div>
-
-                                <div class="form-group hidden">
-                                    <label for="bcc" class="">Bcc:</label>
-                                    <input type="text" tabindex="2" id="bcc" class="form-control">
+                                    <input type="text" name="to" tabindex="1" id="to" class="form-control">
                                 </div>
 
                                 <div class="form-group">
                                     <label for="subject" class="">Subject:</label>
-                                    <input type="text" tabindex="1" id="subject" class="form-control">
+                                    <input type="text" name="subject" tabindex="1" id="subject" class="form-control">
                                 </div>
 
                                 <div class="compose-editor">
-                                    <textarea class="wysihtml5 form-control" rows="9"></textarea>
+                                    <textarea name="body" class="wysihtml5 form-control" rows="9"></textarea>
                                     <input type="file" class="default">
                                 </div>
                                 <div class="compose-btn">
