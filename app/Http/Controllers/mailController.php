@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\mail;
 
 class mailController extends Controller
 {
@@ -11,6 +12,7 @@ class mailController extends Controller
     }
 
     public function sendemail(){
-        return view('dashboard.email.send');
+        $mail = mail::all();
+        return view('dashboard.email.send',compact('mail'));
     }
 }

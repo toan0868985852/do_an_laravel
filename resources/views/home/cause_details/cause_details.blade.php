@@ -77,6 +77,7 @@
                         </div>
                         <div class="contact-form">
                             <input type="hidden" name="name" value="{{Auth::user()->name}}">
+                            <input type="hidden" name="doituong" value="{{$caudetails->doi_tuong}}">
                             <input type="text" name="email"  placeholder="Email">
                             <input type="text" name="phone"  placeholder="Phone">
                             <input type="text" name="money"  placeholder="$100.00">

@@ -32,6 +32,7 @@ class donateResource extends Controller
             $donate = new donate();
             $donate->hinh_thuc = $request->radio;
             $donate->name = $request->name;
+            $donate->doi_tuong = $request->doituong;
             $donate->email = $request->email;
             $donate->phone = $request->phone;
             $donate->so_tien_donate = $request->money;

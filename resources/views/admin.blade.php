@@ -30,6 +30,32 @@
                 <div class="fa fa-bars"></div>
             </div>
         </div>
+        <div class="nav notify-row" id="top_menu">
+            <ul class="nav top-menu">
+                <li id="header_inbox_bar" class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                        <i class="fas fa-envelope"></i>
+                        <span class="badge bg-important">1</span>
+                    </a>
+                    <ul class="dropdown-menu extended inbox">
+                        <li>
+                            <p class="red">You have 1 Mails</p>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="subject">
+                                <span class="from">nguyen van a</span>
+                                <span class="time">Just now</span>
+                                </span>
+                                <span class="message">
+                                    Hello
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
         <div class="top-nav clearfix">
             <ul class="nav pull-right top-menu">
                 <li class="dropdown">
@@ -112,7 +138,7 @@
                             <i id="icon-donate" class="fa fa-chevron-down"></i>
                         </a>
                         <ul class="sub">
-                            <li><a href="chartjs.html">List of supporters</a></li>
+                            <li><a href="{{route('donate')}}">List of supporters</a></li>
                             <li><a href="chartjs.html">The most supporters</a></li>
                         </ul>
                     </li>

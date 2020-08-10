@@ -61,7 +61,8 @@ class homeController extends Controller
     }
 
     public function about(){
-        return view('home.about');
+        $homePlan = homeplan::all();
+        return view('home.about',compact('homePlan'));
     }
 
     public function even(){

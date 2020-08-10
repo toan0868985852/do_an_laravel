@@ -18,7 +18,6 @@ use Illuminate\Support\Facades\Route;
 //----------------login-signup-forgotPassword------------------------------------
 Route::resource('login','loginResouce')->only(['index', 'store']);
 Route::resource('signup','signupResource')->only(['index', 'store']);
-
 //----------------login-signup-forgotPassword------------------------------------
 
 
@@ -44,6 +43,7 @@ Route::group(['prefix'=>'admin'],function(){
     Route::get('sendemail','mailController@sendemail')->name('sendemail');
     Route::get('image','adminController@image')->name('image');
     Route::get('image/listimg/{id}','adminController@imagelist')->name('imglist');
+    Route::get('donate','adminController@donate')->name('donate');
 });
 //-------------------------quan ly--------------------------
 

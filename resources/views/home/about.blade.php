@@ -34,8 +34,8 @@
                     <img src="{{asset('fronend/home/img/about-2.jpg')}}">
                 </div>
                 <div class="section2-4-2 col-md-6 col-xs-6 col-lg-6 col-sm-6">
-                    <div>Về chúng tôi</div>
-                    <h3>Niềm vui của họ là hạnh phúc của chúng tôi</h3>
+                    <div>About us</div>
+                    <h3>Their joy is our happiness</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text.</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas.</p>
                 </div>
@@ -69,7 +69,7 @@
                     </div>
                     <div class="tt tt1 col-md-2 col-xs-2 col-lg-2 col-sm-2">
                         <div>10000+</div>
-                        <p class="number"><font color="white"> Thành viên</font></p>
+                        <p class="number"><font color="white"> Member</font></p>
                     </div>
                 </div>
             </div>
@@ -84,36 +84,20 @@
                     <img src="{{asset('fronend/home/img/get-started.png')}}">
                 </div>
                 <div class="section2-5-2 col-md-6 col-xs-6 col-lg-6 col-sm-6">
-                    <div>Bắt đầu từ hôm nay</div>
-                    <p class="about1">Kế hoạch gây quĩ của chúng tôi</p>
+                    <div>Starting from today</div>
+                    <p class="about1">Our fundraising plan</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <div>
-                        <div class="col-md-2 col-xs-2 col-lg-2 col-sm-2">
-                            <img src="{{asset('fronend/home/img/getstarted1.png')}}" width="66%">
+                    @foreach($homePlan as $HomePlan)
+                        <div>
+                            <div class="col-md-2 col-xs-2 col-lg-2 col-sm-2">
+                                <img src="{{asset("fronend/home/img/" . "$HomePlan->img" . "")}}" width="66%">
+                            </div>
+                            <div class="col-md-10 col-xs-10 col-lg-10 col-sm-10">
+                                <h3>{{ $HomePlan->title }}</h3>
+                                <p>{{ $HomePlan->content }}</p>
+                            </div>
                         </div>
-                        <div class="col-md-10 col-xs-10 col-lg-10 col-sm-10">
-                            <h3>Giáo dục cho trẻ em</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</p>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="col-md-2 col-xs-2 col-lg-2 col-sm-2">
-                            <img src="{{asset('fronend/home/img/getstarted2.png')}}" width="66%">
-                        </div>
-                        <div class="col-md-10 col-xs-10 col-lg-10 col-sm-10">
-                            <h3>Nhà ở công cộng cho người vô gia cư</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</p>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="col-md-2 col-xs-2 col-lg-2 col-sm-2">
-                            <img src="{{asset('fronend/home/img/getstarted3.png')}}" width="66%">
-                        </div>
-                        <div class="col-md-10 col-xs-10 col-lg-10 col-sm-10">
-                            <h3>Dịch vụ y tế miễn phí</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed</p>
-                        </div>
-                    </div>
+                    @endforeach
                     <button class="btn">Tìm hiểu thêm</button>
                 </div>
             </div>

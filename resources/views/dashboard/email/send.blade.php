@@ -25,46 +25,18 @@
                         <div class="table-inbox-wrap ">
                             <table class="table table-inbox table-hover">
                                 <tbody>
-                                <tr class="unread">
-                                    <td class="inbox-small-cells">
-                                        <input type="checkbox" class="mail-checkbox">
-                                    </td>
-                                    <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
-                                    <td class="view-message  dont-show"><a href="#">ABC Company</a></td>
-                                    <td class="view-message "><a href="#">Lorem ipsum dolor imit set.</a></td>
-                                    <td class="view-message  inbox-small-cells"><i class="fa fa-paperclip"></i></td>
-                                    <td class="view-message  text-right">12.10 AM</td>
-                                </tr>
-                                <tr class="unread">
-                                    <td class="inbox-small-cells">
-                                        <input type="checkbox" class="mail-checkbox">
-                                    </td>
-                                    <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
-                                    <td class="view-message dont-show"><a href="#">Mr Bean</a></td>
-                                    <td class="view-message"><a href="#">Hi Bro, Lorem ipsum dolor imit</a></td>
-                                    <td class="view-message inbox-small-cells"></td>
-                                    <td class="view-message text-right">Jan 11</td>
-                                </tr>
+                                @foreach($mail as $email)
                                 <tr class="">
                                     <td class="inbox-small-cells">
                                         <input type="checkbox" class="mail-checkbox">
                                     </td>
                                     <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
-                                    <td class="view-message dont-show"><a href="#">Jonathan Smith</a></td>
-                                    <td class="view-message"><a href="#">Lorem ipsum dolor sit amet</a></td>
+                                    <td class="view-message dont-show"><a href="#">{{$email->email}}</a></td>
+                                    <td class="view-message"><a href="#">{{$email->title}}</a></td>
                                     <td class="view-message inbox-small-cells"></td>
-                                    <td class="view-message text-right">March 15</td>
+                                    <td class="view-message text-right">{{$email->created_at}}</td>
                                 </tr>
-                                <tr class="">
-                                    <td class="inbox-small-cells">
-                                        <input type="checkbox" class="mail-checkbox">
-                                    </td>
-                                    <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
-                                    <td class="view-message dont-show"><a href="#">Facebook</a></td>
-                                    <td class="view-message"><a href="#">Dolor sit amet, consectetuer adipiscing</a></td>
-                                    <td class="view-message inbox-small-cells"></td>
-                                    <td class="view-message text-right">June 01</td>
-                                </tr>
+                                @endforeach
                                 </tbody>
                             </table>
 

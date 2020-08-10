@@ -28,18 +28,14 @@
             <div class="section2-2 col-md-12 col-xs-12 col-lg-12 col-sm-12">
                 <h4>Good Causes</h4>
                 <h2>Help the Poor Through Us</h2>
-                <p>Cuộc sống là quá trình trao tặng và đón nhận không
-                    ngừng, mỗi người chúng
-                    ta là một mắc xích quan trọng trong vòng liên kết ấy. </p>
-                <p>Đừng do dự khi mở rộng lòng mình với mọi người. Rất nhiều
-                    người, nhiều nơi trên thế giới đang chờ đợi ở bạn một sự
-                    hảo tâm.</p>
+                <p>Life is a constant process of giving and receiving, each of us is an important link in that circle. </p>
+                <p>Don't hesitate to open up your heart to people. Many people, many parts of the world are waiting for your generosity.</p>
             </div>
             <div class="section2-3 col-md-12 col-xs-12 col-lg-12 col-sm-12">
                 @foreach($homeBox as $HomeBox)
                 <div class="section2-3-1 {{$HomeBox->session}} {{$HomeBox->session2}} col-md-3 col-xs-3 col-lg-3 col-sm-3">
                     <font color="{{$HomeBox->color}}"><i class='{{$HomeBox->icon}}' style='font-size:36px'></i></font>
-                    <h5>Save Water</h5>
+                    <h5>{{$HomeBox->title}}</h5>
                     <div ><font color="{{$HomeBox->color}}"><i class='{{$HomeBox->icon}}' ></i></font></div>
                     <p>{{$HomeBox->content}}</p>
                     <a href="#" class="read-more" >Read More</a>
@@ -51,8 +47,8 @@
                     <img src="{{asset('fronend/home/img/about-2.jpg')}}">
                 </div>
                 <div class="section2-4-2 col-md-6 col-xs-6 col-lg-6 col-sm-6">
-                    <div>Về chúng tôi</div>
-                    <h3>Niềm vui của họ là hạnh phúc của chúng tôi</h3>
+                    <div>About us</div>
+                    <h3>Their joy is our happiness</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                         ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo
                         viverra maecenas accumsan lacus vel facilisis.Lorem Ipsum is simply dummy text of the
@@ -61,7 +57,7 @@
                         elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         Quis ipsum suspendisse ultrices gravida. Risus commodo
                         viverra maecenas.</p>
-                    <button class="btn">Tìm hiểu thêm</button>
+                    <button class="btn">More Details</button>
                 </div>
             </div>
 
@@ -70,8 +66,8 @@
                     <img src="{{asset('fronend/home/img/get-started.png')}}">
                 </div>
                 <div class="section2-5-2 col-md-6 col-xs-6 col-lg-6 col-sm-6">
-                    <div>Bắt đầu từ hôm nay</div>
-                    <p class="about1">Kế hoạch gây quĩ của chúng tôi</p>
+                    <div>Starting from today</div>
+                    <p class="about1">Our fundraising plan</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua.</p>
                     @foreach($homePlan as $HomePlan)
@@ -85,7 +81,7 @@
                         </div>
                     </div>
                     @endforeach
-                    <button class="btn">Tìm hiểu thêm</button>
+                    <button class="btn">Learn More</button>
                 </div>
             </div>
         </div>
@@ -93,9 +89,9 @@
     <section class="section3">
         <div class="container">
             <div class="section2-2 section3-1 col-md-12 col-xs-12 col-lg-12 col-sm-12">
-                <h4>Chiến dịch hoạt dộng</h4>
-                <h2>Một số việc làm tốt</h2>
-                <p>Dưới đây là một số chiến lịch mà chúng tôi đang thực hiện. Hãy chúng tay với chúng tôi vì một cuộc sống tươi đẹp hơn</p>
+                <h4>Operation campaign</h4>
+                <h2>Some good jobs</h2>
+                <p>Here are some of the war schedules that we are working on. Please join hands with us for a better life</p>
             </div>
         </div>
         <img class="swiper-slide-icon__img" src="{{asset('fronend/home/img/1%20(1).png')}}" width="210px" height="210px">
@@ -120,7 +116,7 @@
                                     <hr>
                                     <h3>{{$project->ten_chien_dich}}</h3>
                                     <p>{{$project->content}}</p>
-                                    <a class="read-more" href="#">Read More</a>
+                                    <a class="read-more" href="{{url("home/cause_details/".$project->cause_details."")}}">Read More</a>
                                 </div>
                             </div>
                         </div>
@@ -179,7 +175,7 @@
     <section class="section5">
         <div class="container">
             <div class="section5-1 col-md-12 col-xs-12 col-lg-12 col-sm-12">
-                <h1 class="title-session5" style="font-weight: 700"><font color="white"> Một số những mục đích tốt</font></h1>
+                <h1 class="title-session5" style="font-weight: 700"><font color="white"> Some good purposes</font></h1>
                 <font color="white">
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
                     <br>
@@ -203,7 +199,7 @@
                     </div>
                     <div class="tt tt1 col-md-2 col-xs-2 col-lg-2 col-sm-2">
                         <span class="counter">10000<span>+</span></span>
-                        <p class="number"><font color="white" style="line-height: 47px"> Thành viên</font></p>
+                        <p class="number"><font color="white" style="line-height: 47px"> Member</font></p>
                     </div>
                 </div>
             </div>
@@ -219,18 +215,18 @@
                     <font color="black">
                         <div class="session6-title">
                             <h1>
-                                Cho đi sẽ nhận lại được nhiều hơn những gì bạn mất.
+                                Giving away gets you more in return than you lose.
                             </h1>
                         </div>
                         <p class="session6-conten">
-                            Hãy cứ cho đi sẽ nhận lại
-                            gấp trăm ngàn lần yêu thương. Trao yêu thương sẽ
-                            nhận lại yêu thương, cái được nhận lại còn lớn lao gấp bội lần.
+                            Just give and receive back
+                            hundred thousand times love. Give love will
+                            to receive love in return, what was received was even greater than that.
                             <br>
-                            Đó chính là phước báo, là sự thanh thản trong tâm hồn.
-                            Đây chính là những giá trị không thể đo đếm được. Sự
-                            yêu thương giúp đỡ mà chúng ta nhận lại chính là quả
-                            ngọt của tình yêu thương mà chúng ta đã trao đi.
+                            That is the blessing, the serenity of the soul.
+                            These are immeasurable values. The
+                            The love and help we receive in return is the fruit
+                            the sweetness of the love we have given.
                         </p>
                     </font>
                     <a class="button" href="">Làm cách nào để ủng hộ</a>
@@ -245,12 +241,12 @@
     <section class="section7">
         <div class="container">
             <div class="section2-2 ">
-                <h4>Sự kiện </h4>
-                <h2>Sự kiện sắp tới của chúng tôi</h2>
-                <p>Hãy cùng chung tôi chung tay giúp đỡ những người có hoàn cảnh
-                    khó khăn bằng bất cứ những gì bạn có dù là nhỏ nhất </p>
-                <p>Cho đi là nhận lại, đừng giữ cho riêng mình. Có những thứ là
-                    bỏ bé so với bận nhưng đó là những món quá vô giá đối với người khác.   </p>
+                <h4>Event </h4>
+                <h2>Our upcoming event</h2>
+                <p>Let's join hands to help people in need
+                    as difficult as whatever you have even the smallest</p>
+                <p>Give is take back, don't keep to yourself. There are things that are
+                    to leave the baby compared to busy, but they are too invaluable to others. </p>
                 <p> </p>
             </div>
             <div class="container-list">
