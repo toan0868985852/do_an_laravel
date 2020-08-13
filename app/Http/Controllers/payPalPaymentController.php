@@ -1,6 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 
+use App\donate;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Input;
@@ -89,12 +90,12 @@ class payPalPaymentController extends Controller
             if (Config::get('app.debug')) {
 
                 Session::put('error', 'Connection timeout');
-                return Redirect('/');
+                return Redirect('home/donate2/1');
 
             } else {
 
                 Session::put('error', 'Some error occur, sorry for inconvenient');
-                return Redirect('/');
+                return Redirect('home/donate2/1');
 
             }
 
@@ -122,11 +123,11 @@ class payPalPaymentController extends Controller
         }
 
         Session::put('error', 'Unknown error occurred');
-        return Redirect('/');
+        return Redirect('home/donate2/1');
 
     }
 
-    public function getPaymentStatus()
+    public function getPaymentStatus(Request $request)
     {
         /** Get the payment ID before session clear **/
         $payment_id = Session::get('paypal_payment_id');
@@ -136,7 +137,7 @@ class payPalPaymentController extends Controller
         if (empty(Input::get('PayerID')) || empty(Input::get('token'))) {
 
             Session::put('error', 'Payment failed');
-            return Redirect('/');
+            return Redirect('home/donate2/1');
 
         }
 
@@ -150,12 +151,23 @@ class payPalPaymentController extends Controller
         if ($result->getState() == 'approved') {
 
             Session::put('success', 'Payment success');
-            return Redirect('/');
+
+//            return Redirect('home/donate2/1');
+            $donate = new donate();
+            $donate->hinh_thuc = 'Paypel';
+            $donate->name = $request->name;
+            $donate->doi_tuong = $request->doituong;
+            $donate->history = 1;
+            $donate->email = $request->email;
+            $donate->so_tien_donate = $request->money;
+            $donate->phone = $request->phone;
+            $donate->save();
+            return redirect()->back()->with('thanhcong', 'Thanks for your support');
 
         }
 
         Session::put('error', 'Payment failed');
-        return Redirect('/');
+        return Redirect('home/donate2/1');
 
     }
 

@@ -48,4 +48,6 @@ class signupResource extends Controller
         return redirect()->route('mail')->with('thanhcong','Tạo tài khoản thành công');
     }
 
+
+
 }

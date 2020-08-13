@@ -26,9 +26,8 @@ class homeController extends Controller
         $homeSlide = projects::all()->take(6);
         $homeEvent = Event::all()->take(4);
         $homeBlogGrid = blog::all()->take('3');
-        $information = information::all();
         $partnerList = partherlist::all();
-        return view('home.home',compact('homeTitle','homeBox','homePlan', 'homeSlide','homeEvent', 'homeBlogGrid','information', 'partnerList'));
+        return view('home.home',compact('homeTitle','homeBox','homePlan', 'homeSlide','homeEvent', 'homeBlogGrid', 'partnerList'));
     }
 
     public function blog_details($id){
@@ -71,6 +70,10 @@ class homeController extends Controller
     public function even(){
         $event = Event::paginate(6);
        return view('home.Even_grid',compact('event'));
+    }
+
+    public function contact(){
+       return view('home.Contact');
     }
 
     public function project(){

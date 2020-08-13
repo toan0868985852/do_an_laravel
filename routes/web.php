@@ -33,9 +33,9 @@ Route::resource('user','userResouce')->middleware('adminlogin');
 
 
 //-------------------------quan ly--------------------------
-Route::resource('admin','adminResource')->only(['index']);
+Route::resource('admin','adminResource')->only(['index'])->middleware('adminlogin');;
 
-Route::group(['prefix'=>'admin'],function(){
+Route::group(['prefix'=>'admin','middleware'=>'adminlogin'],function(){
     Route::resource('register','registerController')->only(['index']);
     Route::resource('edit','editUserController');
     Route::get('register/serch','serchController@getserch')->name('serch');
@@ -74,12 +74,13 @@ Route::group(['prefix'=>'home'],function(){
     Route::get('about','homeController@about')->name('about');
     Route::get('even','homeController@even')->name('even');
     Route::get('project','homeController@project')->name('project');
+    Route::get('contact','homeController@contact')->name('contact');
     Route::get('event_details/{id}','homeController@event_details');
-    Route::get('donate2/{id}','homeController@donate2')->name('donate2');
-    Route::post('donate/card','paymentController@card');
-    Route::post('donate/order','paymentController@order');
-    Route::post('donate/paypal','payPalPaymentController@paywithpaypal');
-    Route::post('donate/paypal/status','payPalPaymentController@status');
+    Route::get('donate2/{id}','homeController@donate2')->name('donate2')->middleware('donateMiddkeware');
+    Route::post('donate/card','paymentController@card')->middleware('donateMiddkeware');
+    Route::post('donate/order','paymentController@order')->middleware('donateMiddkeware');
+    Route::post('donate/paypal','payPalPaymentController@paywithpaypal')->middleware('donateMiddkeware');
+    Route::post('donate/paypal/status','payPalPaymentController@status')->middleware('donateMiddkeware');
 
 });
 //----------------------trang chu----------------------------

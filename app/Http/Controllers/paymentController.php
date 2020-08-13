@@ -31,32 +31,74 @@ class paymentController extends Controller
     }
     public  function posts(Request $request)
     {
+        $this->validate($request,
+            [
+                'email'=>'required',
+                'money'=>'required',
+                'phone'=>'required',
+            ],
+            [
+                'email.required'=>'',
+                'money.required'=>'',
+                'phone.required'=>'',
+            ]);
                 $donate = new donate();
                 $donate->hinh_thuc = 'Card';
-//                $donate->other = $request->other;
-//                $donate->Card_number = $request->card;
-//                $donate->name = $request->name;
-//                $donate->doi_tuong = $request->doituong;
+                $donate->name = $request->name;
+                $donate->doi_tuong = $request->doituong;
                 $donate->history = 1;
                 $donate->email = $request->email;
                 $donate->so_tien_donate = $request->money;
-//                $donate->save();
-//                return redirect()->back()->with('thanhcong', 'Thanks for your support');
-        dd($donate);
+                $donate->phone = $request->phone;
+                $donate->save();
+                return redirect()->back()->with('thanhcong', 'Thanks for your support');
     }
 
     public function order(Request $request){
+        $this->validate($request,
+            [
+                'email'=>'required',
+                'money'=>'required',
+                'phone'=>'required',
+            ],
+            [
+                'email.required'=>'',
+                'money.required'=>'',
+                'phone.required'=>'',
+            ]);
+                $donate = new donate();
+                $donate->hinh_thuc = $request->other;
+                $donate->name = $request->name;
+                $donate->doi_tuong = $request->doituong;
+                $donate->history = 0;
+                $donate->email = $request->email;
+                $donate->so_tien_donate = $request->money;
+                $donate->phone = $request->phone;
+                $donate->save();
+                return redirect()->back()->with('thanhcong', 'Thanks for your support');
+    }
+
+    public function paypal(Request $request){
+        $this->validate($request,
+            [
+                'email'=>'required',
+                'money'=>'required',
+                'phone'=>'required',
+            ],
+            [
+                'email.required'=>'',
+                'money.required'=>'',
+                'phone.required'=>'',
+            ]);
         $donate = new donate();
-        $donate->hinh_thuc =  $request->hinh_thuc;
-//                $donate->other = $request->other;
-//                $donate->Card_number = $request->card;
-//                $donate->name = $request->name;
-//                $donate->doi_tuong = $request->doituong;
-        $donate->history = 0;
+        $donate->hinh_thuc = 'Paypal';
+        $donate->name = $request->name;
+        $donate->doi_tuong = $request->doituong;
+        $donate->history = 1;
         $donate->email = $request->email;
         $donate->so_tien_donate = $request->money;
-//                $donate->save();
-//                return redirect()->back()->with('thanhcong', 'Thanks for your support');
-        dd($donate);
+        $donate->phone = $request->phone;
+        $donate->save();
+        return redirect()->back()->with('thanhcong', 'Thanks for your support');
     }
 }

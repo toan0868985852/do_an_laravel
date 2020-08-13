@@ -58,7 +58,7 @@
                 </div>
             </div>
         </li>
-        <li><a class="" href="#">Contact</a></li>
+        <li><a class="" href="{{route('contact')}}">Contact</a></li>
         @if(Auth::check())
             <li>
                 <div class="dropdown seting-color">

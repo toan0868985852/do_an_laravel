@@ -47,13 +47,26 @@
                     <img src="{{asset('fronend/home/img/about-2.jpg')}}">
                 </div>
                 <div class="section2-4-2 col-md-6 col-xs-6 col-lg-6 col-sm-6">
-                    @foreach($information as $informations)
                     <div>About us</div>
-                    <h3>{{$informations->title}}</h3>
-                    <p>{{$informations->content1}}</p>
-                    <p>{{$informations->content3}}</p>
+                    <h3>A Dream in their Mind is Our Mission</h3>
+                    <p>Fabv - for a better world is a Vietnamese charity. was
+                        established on February 25, 2018 with the main purpose
+                        of calling for donations to bring what you receive to
+                        give to disadvantaged people who need help. Fabv did not
+                        work exclusively in any particular field but in an integrated
+                        direction. We always open programs calling for all areas of
+                        life such as: poor children, homeless people, roads, remote
+                        areas, ... just define the way the items We will immediately
+                        put in place the calling programs and once we have made the
+                        successful calls we will begin to implement those programs.</p>
+                    <p>What Fabv does is not for our own sake but we
+                        want to help the needy, the needy, ... we want to convey a
+                        message to everyone "or to give, whether it be the smallest
+                        things ". After a period of operation, our organization has a
+                        lot of companions and collaborators of Fabv spread across
+                        Vietnam. It is a fear of honor and a happiness for us, that
+                        shows your trust in our organization.</p>
                     <button class="btn">More Details</button>
-                    @endforeach
                 </div>
             </div>
 

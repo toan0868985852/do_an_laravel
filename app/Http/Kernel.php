@@ -66,5 +66,6 @@ class Kernel extends HttpKernel
         'adminlogin' => \App\Http\Middleware\Adminlogin::class,
         'donnateLogin' => \App\Http\Middleware\donnateLogin::class,
         'loginmiddkeware' => \App\Http\Middleware\loginMiddkeware::class,
+        'donateMiddkeware' => \App\Http\Middleware\donateMiddleware::class,
     ];
 }

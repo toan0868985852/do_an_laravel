@@ -129,17 +129,20 @@
 
         .StripeElement {
             box-sizing: border-box;
-            width: 500px;
+            width: 510px;
             height: 40px;
             padding: 10px 12px;
 
-            border: 1px solid transparent;
+            border: 1px solid #00000017;
             border-radius: 4px;
             background-color: white;
 
             box-shadow: 0 1px 3px 0 #e6ebf1;
             -webkit-transition: box-shadow 150ms ease;
             transition: box-shadow 150ms ease;
+
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
 
         .StripeElement--focus {
@@ -154,6 +157,82 @@
             background-color: #fefde5 !important;
         }
 
+        .tab button{
+            background: none;
+            outline: none;
+            border: none;
+        }
+        .tab .tablinks{
+            padding: 10px 20px;
+            border: 2px solid #E22B64;
+            color: #E22B64;
+            font-weight: 600;
+            margin-right: 8px;
+            border-radius: 14px;
+            margin-top: 10px;
+            transition: .3s;
+        }
+
+        .tab .tablinks.active{
+            background: #E22B64;
+            color: white;
+        }
+
+        .form-row input{
+            width: 510px;
+            height: 40px;
+            border-radius: 4px;
+            border: 1px solid #00000017;
+            box-shadow: 0 1px 3px 0 #e6ebf1;
+            padding-left: 14px;
+            outline: none;
+            margin-bottom: 12px;
+        }
+
+        .form-row input:focus{
+            border: 2px solid #E22B64;
+        }
+
+        form button{
+            background: #E22B64;
+            outline: none;
+            text-align: center;
+            color: white;
+            font-weight: 600;
+            padding: 10px 229px;
+            border: none;
+            border-radius: 8px;
+            transition: .3s;
+        }
+        form button:hover{
+            background: #ff427b;
+        }
+
+        .card__donate input{
+            width: 510px;
+            height: 40px;
+            border-radius: 4px;
+            border: 1px solid #00000017;
+            box-shadow: 0 1px 3px 0 #e6ebf1;
+            padding-left: 14px;
+            outline: none;
+            margin-bottom: 12px;
+        }
+
+        .card__donate input:focus{
+            border: 2px solid #E22B64;
+        }
+
+        .other__donate input{
+            width: 510px;
+            height: 40px;
+            border-radius: 4px;
+            border: 1px solid #00000017;
+            box-shadow: 0 1px 3px 0 #e6ebf1;
+            padding-left: 14px;
+            outline: none;
+            margin-bottom: 12px;
+        }
 
     </style>
     @if(Auth::check())
@@ -169,79 +248,146 @@
         </div>
         <div class="thanhcong" style="position: absolute">
             @if(Session::has('thanhcong'))
-                <div class="success" style="position: relative;margin-left: 184px;top: 9px;font-size: 18px;color: #ff3b7b;">
+                <div class="success" style="position: relative;margin-left: 184px;top: -37px;font-size: 18px;color: #ff3b7b;">
                     {{Session::get('thanhcong')}}
                 </div>
             @endif
         </div>
-                <div class="article-content" style="width: 48%;margin-bottom: 40px; margin-top: 0">
+                <div class="article-content" style="width: 48%;height: 439px;margin-bottom: 40px; margin-top: 0">
 {{--                    <form action="{{route('donate.store')}}" method="post" id="payment-form">--}}
-                        <input type="hidden" name="_token" value="{{csrf_token()}}">
-                        <div class="payment-method" style="position: absolute; margin-top: -115px">
-                            <p class="radio-input active" style="display: none"></p>
-                            <h3>Select Payment Method</h3>
-                            <p style="padding-right: 11px;padding-left: 8px;">
-                                <input type="radio" id="paypal" name="radio" value="PayPal">
-                                <label for="paypal">PayPal</label>
-                                <a class="input-card">
-                                    <form class="w3-container w3-display-middle w3-card-4 " method="POST" action="{{url('home/donate/paypal')}}">
-                                        {{ csrf_field() }}
-                                        <label class="w3-text-blue"><b>Enter Amount</b></label>
-                                        <input class="w3-input w3-border" name="amount" type="text">
-                                        <button class="w3-btn w3-blue">Pay with PayPal</button>
+{{--                        <input type="hidden" name="_token" value="{{csrf_token()}}">--}}
+{{--                        <div class="payment-method" style="position: absolute; margin-top: -115px">--}}
+{{--                            <p class="radio-input active" style="display: none"></p>--}}
+{{--                            <h3>Select Payment Method</h3>--}}
+{{--                            <p style="padding-right: 11px;padding-left: 8px;">--}}
+{{--                                <input type="radio" id="paypal" name="radio" value="PayPal">--}}
+{{--                                <label for="paypal">PayPal</label>--}}
+{{--                                <a class="input-card">--}}
+{{--                                    <form class="w3-container w3-display-middle w3-card-4 " method="POST" action="{{url('home/donate/paypal')}}">--}}
+{{--                                        {{ csrf_field() }}--}}
+{{--                                        <label class="w3-text-blue"><b>Enter Amount</b></label>--}}
+{{--                                        <input class="w3-input w3-border" name="amount" type="text">--}}
+{{--                                        <button class="w3-btn w3-blue">Pay with PayPal</button>--}}
 
-                            </form>
-                                </a>
-                            </p>
-                            <p class="radio-input" style="padding-right: 11px;padding-left: 8px;">
-                                <input type="radio" id="credit" name="radio" value="Card">
-                                <label for="credit">Card</label>
-                                <a class="input-card">
-                                    <form action="{{url('home/donate/card')}}" method="post" id="payment-form">
-                                        <input type="hidden" name="_token" value="{{csrf_token()}}">
-                                        <div class="form-row">
-                                            <div id="card-element">
-                                                <!-- A Stripe Element will be inserted here. -->
-                                            </div>
-                                            <!-- Used to display form errors. -->
-                                            <div id="card-errors" role="alert"></div>
-                                            <input type="text" name="money"  placeholder="$100.00">
-                                            <input type="text" name="email"  placeholder="Email">
+{{--                            </form>--}}
+{{--                                </a>--}}
+{{--                            </p>--}}
+{{--                            <p class="radio-input" style="padding-right: 11px;padding-left: 8px;">--}}
+{{--                                <input type="radio" id="credit" name="radio" value="Card">--}}
+{{--                                <label for="credit">Card</label>--}}
+{{--                                <a class="input-card">--}}
+{{--                                    <form action="{{url('home/donate/card')}}" method="post" id="payment-form">--}}
+{{--                                        <input type="hidden" name="_token" value="{{csrf_token()}}">--}}
+{{--                                        <div class="form-row">--}}
+{{--                                            <div id="card-element">--}}
+{{--                                                <!-- A Stripe Element will be inserted here. -->--}}
+{{--                                            </div>--}}
+{{--                                            <!-- Used to display form errors. -->--}}
+{{--                                            <div id="card-errors" role="alert"></div>--}}
+{{--                                            <input type="text" name="money"  placeholder="$100.00">--}}
+{{--                                            <input type="text" name="email"  placeholder="Email">--}}
 
-                                        </div>
+{{--                                        </div>--}}
 
-                                        <button>Submit Payment</button>
-                                    </form>
+{{--                                        <button>Submit Payment</button>--}}
+{{--                                    </form>--}}
 
-                                </a>
-                            </p>
-                            <p class="radio-input" style="padding-right: 11px;padding-left: 8px;">
-                                <input type="radio" id="credit" name="radio" value="Other">
-                                <label for="credit">Other</label>
-                                <a class="input-card">
-                                    <form action="{{url('home/donate/order')}}" method="post">
-                                        <input type="hidden" name="_token" value="{{csrf_token()}}">
+{{--                                </a>--}}
+{{--                            </p>--}}
+{{--                            <p class="radio-input" style="padding-right: 11px;padding-left: 8px;">--}}
+{{--                                <input type="radio" id="credit" name="radio" value="Other">--}}
+{{--                                <label for="credit">Other</label>--}}
+{{--                                <a class="input-card">--}}
+{{--                                    <form action="{{url('home/donate/order')}}" method="post">--}}
+{{--                                        <input type="hidden" name="_token" value="{{csrf_token()}}">--}}
 {{--                                        <input style="font-size: 16px;width: 197%;height: 50px;border: 1px solid #e6e6e6;margin-bottom: -9px;position: absolute;margin-left: -172px;margin-top: -4px; padding-left: 19px" type="text" id="others" name="other" placeholder="Payment methods">--}}
-                                        <input type="text" name="money"  placeholder="$100.00">
-                                        <input type="text" name="hinh_thuc"  placeholder="hinh thuc">
-                                        <input type="text" name="email"  placeholder="Email">
-                                        <button>Submit</button>
-                                    </form>
-                                </a>
-                            </p>
-                        </div>
-                        <div class="contact-form" style="line-height: 5; margin-top: 100px;position: relative;top: 20px;">
+{{--                                        <input type="text" name="money"  placeholder="$100.00">--}}
+{{--                                        <input type="text" name="hinh_thuc"  placeholder="hinh thuc">--}}
+{{--                                        <input type="text" name="email"  placeholder="Email">--}}
+{{--                                        <button>Submit</button>--}}
+{{--                                    </form>--}}
+{{--                                </a>--}}
+{{--                            </p>--}}
+{{--                        </div>--}}
+{{--                        <div class="contact-form" style="line-height: 5; margin-top: 100px;position: relative;top: 20px;">--}}
 {{--                            <input type="hidden" name="name" value="{{Auth::user()->id}}">--}}
 {{--                            <input type="hidden" name="doituong" value="{{$cause_details->id}}">--}}
 {{--                            <input type="text" name="email"  placeholder="Email">--}}
 {{--                            <input type="text" name="phone"  placeholder="Phone">--}}
 {{--                            <input type="text" name="money"  placeholder="$100.00">--}}
 {{--                            <button type="submit" class="default-btn" >Donate Now</button>--}}
-                        </div>
+{{--                        </div>--}}
 
 {{--                    </form>--}}
+                    <h3 style="font-weight: 600; margin-top: -10px">Select Payment Method</h3>
+                    <div class="tab">
+                        <button class="tablinks active" onclick="openCity(event, 'London')" id="defaultOpen">Card</button>
+                        <button class="tablinks" onclick="openCity(event, 'Paris')">Paypal</button>
+                        <button class="tablinks" onclick="openCity(event, 'Tokyo')">Other</button>
+                    </div>
 
+                    <div id="London" class="tabcontent">
+                        <form action="{{url('home/donate/card')}}" method="post" id="payment-form">
+                            <input type="hidden" name="_token" value="{{csrf_token()}}">
+                            <div class="form-row">
+                                <div id="card-element">
+                                    <!-- A Stripe Element will be inserted here. -->
+                                </div>
+                                <!-- Used to display form errors. -->
+                                <div id="card-errors" role="alert"></div>
+                                <p>
+                                <input type="text" name="money"  placeholder="$100.00">
+                                </p>
+                                <p>
+                                <input type="text" name="email"  placeholder="Email">
+                                </p>
+                                <p>
+                                <input type="text" name="phone"  placeholder="Phone">
+                                </p>
+                            </div>
+                            <button>Donate</button>
+                        </form>
+                    </div>
 
+                    <div id="Paris" class="tabcontent" style="display: none">
+                        <form class="w3-container w3-display-middle w3-card-4 " method="POST" action="{{url('home/donate/paypal')}}">
+                            {{ csrf_field() }}
+                            <label class="w3-text-blue"><b style="display: none">Enter Amount</b></label>
+                            <p class="card__donate">
+                                <input class="w3-input w3-border" name="amount" type="text" placeholder="$100.00">
+                            </p>
+                            <p class="card__donate">
+                                <input type="text" name="email"  placeholder="Email">
+                            </p>
+                            <p class="card__donate">
+                                <input type="text" name="phone"  placeholder="Phone">
+                            </p>
+                            <button class="w3-btn w3-blue">Donate</button>
+                        </form>
+                    </div>
+
+                    <div id="Tokyo" class="tabcontent" style="display: none">
+                        @if(Auth::check())
+                       <form action="{{url('home/donate/order')}}" method="post" class="other__donate">
+                           <input type="hidden" name="_token" value="{{csrf_token()}}">
+                           <input type="hidden" name="name" value="{{Auth::user()->name}}">
+                           <input type="hidden" name="doituong" value="{{$donate->doi_tuong}}">
+                           <p>
+                           <input style="margin-top: 20px" id="others" name="other" placeholder="Payment methods">
+                           </p>
+                           <p>
+                           <input type="text" name="money"  placeholder="$100.00">
+                           </p>
+                           <p>
+                           <input type="text" name="email"  placeholder="Email">
+                           </p>
+                           <p>
+                           <input type="text" name="phone"  placeholder="Phone">
+                           </p>
+                          <button>Donate</button>
+                       </form>
+                        @endif
+                    </div>
                 </div>
                 <div class="campaing-img" style="margin-left: 35px;">
                     <div class="card">
@@ -340,6 +486,24 @@
                 // Submit the form
                 form.submit();
             }
+
+
+            function openCity(evt, cityName) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+                document.getElementById(cityName).style.display = "block";
+                evt.currentTarget.className += " active";
+            }
+
+            // Get the element with id="defaultOpen" and click on it
+            document.getElementById("defaultOpen").click();
         </script>
 
     @endforeach
