@@ -76,6 +76,10 @@ Route::group(['prefix'=>'home'],function(){
     Route::get('project','homeController@project')->name('project');
     Route::get('event_details/{id}','homeController@event_details');
     Route::get('donate2/{id}','homeController@donate2')->name('donate2');
+    Route::post('donate/card','paymentController@card');
+    Route::post('donate/order','paymentController@order');
+    Route::post('donate/paypal','payPalPaymentController@paywithpaypal');
+    Route::post('donate/paypal/status','payPalPaymentController@status');
 
 });
 //----------------------trang chu----------------------------
@@ -92,7 +96,6 @@ Route::resource('donate','donateResource')->only(['store']);
 Route::post('admin/mail','sendmailController@sendmail')->name('sendmail');
 //-------------------------send email-----------------------------------
 
-Route::get('stripe', 'stripePaymentController@stripe');
 Route::post('stripe', 'stripePaymentController@stripePost')->name('stripe.post');
 
 

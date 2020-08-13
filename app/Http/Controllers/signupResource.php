@@ -29,7 +29,7 @@ class signupResource extends Controller
             [
                 'email'=>'required|email|unique:users,email',
                 'password'=>'required|min:6|max:20',
-                'fullname'=>'required|unique:users,name',
+                'fullname'=>'required',
             ],
             [
                 'email.required'=>'Vui lòng nhập email',
@@ -38,7 +38,6 @@ class signupResource extends Controller
                 'password.required'=>'Vui lòng nhập mật khẩu',
                 'password.min'=>'Mật khẩu ít nhất 6 ký tự',
                 'password.max'=>'Mật khẩu không quá 20 ký tự',
-                'fullname.unique'=>'Tên người dụng đã được sử dụng'
             ]);
         $user = new User();
         $user->remember_token = $request->_token;
