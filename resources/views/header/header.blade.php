@@ -15,22 +15,22 @@
 
 </head>
 <body>
-{{--<div class="loader-img">--}}
-{{--<img src="{{asset('fronend/img/lago2.png')}}" alt="">--}}
-{{--<div class="loader">--}}
-{{--    <span></span>--}}
-{{--    <span></span>--}}
-{{--    <span></span>--}}
-{{--</div>--}}
-{{--</div>--}}
+<div class="loader-img">
+<img src="{{asset('fronend/img/lago2.png')}}" alt="">
+<div class="loader">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+</div>
 <section class="main">
 <header>
     <a href="{{route('home')}}" class="logo"><img src="{{asset('fronend/home/img/logo.png')}}" alt=""></a>
-{{--    <button class="menu-toggler">--}}
-{{--        <span></span>--}}
-{{--        <span></span>--}}
-{{--        <span></span>--}}
-{{--    </button>--}}
+    <button class="menu-toggler">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
     <ul class="navbar-menu">
         <li><a class="active" href="{{route('home')}}">Home</a></li>
         <li><a class="" href="{{route('about')}}">About</a></li>
@@ -64,10 +64,13 @@
                 <div class="dropdown seting-color">
                     <button class="dropbtn js-item setting-user">
                         <i class="far fa-user-circle"></i>
-                        <i class="fa fa-chevron-down"></i>
+                        @if(Auth::check())
+                            <span style="position: relative;top: -4px">{{Auth::user()->name}}</span>
+                        @endif
+                        <i style="position: relative;top: -5px" class="fa fa-chevron-down"></i>
                     </button>
-                    <div class="dropdown-content conten-setting">
-                        <a href="{{route('log_out')}}">Đăng xuất</a>
+                    <div style="margin-left: 83px" class="dropdown-content conten-setting">
+                        <a style="margin-left: 35px" href="{{route('log_out')}}">Đăng xuất</a>
                     </div>
                 </div>
             </li>

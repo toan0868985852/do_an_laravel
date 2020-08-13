@@ -103,27 +103,21 @@ $(document).ready(function () {
     });
 });
 
-window.addEventListener('scroll',function () {
-    const parallax = document.querySelector('.active-slide');
-    let scrollPosition =  window.pageYOffset;
+// window.addEventListener('scroll',function () {
+//     const parallax = document.querySelector('.active-slide');
+//     let scrollPosition =  window.pageYOffset;
+//
+//     parallax.style.transform = 'translateY('+ scrollPosition * .5 + 'px)';
+// });
 
-    parallax.style.transform = 'translateY('+ scrollPosition * .5 + 'px)';
-});
 
+// window.addEventListener('scroll',function () {
+//     const parallax = document.querySelector('.js-conten');
+//     let scrollPosition =  window.pageYOffset;
+//
+//     parallax.style.transform = 'translateY('+ scrollPosition * .1 + 'px)';
+// })
 
-window.addEventListener('scroll',function () {
-    const parallax = document.querySelector('.js-conten');
-    let scrollPosition =  window.pageYOffset;
-
-    parallax.style.transform = 'translateY('+ scrollPosition * .1 + 'px)';
-})
-
-jQuery(document).ready(function($) {
-    $('.counter').counterUp({
-        delay: 10,
-        time: 1000
-    });
-});
 
 
 function session2box1() {

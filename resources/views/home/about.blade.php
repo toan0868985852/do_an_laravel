@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>FABV</title>
+    <title>FABV-about</title>
     <link rel="stylesheet" type="text/css" href="{{asset('fronend/home/vendorabc/fontawesome/css/all.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('fronend/home/vendorabc/bootstrap3.3.7/css/bootstrap.css')}}">
     <link rel="icon" href="{{asset('fronend/home/img/nivo-logo.png')}}">
@@ -36,8 +36,20 @@
                 <div class="section2-4-2 col-md-6 col-xs-6 col-lg-6 col-sm-6">
                     <div>About us</div>
                     <h3>Their joy is our happiness</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.Lorem Ipsum is simply dummy text of the printing and typesetting industry.Lorem Ipsum is simply dummy text.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas.</p>
+                    <p>We want to develop our organization as one of the largest charitable
+                        communities in Vietnam. We will try to be active and call for more
+                        investors, corporations that can help us. To build a corporation
+                        like today is very difficult to maintain and develop, the more
+                        difficult it is, so we are together with everyone. What you donate
+                        is not for us, but for everyone who is in need of our help. For a
+                        beautiful country, for a united people. Let's join hands with Fabv
+                        to complete the mission we set out to bring happiness to everyone.</p>
+                    <p>What Fabv does is not for our own sake but we want to help the needy,
+                        the needy, we want to convey a message to everyone "or to give,
+                        whether it be the smallest things ". After a period of operation,
+                        our organization has a lot of companions and collaborators of Fabv
+                        spread across Vietnam. It is a fear of honor and a happiness for
+                        us, that shows your trust in our organization.</p>
                 </div>
             </div>
         </div>
@@ -45,14 +57,14 @@
     <section class="section5">
         <div class="container">
             <div class="section5-1 col-md-12 col-xs-12 col-lg-12 col-sm-12">
-                <h1 class="title-session5" style="font-weight: 700"><font color="white"> Một số những mục đích tốt</font></h1>
+                <h1 class="title-session5" style="font-weight: 700"><font color="white"> Some Good Causes</font></h1>
                 <font color="white">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
                         <br>
                         magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas.</p>
                 </font>
-                <div class="donate1"><a href="#">Ủng hộ ngay</a> </div>
-                <div class="join"><a href="#">Tham  gia ngay</a> </div>
+                <div class="donate1"><a href="#">Donate Now</a> </div>
+                <div class="join"><a href="#">Join Now</a> </div>
 
                 <div class="section5-2 col-md-12 col-xs-12 col-lg-12 col-sm-12">
                     <div class="tt col-md-2 col-xs-2 col-lg-2 col-sm-2">
@@ -98,12 +110,42 @@
                             </div>
                         </div>
                     @endforeach
-                    <button class="btn">Tìm hiểu thêm</button>
+                    <button class="btn">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section6">
+        <div class="container">
+            <div style="display: flex; margin-top: -70px" class="section6-1 col-md-12 col-xs-12 col-lg-12 col-sm-12">
+                <div style="opacity: 1; position: relative; left: 180px" class="chodi col-md-6 col-xs-6 col-lg-7 col-sm-6">
+                    <font color="black">
+                        <div class="session6-title">
+                            <h1>
+                                Giving away gets you more in return than you lose.
+                            </h1>
+                        </div>
+                        <p class="session6-conten">
+                            Just give and receive back
+                            hundred thousand times love. Give love will
+                            to receive love in return, what was received was even greater than that.
+                            <br>
+                            That is the blessing, the serenity of the soul.
+                            These are immeasurable values. The
+                            The love and help we receive in return is the fruit
+                            the sweetness of the love we have given.
+                        </p>
+                    </font>
+                    <a class="button" href="">How To Donate</a>
+                </div>
+                <div style="opacity: 1; position: relative; right: 211px; top: -20px" class="section6-img col-md-5 col-xs-6 col-lg-5 col-sm-6">
+                    <img src="{{asset('fronend/home/img/organaization-2.jpg')}}" alt="">
                 </div>
             </div>
         </div>
     </section>
 </main>
+
 @include('footer.footer')
 <script type="text/javascript" src="{{asset('fronend/home/js/jquery.js')}}"></script>
 </body>

@@ -72,6 +72,7 @@ body {
     padding: 25px;
     box-shadow: 0 0 11px 3px rgba(0, 0, 0, 0.05);
     border-radius: 0 0 4px 4px;
+    position: relative;
 }
 
 .campaing-text p{
@@ -257,7 +258,7 @@ p{
     color: #8a8486;
     position: absolute;
     right: 185px;
-    top: 605px;
+    top: 20px;
 }
 .payment-method p{
     display: inline-block;
@@ -298,11 +299,6 @@ p{
     transition: all 0.5s;
 }
 
-
-
-
-
-
 .article-tags{
     width: 50%;
 }
@@ -311,7 +307,7 @@ p{
 }
 .article-footer{
     padding-bottom: 40px;
-    margin-top: 30px;
+    margin-top: 57px;
     display: flex;
     justify-content: space-between;
 }

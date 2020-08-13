@@ -17,20 +17,21 @@ class donateResource extends Controller
      */
     public function store(Request $request)
     {
-        if(Auth::check()) {
             $this->validate($request,
                 [
-                    'email' => 'required',
+                    'radio' => 'required',
                     'phone' => 'required',
                     'money' => 'required',
                 ],
                 [
-                    'email.required' => 'Vui lòng nhập email',
-                    'phone.required' => 'Vui lòng nhập mật khẩu',
-                    'money.required' => 'Vui lòng nhập số tiền',
+                    'radio.required' => 'Choose the form of payment',
+                    'phone.required' => 'Please enter the phone number',
+                    'money.required' => 'Please enter the amount',
                 ]);
             $donate = new donate();
             $donate->hinh_thuc = $request->radio;
+            $donate->other = $request->other;
+            $donate->Card_number = $request->card;
             $donate->name = $request->name;
             $donate->doi_tuong = $request->doituong;
             $donate->email = $request->email;
@@ -38,10 +39,5 @@ class donateResource extends Controller
             $donate->so_tien_donate = $request->money;
             $donate->save();
             return redirect()->back()->with('thanhcong', 'Thanks for your support');
-        }
-        else{
-            return redirect()->route('login.index');
-        }
     }
-
 }

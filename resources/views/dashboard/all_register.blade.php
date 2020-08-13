@@ -9,7 +9,7 @@
                 <div class="col-sm-4">
                 </div>
                 <div class="col-sm-3">
-                    <p style="position: relative; left: 497px">Tìm kiếm theo tên</p>
+                    <p style="position: relative; left: 497px">Search by username</p>
                     <div class="input-group">
                         <form action="{{route('serch')}}" method="get">
                             <input style="outline: none; width: 200px" type="text" name="key" class="input-sm form-control" placeholder="Search">

@@ -12,8 +12,10 @@ use App\homeTitle;
 use App\homebox;
 use App\homeplan;
 use App\partherlist;
+use App\information;
 use Illuminate\Http\Request;
 use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Facades\Auth;
 
 class homeController extends Controller
 {
@@ -24,8 +26,9 @@ class homeController extends Controller
         $homeSlide = projects::all()->take(6);
         $homeEvent = Event::all()->take(4);
         $homeBlogGrid = blog::all()->take('3');
+        $information = information::all();
         $partnerList = partherlist::all();
-        return view('home.home',compact('homeTitle','homeBox','homePlan', 'homeSlide','homeEvent', 'homeBlogGrid', 'partnerList'));
+        return view('home.home',compact('homeTitle','homeBox','homePlan', 'homeSlide','homeEvent', 'homeBlogGrid','information', 'partnerList'));
     }
 
     public function blog_details($id){
@@ -73,6 +76,15 @@ class homeController extends Controller
     public function project(){
         $projects = projects::all()->take(6);
         return view('home.project', compact('projects'));
+    }
+
+    public function donate2($id){
+        if (Auth::check()){
+            $donate2 = causeDetails::all()->where('id',$id);
+            return view('home.donate',compact('donate2'));
+        }else{
+            return redirect()->route('login.index');
+        }
     }
 
 }

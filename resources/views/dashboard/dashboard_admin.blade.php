@@ -1,5 +1,7 @@
 @extends('admin')
 @section('content_admin')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
             <div class="market-updates">
                 <div class="col-md-3 market-update-gd">
                     <div class="market-update-block clr-block-1">
@@ -63,6 +65,18 @@
                 </div>
                 <div class="clearfix"> </div>
             </div>
+    <div class="container">
+        <div class="row">
+
+            <div class="panel panel-default" style="width: 1075px;">
+
+                <div class="panel-body" style="width: 1065px; height: 496px; margin-left: 13px">
+                    <canvas id="line-chart" style="height: 493px; width: 1049px"></canvas>
+                </div>
+            </div>
+
+        </div>
+    </div>
             <div class="agileits-w3layouts-stats">
                 <div class="col-md-4 stats-info widget">
                     <div class="stats-info-agileits">
@@ -110,48 +124,48 @@
                         <table class="table stats-table ">
                             <thead>
                             <tr>
-                                <th style="color: #fff">STT</th>
-                                <th style="color: #fff">PROJECT</th>
-                                <th style="color: #fff">STATUS</th>
-                                <th style="color: #fff">PROGRESS</th>
+                                <th>STT</th>
+                                <th>PROJECT</th>
+                                <th>STATUS</th>
+                                <th>PROGRESS</th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr>
-                                <th style="color: #fff" scope="row">1</th>
-                                <td style="color: #fff">Children</td>
-                                <td style="color: #fff"><span class="label label-success">finish</span></td>
-                                <td style="color: #fff"><h5 style="color: #4cc71b">100% <i class="fa fa-thumbs-up"></i></h5></td>
+                                <th scope="row">1</th>
+                                <td>Children</td>
+                                <td><span class="label label-success">finish</span></td>
+                                <td><h5 style="color: #4cc71b">100% <i class="fa fa-thumbs-up"></i></h5></td>
                             </tr>
                             <tr>
-                                <th style="color: #fff" scope="row">2</th>
-                                <td style="color: #fff">House</td>
-                                <td style="color: #fff"><span class="label label-warning">New</span></td>
-                                <td style="color: #fff"><h5 style="color: orange">0% <i class="fa fa-long-arrow-right"></i></h5></td>
+                                <th scope="row">2</th>
+                                <td>House</td>
+                                <td><span class="label label-warning">New</span></td>
+                                <td><h5 style="color: orange">0% <i class="fa fa-long-arrow-right"></i></h5></td>
                             </tr>
                             <tr>
-                                <th style="color: #fff" scope="row">3</th>
-                                <td style="color: #fff">Heart for you</td>
-                                <td style="color: #fff"><span class="label label-warning">New</span></td>
-                                <td style="color: #fff"><h5 style="color: orange">0% <i class="fa fa-long-arrow-right"></i></h5></td>
+                                <th scope="row">3</th>
+                                <td>Heart for you</td>
+                                <td><span class="label label-warning">New</span></td>
+                                <td><h5 style="color: orange">0% <i class="fa fa-long-arrow-right"></i></h5></td>
                             </tr>
                             <tr>
-                                <th style="color: #fff" scope="row">4</th>
-                                <td style="color: #fff">Construct a road</td>
-                                <td style="color: #fff"><span class="label label-info">In process</span></td>
-                                <td style="color: #fff"><h5>55% <i class="fa fa-level-up"></i></h5></td>
+                                <th scope="row">4</th>
+                                <td>Construct a road</td>
+                                <td><span class="label label-info">In process</span></td>
+                                <td><h5>55% <i class="fa fa-level-up"></i></h5></td>
                             </tr>
                             <tr>
-                                <th style="color: #fff" scope="row">5</th>
-                                <td style="color: #fff">The homeless</td>
-                                <td style="color: #fff"><span class="label label-success">finish</span></td>
-                                <td style="color: #fff"><h5 style="color: #4cc71b">100% <i class="fa fa-thumbs-up"></i></h5></td>
+                                <th scope="row">5</th>
+                                <td>The homeless</td>
+                                <td><span class="label label-success">finish</span></td>
+                                <td><h5 style="color: #4cc71b">100% <i class="fa fa-thumbs-up"></i></h5></td>
                             </tr>
                             <tr>
-                                <th style="color: #fff" scope="row">6</th>
-                                <td style="color: #fff">Mid-Autumn Festival for kids</td>
-                                <td style="color: #fff"><span class="label label-info">In process</span></td>
-                                <td style="color: #fff"><h5>38% <i class="fa fa-level-up"></i></h5></td>
+                                <th scope="row">6</th>
+                                <td>Mid-Autumn Festival for kids</td>
+                                <td><span class="label label-info">In process</span></td>
+                                <td><h5>38% <i class="fa fa-level-up"></i></h5></td>
                             </tr>
                             </tbody>
                         </table>
@@ -159,4 +173,42 @@
                 </div>
                 <div class="clearfix"> </div>
             </div>
+    <script type="text/javascript">
+        window.onload = function () {
+            Chart.defaults.global.defaultFontColor = '#000000';
+            Chart.defaults.global.defaultFontFamily = 'Arial';
+            var lineChart = document.getElementById('line-chart');
+            var myChart = new Chart(lineChart, {
+                type: 'line',
+                data: {
+                    labels: ["Jan", "Feb", "Mar", "Apr", "May", "June"],
+                    datasets: [
+                        {
+                            label: 'Donate',
+                            data: [80, 30, 63, 20, 110, 3],
+                            backgroundColor: 'rgba(0, 128, 128, 0.3)',
+                            borderColor: 'rgba(0, 128, 128, 0.7)',
+                            borderWidth: 1
+                        },
+                        {
+                            label: 'Volunteers',
+                            data: [18, 72, 10, 39, 19, 75],
+                            backgroundColor: 'rgba(0, 128, 128, 0.7)',
+                            borderColor: 'rgba(0, 128, 128, 1)',
+                            borderWidth: 1
+                        }
+                    ]
+                },
+                options: {
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero:true
+                            }
+                        }]
+                    },
+                }
+            });
+        };
+    </script>
 @endsection

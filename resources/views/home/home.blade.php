@@ -47,17 +47,13 @@
                     <img src="{{asset('fronend/home/img/about-2.jpg')}}">
                 </div>
                 <div class="section2-4-2 col-md-6 col-xs-6 col-lg-6 col-sm-6">
+                    @foreach($information as $informations)
                     <div>About us</div>
-                    <h3>Their joy is our happiness</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                        ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo
-                        viverra maecenas accumsan lacus vel facilisis.Lorem Ipsum is simply dummy text of the
-                        printing and typesetting industry.Lorem Ipsum is simply dummy text.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing
-                        elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Quis ipsum suspendisse ultrices gravida. Risus commodo
-                        viverra maecenas.</p>
+                    <h3>{{$informations->title}}</h3>
+                    <p>{{$informations->content1}}</p>
+                    <p>{{$informations->content3}}</p>
                     <button class="btn">More Details</button>
+                    @endforeach
                 </div>
             </div>
 
@@ -86,47 +82,47 @@
             </div>
         </div>
     </section>
-    <section class="section3">
+    <div class="slide-img" style="background: #f7fafe;">
         <div class="container">
-            <div class="section2-2 section3-1 col-md-12 col-xs-12 col-lg-12 col-sm-12">
-                <h4>Operation campaign</h4>
-                <h2>Some good jobs</h2>
-                <p>Here are some of the war schedules that we are working on. Please join hands with us for a better life</p>
+            <div class="slide-title" style="text-align: center; margin-top: 80px">
+                <span class="title__slide-img" style="color: #e22b64;">Active Campaign</span>
+                <h2 style="font-size: 32px;font-weight: 700;" class="header__slide">Some Good Causes</h2>
+                <p style="font-size: 15px;color: #7d7d7d;" class="conten__slide">
+                    Here are some of the war schedules that we are working on. Please join hands with us for a better life
+                </p>
+                <img class="swiper-slide-icon__img" src="{{asset('fronend/home/img/projects/1%20(1).png')}}" width="210px" height="210px">
             </div>
-        </div>
-        <img class="swiper-slide-icon__img" src="{{asset('fronend/home/img/1%20(1).png')}}" width="210px" height="210px">
-        <div class="container">
-        <div class="slide">
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    @foreach($homeSlide as $project)
-                        <div class="swiper-slide">
-                            <div class="slide__img">
-                                <img src="{{asset("fronend/home/img/projects/" . "$project->img" . "")}}" alt="">
-                            </div>
-                            <div class="skill">
-                                <div class="skill-bar">
-                                    <div class="skill-per" per="{{($project->so_tien_quyen_gop_duoc /$project->muc_tieu)* 100 }}"></div>
+            <div class="slide" style=" margin-bottom: 40px;">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        @foreach($homeSlide as $project)
+                            <div class="swiper-slide">
+                                <div class="slide__img">
+                                    <img src="{{asset("fronend/home/img/projects/" . "$project->img" . "")}}" alt="">
                                 </div>
-                                <div class="slill__text">
-                                    <div class="price">
-                                        <span class="text__left">Raised: ${{$project->so_tien_quyen_gop_duoc}}</span>
-                                        <span class="text__right">Goal: ${{$project->muc_tieu}}</span>
+                                <div class="skill">
+                                    <div class="skill-bar">
+                                        <div class="skill-per" per="{{($project->so_tien_quyen_gop_duoc /$project->muc_tieu)* 100 }}"></div>
                                     </div>
-                                    <hr>
-                                    <h3>{{$project->ten_chien_dich}}</h3>
-                                    <p>{{$project->content}}</p>
-                                    <a class="read-more" href="{{url("home/cause_details/".$project->cause_details."")}}">Read More</a>
+                                    <div class="slill__text">
+                                        <div class="price">
+                                            <span class="text__left">Raised: ${{$project->so_tien_quyen_gop_duoc}}</span>
+                                            <span class="text__right">Goal: ${{$project->muc_tieu}}</span>
+                                        </div>
+                                        <hr>
+                                        <h3>{{$project->ten_chien_dich}}</h3>
+                                        <p>{{$project->content}}</p>
+                                        <a class="read-more" href="{{url("home/cause_details/" . "$project->trang" . "")}}">Read More</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    @endforeach
+                        @endforeach
+                    </div>
+                    <div class="swiper-pagination"></div>
                 </div>
-                <div class="swiper-pagination"></div>
             </div>
         </div>
-        </div>
-    </section>
+    </div>
 
     <section class="section4">
         <div class="container">
@@ -136,34 +132,34 @@
                 </div>
                 <div class="section4-box">
                     <div class="section4-title">
-                        <i class='fas fa-gift' style='font-size:28px; color: #0b85ff'></i>
+                        <i class='fas fa-gift' style='font-size:28px; color:#52cccf'></i>
                         <div class="box-conten">
                         <h3>Happy Hour</h3>
-                        <p>Lorem ipsum dolor <br> amet,sed do eli elit, sed.</p>
+                        <p>We bring a surprise <br> gift to everyone <br> </p>
                         <a href="#">Read More</a>
                         </div>
                     </div>
                     <div class="section4-title">
-                        <i class='fas fa-apple-alt' style='font-size:28px; color: #ff0b7b'></i>
+                        <i class='fas fa-apple-alt' style='font-size:28px; color: #e22b64'></i>
                         <div class="box-conten">
                             <h3>Healthy Life</h3>
-                            <p>Lorem ipsum dolor <br> amet,sed do eli elit, sed.</p>
+                            <p>Help people live <br> a healthy life</p>
                             <a href="#">Read More</a>
                         </div>
                     </div>
                     <div class="section4-title">
-                        <i class='fas fa-home' style='font-size:28px; color: #70bd00'></i>
+                        <i class='fas fa-home' style='font-size:28px; color: #43b663'></i>
                         <div class="box-conten">
                             <h3>Home shelter</h3>
-                            <p>Lorem ipsum dolor <br> amet,sed do eli elit, sed.</p>
+                            <p>Loving homes are <br> sent to the needy</p>
                             <a href="#">Read More</a>
                         </div>
                     </div>
                     <div class="section4-title">
-                        <i class='fas fa-burn' style='font-size:28px; color: #ef03ff'></i>
+                        <i class='fas fa-burn' style='font-size:28px; color: #9b4c98'></i>
                         <div class="box-conten">
                             <h3>Drinking Water</h3>
-                            <p>Lorem ipsum dolor <br> amet,sed do eli elit, sed.</p>
+                            <p>Bring clean water <br> droplets to everyone</p>
                             <a href="#">Read More</a>
                         </div>
                     </div>
@@ -181,8 +177,13 @@
                     <br>
                 magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas.</p>
                 </font>
-                <div class="donate1"><a href="#">Ủng hộ ngay</a> </div>
-                <div class="join"><a href="#">Tham  gia ngay</a> </div>
+                @if(Auth::check())
+                    <div class="donate1"><a href="{{url("home/donate2/1")}}">Donate Now</a> </div>
+                @else
+                    <div class="donate1"><a href="{{route('login.index')}}">Donate Now</a> </div>
+                @endif
+
+                <div class="join"><a href="#">Join Now</a> </div>
 
                 <div class="section5-2 col-md-12 col-xs-12 col-lg-12 col-sm-12">
                     <div class="tt col-md-2 col-xs-2 col-lg-2 col-sm-2">
@@ -229,7 +230,7 @@
                             the sweetness of the love we have given.
                         </p>
                     </font>
-                    <a class="button" href="">Làm cách nào để ủng hộ</a>
+                    <a class="button" href="">How To Donate</a>
                 </div>
                 <div class="section6-img col-md-5 col-xs-6 col-lg-5 col-sm-6">
                     <img src="{{asset('fronend/home/img/organaization-2.jpg')}}" alt="">

@@ -14,11 +14,11 @@ body{
     overflow-x: hidden;
 }
 
-/*.main{*/
-/*    opacity: 0;*/
-/*    display: none;*/
-/*    transition: opacity 1s ease-in;*/
-/*}*/
+.main{
+    opacity: 0;
+    display: none;
+    transition: opacity 1s ease-in;
+}
 
 header{
     position: fixed;
@@ -708,7 +708,7 @@ img {
 }
 .section2-4-2 p{
     color: #656565;
-    line-height: 35px;
+    line-height: 26px;
 }
 .section2-4-2 button:hover{
     background-color: black;
@@ -932,13 +932,6 @@ img {
     transition: 4s;
 }
 
-.swiper-slide:hover .slide__img img{
-    /*width: 420px;*/
-    /*height: 320px;*/
-    /*margin-top: -27px;*/
-    /*margin-left: -25px;*/
-    /*transform: rotate(10deg);*/
-}
 
 .skill{
     width: 85%;
@@ -1218,6 +1211,7 @@ img {
     border-radius: 8px;
     font-size: 17px;
     margin-right: 10px;
+    margin-left: -33px;
     transition: .3s;
 }
 
@@ -1808,5 +1802,10 @@ img {
     background: linear-gradient(transparent, #ff3073);
     border-radius: 50px;
 }
+
+.loader::-webkit-scrollbar{
+    width: 0;
+}
+
 
 

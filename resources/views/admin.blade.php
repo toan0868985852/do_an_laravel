@@ -22,7 +22,7 @@
 <section id="container">
     <header class="header fixed-top clearfix">
         <div class="brand">
-            <a href="index.html" class="logo">
+            <a href="{{route('admin.index')}}" class="logo">
                 <img src="{{asset('fronend/img/lago2.png')}}" alt="">
                 ADMIN
             </a>
@@ -42,7 +42,7 @@
                             <p class="red">You have 1 Mails</p>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="{{route('sendemail')}}">
                                 <span class="subject">
                                 <span class="from">nguyen van a</span>
                                 <span class="time">Just now</span>
@@ -94,7 +94,6 @@
                             <i id="icon-1" class="fa fa-chevron-down"></i>
                         </a>
                         <ul class="sub">
-                            <li><a href="typography.html">Introduction</a></li>
                             <li><a href="glyphicon.html">Completed projects</a></li>
                             <li><a href="grids.html">Ongoing projects</a></li>
                         </ul>

@@ -14,6 +14,12 @@
     width: 50px;
 }
 
+.main{
+    opacity: 0;
+    display: none;
+    transition: opacity 1s ease-in;
+}
+
 .loader{
     display: flex;
     justify-content: center;
@@ -45,10 +51,3 @@
     }
 }
 
-.loader::-webkit-scrollbar{
-    width: 0;
-}
-
-.loader::-webkit-scrollbar-thumb{
-    background: none;
-}

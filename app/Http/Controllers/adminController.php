@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\image;
 use App\listimg;
 use App\donate;
+use App\information;
+use Illuminate\Support\Facades\DB;
 
 class adminController extends Controller
 {
@@ -23,4 +25,15 @@ class adminController extends Controller
         $donate = donate::all();
         return view('dashboard.donate.listdonate',compact('donate'));
     }
+
+    public function donate_active($id){
+        DB::table('donate')->where('id',$id)->update(['history'=>1]);
+        return redirect()->route('donate');
+    }
+
+    public function donate_unactive($id){
+        DB::table('donate')->where('id',$id)->update(['history'=>0]);
+        return redirect()->route('donate');
+    }
+
 }

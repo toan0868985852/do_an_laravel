@@ -40,10 +40,15 @@ Route::group(['prefix'=>'admin'],function(){
     Route::resource('edit','editUserController');
     Route::get('register/serch','serchController@getserch')->name('serch');
     Route::get('email','mailController@getmail')->name('mail');
+    Route::delete('sendemail/{id}','mailController@deletemail')->name('deletemail');
     Route::get('sendemail','mailController@sendemail')->name('sendemail');
+    Route::get('sendemail/viewmail/{id}','mailController@viewmail')->name('viewmail');
     Route::get('image','adminController@image')->name('image');
     Route::get('image/listimg/{id}','adminController@imagelist')->name('imglist');
     Route::get('donate','adminController@donate')->name('donate');
+    Route::get('donate/active/{id}','adminController@donate_active')->name('donate_active');
+    Route::get('donate/unactive/{id}','adminController@donate_unactive')->name('donate_unactive');
+    Route::get('information','adminController@information')->name('information');
 });
 //-------------------------quan ly--------------------------
 
@@ -70,6 +75,7 @@ Route::group(['prefix'=>'home'],function(){
     Route::get('even','homeController@even')->name('even');
     Route::get('project','homeController@project')->name('project');
     Route::get('event_details/{id}','homeController@event_details');
+    Route::get('donate2/{id}','homeController@donate2')->name('donate2');
 
 });
 //----------------------trang chu----------------------------

@@ -45,37 +45,6 @@
                     </div>
                 </div>
             @endforeach
-
-{{--            <div class="filter charity sponsorship">--}}
-{{--                <img src="{{asset('fronend/home/img/projects/22.jpg')}}" alt="">--}}
-{{--                <div class="overlay-2">--}}
-{{--                    <div class="text"><a href=""><i class="fa fa-eye"></i></a></div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--            <div class="filter plants plants">--}}
-{{--                <img src="{{asset('fronend/home/img/projects/23.jpg')}}" alt="">--}}
-{{--                <div class="overlay-3">--}}
-{{--                    <div class="text"><a href=""><i class="fa fa-eye"></i></a></div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--            <div class="filter child sponsorship">--}}
-{{--                <img src="{{asset('fronend/home/img/projects/24.jpg')}}" alt="">--}}
-{{--                <div class="overlay-4">--}}
-{{--                    <div class="text"><a href=""><i class="fa fa-eye"></i></a></div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--            <div class="filter charity volunteering">--}}
-{{--                <img src="{{asset('fronend/home/img/projects/25.jpg')}}" alt="">--}}
-{{--                <div class="overlay-5">--}}
-{{--                    <div class="text"><a href=""><i class="fa fa-eye"></i></a></div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--            <div class="filter charity plants volunteering">--}}
-{{--                <img src="{{asset('fronend/home/img/projects/26.jpg')}}" alt="">--}}
-{{--                <div class="overlay-6">--}}
-{{--                    <div class="text"><a href=""><i class="fa fa-eye"></i></a></div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
         </div>
     </div>
 </div>
@@ -110,7 +79,7 @@
                                 <hr>
                                     <h3>{{$project->ten_chien_dich}}</h3>
                                     <p>{{$project->content}}</p>
-                                    <a class="read-more" href="#">Read More</a>
+                                    <a class="read-more" href="{{url("home/cause_details/" . "$project->trang" . "")}}">Read More</a>
                             </div>
                         </div>
                     </div>

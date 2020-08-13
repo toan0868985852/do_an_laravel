@@ -15,4 +15,16 @@ class mailController extends Controller
         $mail = mail::all();
         return view('dashboard.email.send',compact('mail'));
     }
+
+    public function deletemail($id)
+    {
+        mail::findOrFail($id)->delete();
+        return redirect()->route('sendemail');
+    }
+
+    public function viewmail($id)
+    {
+        $viewmail = mail::all()->where('id',$id);
+        return view('dashboard.email.viewmail',compact('viewmail'));
+    }
 }

@@ -31,10 +31,17 @@
                                         <input type="checkbox" class="mail-checkbox">
                                     </td>
                                     <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
-                                    <td class="view-message dont-show"><a href="#">{{$email->email}}</a></td>
-                                    <td class="view-message"><a href="#">{{$email->title}}</a></td>
+                                    <td class="view-message dont-show"><a href="{{url("admin/sendemail/viewmail/".$email->id."")}}">{{$email->email}}</a></td>
+                                    <td class="view-message"><a href="{{url("admin/sendemail/viewmail/".$email->id."")}}">{{$email->title}}</a></td>
                                     <td class="view-message inbox-small-cells"></td>
                                     <td class="view-message text-right">{{$email->created_at}}</td>
+                                    <td class="view-message text-right">
+                                        <form style="" action="{{url("admin/sendemail/".$email->id."")}}" method="post">
+                                            {{csrf_field()}}
+                                            {{method_field('delete')}}
+                                            <button style="border: none; background: none; outline: none"><i class="far fa-trash-alt"></i></button>
+                                        </form>
+                                    </td>
                                 </tr>
                                 @endforeach
                                 </tbody>
