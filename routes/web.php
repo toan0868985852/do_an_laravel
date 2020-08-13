@@ -92,7 +92,8 @@ Route::resource('donate','donateResource')->only(['store']);
 Route::post('admin/mail','sendmailController@sendmail')->name('sendmail');
 //-------------------------send email-----------------------------------
 
-
+Route::get('stripe', 'stripePaymentController@stripe');
+Route::post('stripe', 'stripePaymentController@stripePost')->name('stripe.post');
 
 
 
