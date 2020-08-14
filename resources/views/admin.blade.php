@@ -108,17 +108,17 @@
                             <li><a href="{{route('register.index')}}">Subscribers</a></li>
                         </ul>
                     </li>
-                    <li class="sub-menu">
-                        <a href="#">
-                            <i class="fa fa-tasks"></i>
-                            <span>Partner</span>
-                            <i id="icon-3" class="fa fa-chevron-down"></i>
-                        </a>
-                        <ul class="sub">
-                            <li><a href="form_component.html">Add object</a></li>
-                            <li><a href="form_validation.html">List of partners</a></li>
-                        </ul>
-                    </li>
+{{--                    <li class="sub-menu">--}}
+{{--                        <a href="#">--}}
+{{--                            <i class="fa fa-tasks"></i>--}}
+{{--                            <span>Partner</span>--}}
+{{--                            <i id="icon-3" class="fa fa-chevron-down"></i>--}}
+{{--                        </a>--}}
+{{--                        <ul class="sub">--}}
+{{--                            <li><a href="form_component.html">Add object</a></li>--}}
+{{--                            <li><a href="form_validation.html">List of partners</a></li>--}}
+{{--                        </ul>--}}
+{{--                    </li>--}}
                     <li class="sub-menu">
                         <a href="#">
                             <i class="fa fa-envelope"></i>
@@ -138,7 +138,7 @@
                         </a>
                         <ul class="sub">
                             <li><a href="{{route('donate')}}">List of supporters</a></li>
-                            <li><a href="chartjs.html">The most supporters</a></li>
+                            <li><a href="{{route('donatemost')}}">The most supporters</a></li>
                         </ul>
                     </li>
                     <li class="sub-menu">
@@ -149,6 +149,7 @@
                         </a>
                         <ul class="sub">
                             <li><a href="{{route('image')}}">List of photo categories</a></li>
+                            <li><a href="{{route('addimage')}}">Add Image</a></li>
                         </ul>
                     </li>
                 </ul>

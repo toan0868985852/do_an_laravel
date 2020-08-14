@@ -41,11 +41,16 @@ Route::group(['prefix'=>'admin','middleware'=>'adminlogin'],function(){
     Route::get('register/serch','serchController@getserch')->name('serch');
     Route::get('email','mailController@getmail')->name('mail');
     Route::delete('sendemail/{id}','mailController@deletemail')->name('deletemail');
+    Route::delete('donatemost/{id}','adminController@deletedonatemost')->name('deletedonatemost');
     Route::get('sendemail','mailController@sendemail')->name('sendemail');
     Route::get('sendemail/viewmail/{id}','mailController@viewmail')->name('viewmail');
     Route::get('image','adminController@image')->name('image');
+    Route::get('addimage','adminController@addimage')->name('addimage');
+    Route::post('addimages','adminController@addimagepost')->name('addimages');
     Route::get('image/listimg/{id}','adminController@imagelist')->name('imglist');
     Route::get('donate','adminController@donate')->name('donate');
+    Route::delete('donate/{id}','adminController@deletedonate')->name('deletedonate');
+    Route::get('donatemost','adminController@donatemost')->name('donatemost');
     Route::get('donate/active/{id}','adminController@donate_active')->name('donate_active');
     Route::get('donate/unactive/{id}','adminController@donate_unactive')->name('donate_unactive');
     Route::get('information','adminController@information')->name('information');

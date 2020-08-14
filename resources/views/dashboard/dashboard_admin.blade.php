@@ -68,10 +68,10 @@
     <div class="container">
         <div class="row">
 
-            <div class="panel panel-default" style="width: 1075px;">
+            <div class="panel panel-default" style="width: 1064px;margin-left: 12px">
 
                 <div class="panel-body" style="width: 1065px; height: 496px; margin-left: 13px">
-                    <canvas id="line-chart" style="height: 493px; width: 1049px"></canvas>
+                    <canvas id="line-chart" style="height: 493px; width: 1057px;margin-left: -20px"></canvas>
                 </div>
             </div>
 
@@ -181,7 +181,7 @@
             var myChart = new Chart(lineChart, {
                 type: 'line',
                 data: {
-                    labels: ["Jan", "Feb", "Mar", "Apr", "May", "June"],
+                    labels: ["Jan", "March", "May", "July", "September", "December"],
                     datasets: [
                         {
                             label: 'Donate',

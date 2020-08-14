@@ -6,6 +6,13 @@
                 List of supporters
             </div>
             <div class="table-responsive">
+                <div class="thanhcong">
+                    @if(Session::has('thanhcong'))
+                        <div class="success" style="text-align: center;line-height: 41px;font-weight: 600;color: #e43d9e;">
+                            {{Session::get('thanhcong')}}
+                        </div>
+                    @endif
+                </div>
                 <table class="table table-striped b-t b-light">
                     <thead>
                     <tr>
@@ -16,6 +23,7 @@
                         <th>Form</th>
                         <th>Phone</th>
                         <th>Status</th>
+                        <th></th>
                     </tr>
                     </thead>
                     <tbody>
@@ -38,6 +46,13 @@
                             @else
                                 <a style="color: #27c514 ;font-size: 21px;position: absolute;margin-top: -4px;" href="{{url("admin/donate/unactive/".$donates->id."")}}"><i class="far fa-thumbs-up"></i></a>
                             @endif
+                        </td>
+                        <td class="view-message text-right">
+                            <form style="" action="{{url("admin/donate/".$donates->id."")}}" method="post">
+                                {{csrf_field()}}
+                                {{method_field('delete')}}
+                                <button style="border: none; background: none; outline: none"><i class="far fa-trash-alt"></i></button>
+                            </form>
                         </td>
                     </tr>
                     @endforeach

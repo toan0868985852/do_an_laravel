@@ -6,7 +6,7 @@
     <section class="flex">
         @foreach($image as $img)
         <div class="card">
-            <img class="card__image" src="{{asset("backend/img/".$img->img."")}}" alt="img">
+            <img class="card__image" src="{{asset("public/backend/img/".$img->img."")}}" alt="img">
                 <div class="card__title">
                     <h2>{{$img->title}}</h2>
                     <p>{{ $img->content }}</p>
