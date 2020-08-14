@@ -15,7 +15,8 @@ class loginResouce extends Controller
      */
     public function index()
     {
-        return view('login-signup.login');
+        $url=$_SERVER['HTTP_REFERER'];
+        return view('login-signup.login', compact('url'));
     }
 
     /**
