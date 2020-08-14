@@ -67,28 +67,28 @@
             <div class="widget-post">
                 <h3>Popular Posts</h3>
                 <div class="list-post">
-                    <a href="#"><img style="float: left;width: 80px;height: 80px; margin-bottom: -3px;" src="{{asset('fronend/img_blog/causes2.png')}}"></a>
+                    <a href="{{url('home/cause_details/1')}}"><img style="float: left;width: 80px;height: 80px; margin-bottom: -3px;" src="{{asset('fronend/img_blog/causes2.png')}}"></a>
                     <div class="info">
                         <p>June 30,2019</p>
                         <a href="#"><h4>Delicate contempt received two yet advanced</h4></a>
                     </div>
                 </div>
                 <div class="list-post">
-                    <a href="#"><img style="float: left;width: 80px;height: 80px;margin-bottom: -3px;" src="{{asset('fronend/img_blog/causes3.png')}}"></a>
+                    <a href="{{url('home/cause_details/2')}}"><img style="float: left;width: 80px;height: 80px;margin-bottom: -3px;" src="{{asset('fronend/img_blog/causes3.png')}}"></a>
                     <div class="info">
                         <p>June 30,2019</p>
                         <a href="#"><h4>Future Plan & Strategy for Consutruction</h4></a>
                     </div>
                 </div>
                 <div class="list-post">
-                    <a href="#"><img style="float: left;width: 80px;height: 80px;margin-bottom: -3px;" src="{{asset('fronend/img_blog/causes4.png')}}"></a>
+                    <a href="{{url('home/cause_details/3')}}"><img style="float: left;width: 80px;height: 80px;margin-bottom: -3px;" src="{{asset('fronend/img_blog/causes4.png')}}"></a>
                     <div class="info">
                         <p>June 30,2019</p>
                         <a href="#"><h4>Melancholy devonshire alteration</h4></a>
                     </div>
                 </div>
                 <div class="list-post">
-                    <a href="#"><img style="float: left;width: 80px;height: 80px;margin-bottom: -3px;" src="{{asset('fronend/img_blog/causes5.png')}}"></a>
+                    <a href="{{url('home/cause_details/4')}}"><img style="float: left;width: 80px;height: 80px;margin-bottom: -3px;" src="{{asset('fronend/img_blog/causes5.png')}}"></a>
                     <div class="info">
                         <p>June 30,2019</p>
                         <a href="#"><h4>Delicate contempt received two yet advanced</h4></a>
