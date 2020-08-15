@@ -17,7 +17,7 @@
                             Compose Mail
                         </a>
                         <ul class="nav nav-pills nav-stacked mail-nav">
-                            <li class="active"><a href="{{route('sendmail')}}"> <i class="fa fa-inbox"></i> Inbox <span class="label label-danger pull-right inbox-notification">@if(count($mail) > 0){{count($mail)}}@endif</span></a></li>
+                            <li class="active"><a href="{{route('sendmail')}}"> <i class="fa fa-inbox"></i> Inbox <span class="label label-danger pull-right inbox-notification"></span></a></li>
                             <li><a href="#"> <i class="fa fa-envelope-o"></i> Send Mail</a></li>
                             <li><a href="#"> <i class="fa fa-certificate"></i> Important</a></li>
                         </ul>

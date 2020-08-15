@@ -86,18 +86,6 @@
                             <span>Dashboard</span>
                         </a>
                     </li>
-
-                    <li class="sub-menu">
-                        <a href="#">
-                            <i class="fa fa-book"></i>
-                            <span>Company information</span>
-                            <i id="icon-1" class="fa fa-chevron-down"></i>
-                        </a>
-                        <ul class="sub">
-                            <li><a href="glyphicon.html">Completed projects</a></li>
-                            <li><a href="grids.html">Ongoing projects</a></li>
-                        </ul>
-                    </li>
                     <li class="sub-menu">
                         <a href="#">
                             <i class="fa fa-users"></i>
@@ -108,17 +96,6 @@
                             <li><a href="{{route('register.index')}}">Subscribers</a></li>
                         </ul>
                     </li>
-{{--                    <li class="sub-menu">--}}
-{{--                        <a href="#">--}}
-{{--                            <i class="fa fa-tasks"></i>--}}
-{{--                            <span>Partner</span>--}}
-{{--                            <i id="icon-3" class="fa fa-chevron-down"></i>--}}
-{{--                        </a>--}}
-{{--                        <ul class="sub">--}}
-{{--                            <li><a href="form_component.html">Add object</a></li>--}}
-{{--                            <li><a href="form_validation.html">List of partners</a></li>--}}
-{{--                        </ul>--}}
-{{--                    </li>--}}
                     <li class="sub-menu">
                         <a href="#">
                             <i class="fa fa-envelope"></i>

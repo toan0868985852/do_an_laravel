@@ -85,7 +85,8 @@ Route::group(['prefix'=>'home'],function(){
     Route::post('donate/card','paymentController@card')->middleware('donateMiddkeware');
     Route::post('donate/order','paymentController@order')->middleware('donateMiddkeware');
     Route::post('donate/paypal','payPalPaymentController@paywithpaypal')->middleware('donateMiddkeware');
-    Route::post('donate/paypal/status','payPalPaymentController@status')->middleware('donateMiddkeware');
+
+
 
 });
 //----------------------trang chu----------------------------
@@ -104,7 +105,7 @@ Route::post('admin/mail','sendmailController@sendmail')->name('sendmail');
 
 Route::post('stripe', 'stripePaymentController@stripePost')->name('stripe.post');
 
-
+Route::get('status','payPalPaymentController@getPaymentStatus')->middleware('donateMiddkeware');
 
 
 

@@ -254,71 +254,6 @@
             @endif
         </div>
                 <div class="article-content" style="width: 48%;height: 439px;margin-bottom: 40px; margin-top: 0">
-{{--                    <form action="{{route('donate.store')}}" method="post" id="payment-form">--}}
-{{--                        <input type="hidden" name="_token" value="{{csrf_token()}}">--}}
-{{--                        <div class="payment-method" style="position: absolute; margin-top: -115px">--}}
-{{--                            <p class="radio-input active" style="display: none"></p>--}}
-{{--                            <h3>Select Payment Method</h3>--}}
-{{--                            <p style="padding-right: 11px;padding-left: 8px;">--}}
-{{--                                <input type="radio" id="paypal" name="radio" value="PayPal">--}}
-{{--                                <label for="paypal">PayPal</label>--}}
-{{--                                <a class="input-card">--}}
-{{--                                    <form class="w3-container w3-display-middle w3-card-4 " method="POST" action="{{url('home/donate/paypal')}}">--}}
-{{--                                        {{ csrf_field() }}--}}
-{{--                                        <label class="w3-text-blue"><b>Enter Amount</b></label>--}}
-{{--                                        <input class="w3-input w3-border" name="amount" type="text">--}}
-{{--                                        <button class="w3-btn w3-blue">Pay with PayPal</button>--}}
-
-{{--                            </form>--}}
-{{--                                </a>--}}
-{{--                            </p>--}}
-{{--                            <p class="radio-input" style="padding-right: 11px;padding-left: 8px;">--}}
-{{--                                <input type="radio" id="credit" name="radio" value="Card">--}}
-{{--                                <label for="credit">Card</label>--}}
-{{--                                <a class="input-card">--}}
-{{--                                    <form action="{{url('home/donate/card')}}" method="post" id="payment-form">--}}
-{{--                                        <input type="hidden" name="_token" value="{{csrf_token()}}">--}}
-{{--                                        <div class="form-row">--}}
-{{--                                            <div id="card-element">--}}
-{{--                                                <!-- A Stripe Element will be inserted here. -->--}}
-{{--                                            </div>--}}
-{{--                                            <!-- Used to display form errors. -->--}}
-{{--                                            <div id="card-errors" role="alert"></div>--}}
-{{--                                            <input type="text" name="money"  placeholder="$100.00">--}}
-{{--                                            <input type="text" name="email"  placeholder="Email">--}}
-
-{{--                                        </div>--}}
-
-{{--                                        <button>Submit Payment</button>--}}
-{{--                                    </form>--}}
-
-{{--                                </a>--}}
-{{--                            </p>--}}
-{{--                            <p class="radio-input" style="padding-right: 11px;padding-left: 8px;">--}}
-{{--                                <input type="radio" id="credit" name="radio" value="Other">--}}
-{{--                                <label for="credit">Other</label>--}}
-{{--                                <a class="input-card">--}}
-{{--                                    <form action="{{url('home/donate/order')}}" method="post">--}}
-{{--                                        <input type="hidden" name="_token" value="{{csrf_token()}}">--}}
-{{--                                        <input style="font-size: 16px;width: 197%;height: 50px;border: 1px solid #e6e6e6;margin-bottom: -9px;position: absolute;margin-left: -172px;margin-top: -4px; padding-left: 19px" type="text" id="others" name="other" placeholder="Payment methods">--}}
-{{--                                        <input type="text" name="money"  placeholder="$100.00">--}}
-{{--                                        <input type="text" name="hinh_thuc"  placeholder="hinh thuc">--}}
-{{--                                        <input type="text" name="email"  placeholder="Email">--}}
-{{--                                        <button>Submit</button>--}}
-{{--                                    </form>--}}
-{{--                                </a>--}}
-{{--                            </p>--}}
-{{--                        </div>--}}
-{{--                        <div class="contact-form" style="line-height: 5; margin-top: 100px;position: relative;top: 20px;">--}}
-{{--                            <input type="hidden" name="name" value="{{Auth::user()->id}}">--}}
-{{--                            <input type="hidden" name="doituong" value="{{$cause_details->id}}">--}}
-{{--                            <input type="text" name="email"  placeholder="Email">--}}
-{{--                            <input type="text" name="phone"  placeholder="Phone">--}}
-{{--                            <input type="text" name="money"  placeholder="$100.00">--}}
-{{--                            <button type="submit" class="default-btn" >Donate Now</button>--}}
-{{--                        </div>--}}
-
-{{--                    </form>--}}
                     <h3 style="font-weight: 600; margin-top: -10px">Select Payment Method</h3>
                     <div class="tab">
                         <button class="tablinks active" onclick="openCity(event, 'London')" id="defaultOpen">Card</button>
@@ -344,6 +279,8 @@
                                 <p>
                                 <input type="text" name="phone"  placeholder="Phone">
                                 </p>
+                                <input type="hidden" name="name" value="{{Auth::user()->name}}">
+                                <input type="hidden" name="doituong" value="{{$donate->doi_tuong}}">
                             </div>
                             <button>Donate</button>
                         </form>
@@ -362,6 +299,8 @@
                             <p class="card__donate">
                                 <input type="text" name="phone"  placeholder="Phone">
                             </p>
+                            <input type="hidden" name="name" value="{{Auth::user()->name}}">
+                            <input type="hidden" name="doituong" value="{{$donate->doi_tuong}}">
                             <button class="w3-btn w3-blue">Donate</button>
                         </form>
                     </div>

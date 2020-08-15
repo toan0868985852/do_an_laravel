@@ -152,7 +152,7 @@ class payPalPaymentController extends Controller
 
             Session::put('success', 'Payment success');
 
-//            return Redirect('home/donate2/1');
+//            return Redirect('home/donate2/1');John Doe's Test Store
             $donate = new donate();
             $donate->hinh_thuc = 'Paypel';
             $donate->name = $request->name;
