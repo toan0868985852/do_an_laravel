@@ -273,13 +273,14 @@
                                 <p>
                                 <input type="text" name="money"  placeholder="$100.00">
                                 </p>
-                                <p>
-                                <input type="text" name="email"  placeholder="Email">
-                                </p>
+
                                 <p>
                                 <input type="text" name="phone"  placeholder="Phone">
                                 </p>
+                                <input type="hidden" name="email" value="{{Auth::user()->email}}">
                                 <input type="hidden" name="name" value="{{Auth::user()->name}}">
+                                <input type="hidden" name="account_id" value="{{Auth::user()->id}}">
+                                <input type="hidden" name="projects_id" value="{{$donate->id}}">
                                 <input type="hidden" name="doituong" value="{{$donate->doi_tuong}}">
                             </div>
                             <button>Donate</button>
@@ -300,6 +301,8 @@
                                 <input type="text" name="phone"  placeholder="Phone">
                             </p>
                             <input type="hidden" name="name" value="{{Auth::user()->name}}">
+                            <input type="hidden" name="account_id" value="{{Auth::user()->id}}">
+                            <input type="hidden" name="projects_id" value="{{$donate->id}}">
                             <input type="hidden" name="doituong" value="{{$donate->doi_tuong}}">
                             <button class="w3-btn w3-blue">Donate</button>
                         </form>
@@ -310,6 +313,8 @@
                        <form action="{{url('home/donate/order')}}" method="post" class="other__donate">
                            <input type="hidden" name="_token" value="{{csrf_token()}}">
                            <input type="hidden" name="name" value="{{Auth::user()->name}}">
+                           <input type="hidden" name="account_id" value="{{Auth::user()->id}}">
+                           <input type="hidden" name="projects_id" value="{{$donate->id}}">
                            <input type="hidden" name="doituong" value="{{$donate->doi_tuong}}">
                            <p>
                            <input style="margin-top: 20px" id="others" name="other" placeholder="Payment methods">

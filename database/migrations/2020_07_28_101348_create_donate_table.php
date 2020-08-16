@@ -19,8 +19,6 @@ class CreateDonateTable extends Migration
             $table->integer('account_id')->unsigned();
             $table->integer('projects_id')->unsigned();
             $table->timestamps();
-            $table->foreign('account_id')->references('id')->on('account');
-            $table->foreign('projects_id')->references('id')->on('projects');
         });
     }
 

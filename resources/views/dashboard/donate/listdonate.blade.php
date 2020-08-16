@@ -44,15 +44,17 @@
                             @if($donates->history == 0)
                                 <a style="color: red ;font-size: 21px;position: absolute;margin-top: -4px;" href="{{url("admin/donate/active/".$donates->id."")}}"><i class="far fa-thumbs-down"></i></a>
                             @else
-                                <a style="color: #27c514 ;font-size: 21px;position: absolute;margin-top: -4px;" href="{{url("admin/donate/unactive/".$donates->id."")}}"><i class="far fa-thumbs-up"></i></a>
+                                <a style="color: #27c514 ;font-size: 21px;position: absolute;margin-top: -4px;"><i class="far fa-thumbs-up"></i></a>
                             @endif
                         </td>
                         <td class="view-message text-right">
+                            @if($donates->history == 0)
                             <form style="" action="{{url("admin/donate/".$donates->id."")}}" method="post">
                                 {{csrf_field()}}
                                 {{method_field('delete')}}
                                 <button style="border: none; background: none; outline: none"><i class="far fa-trash-alt"></i></button>
                             </form>
+                            @endif
                         </td>
                     </tr>
                     @endforeach

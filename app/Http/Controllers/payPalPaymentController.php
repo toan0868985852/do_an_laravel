@@ -1,6 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 
+use App\causeDetails;
 use App\donate;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Config;
@@ -154,16 +155,22 @@ class payPalPaymentController extends Controller
 
 //            return Redirect('home/donate2/1');John Doe's Test Store
             $donate = new donate();
-            $donate->hinh_thuc = 'Paypel';
+            $donate->hinh_thuc = 'Paypal';
             $donate->name = $request->name;
             $donate->doi_tuong = $request->doituong;
             $donate->history = 1;
             $donate->email = $request->email;
             $donate->so_tien_donate = $request->money;
             $donate->phone = $request->phone;
+            $donate->account_id = $request->account_id;
+            $donate->projects_id = $request->projects_id;
             $donate->save();
+            $amount = causeDetails::all()->where('id', $donate->projects_id);
+            foreach ($amount as $value){
+                $value->so_tien_khuyen_gop_duoc += $donate->so_tien_donate;
+                $value->save();
+            }
             return redirect()->back()->with('thanhcong', 'Thanks for your support');
-
         }
 
         Session::put('error', 'Payment failed');

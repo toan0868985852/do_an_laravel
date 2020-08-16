@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\causeDetails;
 use App\mail;
 use Illuminate\Http\Request;
 use App\image;
@@ -72,11 +73,14 @@ class adminController extends Controller
 
     public function donate_active($id){
         DB::table('donate')->where('id',$id)->update(['history'=>1]);
-        return redirect()->route('donate');
-    }
-
-    public function donate_unactive($id){
-        DB::table('donate')->where('id',$id)->update(['history'=>0]);
+        $donates = donate::all()->where('id', $id);
+        foreach ($donates as $donate){
+            $amount = causeDetails::all()->where('id', $donate->projects_id);
+            foreach ($amount as $value){
+                $value->so_tien_khuyen_gop_duoc += $donate->so_tien_donate;
+                $value->save();
+            }
+        }
         return redirect()->route('donate');
     }
 

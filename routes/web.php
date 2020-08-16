@@ -52,7 +52,6 @@ Route::group(['prefix'=>'admin','middleware'=>'adminlogin'],function(){
     Route::delete('donate/{id}','adminController@deletedonate')->name('deletedonate');
     Route::get('donatemost','adminController@donatemost')->name('donatemost');
     Route::get('donate/active/{id}','adminController@donate_active')->name('donate_active');
-    Route::get('donate/unactive/{id}','adminController@donate_unactive')->name('donate_unactive');
     Route::get('information','adminController@information')->name('information');
 });
 //-------------------------quan ly--------------------------
