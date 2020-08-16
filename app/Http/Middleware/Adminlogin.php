@@ -18,7 +18,7 @@ class Adminlogin
         if (Auth::check() && Auth::user()->role == 1){
             return $next($request);
         }else if (Auth::check() && Auth::user()->role == 2){
-            return redirect()->intended();
+            return redirect()->route('home');
         }else {
             return redirect('login');
         }
